@@ -1,0 +1,225 @@
+<div id="shopify-section-1605099324d00d08be" class="shopify-section home_item_slider">
+    <div class="item-slick-slider">
+       <ul class="multiple-items">
+           {%- for block in section.blocks -%}
+            <li class="item-slide" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 273px;">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="" width="" height="">
+                {{ block.settings.text }}
+            </li>
+           {%- endfor -%}
+       </ul>
+    </div>
+  
+  <!-- <script>
+  
+  $('.multiple-items').slick({slidesToShow:2, slidesToScroll:2, dots:true});
+    
+    
+  </script> -->
+<style>
+.item-slick-slider {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+ul.multiple-items {
+	background-color: #fffcfa;
+}
+
+.slick-slider .slick-list {
+	border: 1px solid #d3b290;
+	padding: 0 55px;
+}
+
+.multiple-items li.item-slide {
+	border: 0;
+	font-size: 16px;
+	color: #737373;
+	padding: 15px 10px;
+}
+
+.multiple-items li.item-slide strong {
+	font-size: 16px;
+	color: #000;
+}
+
+.multiple-items .slick-slide img {
+	width: 46px;
+	height: auto;
+	margin-bottom: 0px;
+}
+
+ul.multiple-items {
+	background: #cbeff0;
+}
+
+.multiple-items .slick-track {
+	display: flex;
+}
+
+.multiple-items li.item-slide {
+	font-size: 16px!important;
+}
+
+.multiple-items li.item-slide {
+	border: 1px solid #00c2cb;
+	padding: 10px;
+	box-sizing: border-box;
+	left: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+li.slick-active,
+li.slick-current {
+	border-right: none!important;
+}
+
+.slick-slide {
+	height: inherit!important;
+}
+
+.multiple-items li.item-slide {
+	border: 0;
+	font-size: 16px;
+	color: #737373;
+	padding: 15px 10px;
+}
+
+.multiple-items .slick-slide img {
+	width: auto;
+	height: 40px;
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	ul.multiple-items {
+		background-color: #fff!important;
+		border-radius: 15px;
+		box-shadow: 0 4px 31px -10px #ccc;
+	}
+	.slick-slider .slick-list {
+		border: unset!important;
+	}
+}
+
+@media (max-width:1300px) {
+	.item-slick-slider {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media (max-width:767px) {
+	.item-slick-slider {
+		padding: 0;
+	}
+	.slick-slider .slick-list {
+		padding: 0;
+		border: 0;
+	}
+	.multiple-items li.item-slide {
+		border: 1px solid #00c2cb;
+	}
+	.multiple-items li.item-slide strong {
+		color: #000;
+		display: block;
+		line-height: 14px;
+		margin-top: 0;
+	}
+	.multiple-items li.item-slide {
+		font-size: 12px;
+	}
+	.slick-initialized .slick-slide {
+		display: block;
+		text-align: center;
+	}
+	.multiple-items li.item-slide {
+		border: 1px solid #00c2cb;
+		padding: 10px;
+		box-sizing: border-box;
+		left: 0px;
+		position: relative;
+	}
+	.multiple-items .slick-slide img {
+		margin-bottom: 5px;
+		width: auto;
+		height: 40px;
+	}
+}
+</style>
+<script>
+    $('.multiple-items').slick({
+    centerMode: false,
+    centerPadding: '60px',
+    slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          draggable:false,
+          arrows: false,
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: true,
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 2
+        }
+      }
+    ]
+  });
+  </script>
+  
+  
+  </div>
+
+
+{% schema %}
+{
+    "name": "Badges",
+    "blocks": [
+        {
+            "type": "badge",
+            "name": "Badge",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Badges",
+            "category": "Image"
+        }
+    ]
+}
+{% endschema %}

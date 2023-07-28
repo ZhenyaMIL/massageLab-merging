@@ -1,0 +1,26 @@
+<div class="offer-block">
+  <div class="offer-inner-block">
+        {% if section.settings.btn != blank %}
+          <div class="link-btn">
+            <a href="https://offer.massage-lab.com/compression-socks" class="physical-button">{{ section.settings.btn }}</a>
+          </div>
+        {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Physical Section8",
+    "class": "physical-section8",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text",
+        "default": "Click Here To Get Up To 62% OFF"
+      }
+    ]
+  }
+{% endschema %}

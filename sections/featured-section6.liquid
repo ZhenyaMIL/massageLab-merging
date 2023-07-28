@@ -1,0 +1,108 @@
+<div class="featured-header">
+  <div class="featured-wrapper">
+    {% if section.settings.towelimage != blank %}
+      <a class="asset-cta" href="#">
+        <img class="full-img" src="{{ section.settings.towelimage | img_url: 'master' }}" alt="Banner Image">
+      </a>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <h2 class="subheading">{{ section.settings.subheading }}</h2>
+    {% endif %}
+    <div class="compare-brands">
+      <div class="compare-row">
+        {% if section.settings.compareimage != blank %}
+          <div class="box-item heading wborder">
+            <img src="{{ section.settings.compareimage | img_url: 'master' }}" class="p-small">
+          </div>
+        {% endif %}
+        {% if section.settings.comparename != blank %}
+          <div class="box-item heading">
+            <h3 class="compare-name">{{ section.settings.comparename }}</h3>
+          </div>
+        {% endif %}
+      </div>
+      {% for block in section.blocks %}
+        <div class="compare-box">
+          <div class="compare-row">
+            {% if block.settings.text1 != blank %}
+              <div class="box-item checked">
+                <p class="box-text">{{ block.settings.text1 }}</p>
+              </div>
+            {% endif %}
+            {% if block.settings.text2 != blank %}
+              <div class="box-item unchecked">
+                <p class="box-text">{{ block.settings.text2 }}</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if section.settings.desc1 != blank %}
+      <div class="featured-des">{{ section.settings.desc1 }}</div>
+    {% endif %}
+    {% if section.settings.desc2 != blank %}
+      <div class="featured-des">{{ section.settings.desc2 }}</div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Featured Section6",
+    "class": "featured-section6",
+    "tag":"section",
+    "settings": [    
+      {
+        "type": "image_picker",
+        "id": "towelimage",
+        "label": "Banner Image"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "How Does Sutera Silverthread Compare To Regular Bath Towels?"
+      },
+      {
+        "type": "image_picker",
+        "id": "compareimage",
+        "label": "Compare Image"
+      },
+      {
+        "type": "text",
+        "id": "comparename",
+        "label": "Compare Name",
+        "default": "Ordinary Towels"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Decription1"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Decription2"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Compare",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text1",
+            "label": "Text1"
+          },
+          {
+            "type": "text",
+            "id": "text2",
+            "label": "Text2"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

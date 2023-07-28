@@ -1,0 +1,142 @@
+<div class="testimonial-block">
+              <div class="page-width">
+                {% if section.settings.maintitle != blank %}
+                  <div class="section-header text-center">
+                    <h2 class="heading">{{ section.settings.maintitle | escape }}</h2>
+                    <p>(Over 7,000+ Raving Customers)</p>
+                  </div>
+                {% endif %}
+                {% if section.blocks.size > 0 %}
+                  <div class="ishitestimonials-carousel">
+                    {% for block in section.blocks %}
+                        <div class="ishitestimonials-container">
+                          <div class="testimonial-img">
+                              {% if block.settings.testimonial_image != blank %}
+                                <img loading="lazy"
+                                     srcset="{{ block.settings.testimonial_image | img_url: '143x' }}"
+                                     src="{{ block.settings.testimonial_image | img_url: '143x' }}"
+                                     alt="Testimonial image">
+                              {% else %}
+                                {{ 'image' | placeholder_svg_tag: 'ishi-placeholder' }}
+                              {% endif %}
+                          </div>
+                          <div class="user-container">
+                             {% assign review = block.settings.review | plus:0 %}
+                         {% if block.settings.showratting %}
+                          <div class="user-ratting">
+                            <span class="starrating loox-rating">
+                              <i class="loox-icon {% if review >=1 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                              <i class="loox-icon {% if review >=2 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                              <i class="loox-icon {% if review >=3 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                              <i class="loox-icon {% if review >=4 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                              <i class="loox-icon {% if review >=5 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                            </span>
+                          </div>
+                         {% endif %}
+                            {% if block.settings.testimonial_title != blank %}
+                              <h3 class="user-name">{{ block.settings.testimonial_title | escape }}</h3>
+                            {% endif %}
+                             {% if block.settings.testimonial_description != blank %}
+                              <div class="user-description">{{ block.settings.testimonial_description }}</div>
+                            {% endif %}
+                          </div>
+                        </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+          </div>
+
+<script>
+  jQuery(document).ready(function($) {
+   
+    $('.ishitestimonials-carousel').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      autoplay: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 543,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  });
+</script>
+{% schema %}
+  {
+    "name": "Testimonial",
+    "tag": "section",
+	"class": "testimonial-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Heading",
+        "default": "Section Heading"
+      }
+	],
+     "blocks": [
+       { 
+        "type": "text",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "testimonial_image",
+            "label": "Image"
+          },
+           {
+            "type": "checkbox",
+            "id": "showratting",
+            "label": "Show Rattings",
+            "default": true
+          },
+		  {
+            "type": "select",
+            "id": "review",
+            "label": "Star Rattings",
+            "default": "1",
+            "options": [
+              { "value": "1", "label": "1 Star"},
+              { "value": "2", "label": "2 Star"},
+              { "value": "3", "label": "3 Star"},
+              { "value": "4", "label": "4 Star"},
+              { "value": "5", "label": "5 Star"}
+            ]
+          },
+          {
+            "type": "text",
+            "id": "testimonial_title",
+            "label": "Name",
+            "default": "Luies Charls"
+          },
+          {
+            "type": "richtext",
+            "id": "testimonial_description",
+            "label": "Text",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          }
+        ]
+      }
+    ],
+	"presets": [
+      {
+        "name": "Testimonial"
+      }
+    ]
+  }
+{% endschema %}

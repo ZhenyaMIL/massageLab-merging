@@ -1,0 +1,204 @@
+<div class="page-width">
+  <div class="aboutus-information grid--1-col-tablet-down grid--2-col-desktop grid image-position-{{ section.settings.image_position }}">
+    {% if section.settings.image != blank %}
+    <div class="aboutus-banner grid__item">
+      <div class="image-container">
+        <img loading="lazy"
+               srcset"{{ section.settings.image | img_url: 'master' }}"
+               src="{{ section.settings.image | img_url: 'master' }}"
+               alt="Aboutus Image">
+      </div>
+    </div>
+    {% endif %}
+    <div class="information-container grid__item">
+       {% if section.settings.heading != blank %}
+        <div class="title-container section-header">
+          <h2 class="heading">{{ section.settings.heading }}</h2>
+        </div>
+       {% endif %}
+      
+      <div class="item-list">
+        <div class="value-box" data-percent="{{ section.settings.value1 }}">
+             <div class="count-number"><span class="counter">{{ section.settings.value1 }}</span>%</div>
+        </div>
+        <div class="content-block">
+          <div class="smallheading">{{ section.settings.itemheading1 }}</div>
+          <div class="text">{{ section.settings.itemtext1 }}</div>
+        </div>
+      </div>
+      <div class="item-list">
+        <div class="value-box"  data-percent="{{ section.settings.value2 }}">
+            
+            <div class="count-number"><span class="counter">{{ section.settings.value2 }}</span>%</div>
+        </div>
+        <div class="content-block">
+          <div class="smallheading">{{ section.settings.itemheading2 }}</div>
+          <div class="text">{{ section.settings.itemtext2 }}</div>
+        </div>
+      </div>
+      <div class="item-list last">
+        <div class="value-box" data-percent="{{ section.settings.value3 }}">
+          
+            <div class="count-number"><span class="counter">{{ section.settings.value3 }}</span>%</div>
+        </div>
+        <div class="content-block">
+          <div class="smallheading">{{ section.settings.itemheading3 }}</div>
+          <div class="text">{{ section.settings.itemtext3 }}</div>
+        </div>
+      </div>
+      <div class="text-container">
+        <p>* Results according to clinical/consumer studies. For more information refer to each product page.</p>
+      </div>
+      
+        {% if section.settings.about_btn != blank %}
+        <div class="about-btn">
+          <a href="JavaScript:void(0);" class="btn btn-large button getmytheragel">
+            {{ section.settings.about_btn }}
+          </a>
+        </div>
+        {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  jQuery(document).ready(function($) {
+//     $('.counter').counterUp({
+//       delay: 10,
+//       time: 1000
+//     });
+    
+    $('.value-box').easyPieChart({ 
+      barColor: '#35b8d3',
+      size: 70,
+      trackColor: '#dddddd',
+      easing: 'easeInOut',
+      scaleColor: false,
+      lineCap: 'circle',
+      lineWidth: 6,
+      animate: 2000
+    });
+    
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Video With Text",
+    "tag": "section",
+	"class": "aboutus-section videowithtext-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+	  {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image Position",
+        "default": "left",
+        "options": [
+          { "value": "left", "label": "Left"},
+          { "value": "right", "label": "Right"}
+        ]
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "We Have Everything You Need ?"
+      },
+      {
+        "type": "text",
+        "id": "about_btn",
+        "label": "Button Label",
+        "default": "Contact Us"
+      },
+      {
+        "type": "header",
+        "content": "column 1"
+      },
+      {
+        "type": "range",
+        "id": "value1",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Value",
+        "default": 50
+      },
+      {
+        "type": "text",
+        "id": "itemheading1",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "itemtext1",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      },
+	  {
+        "type": "header",
+        "content": "column 2"
+      },
+      {
+        "type": "range",
+        "id": "value2",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Value",
+        "default": 50
+      },
+      {
+        "type": "text",
+        "id": "itemheading2",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "itemtext2",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      },
+      {
+        "type": "header",
+        "content": "column 3"
+      },
+      {
+        "type": "range",
+        "id": "value3",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Value",
+        "default": 50
+      },
+      {
+        "type": "text",
+        "id": "itemheading3",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "itemtext3",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      }
+      
+	],
+	"presets": [
+      {
+        "name": "Video With Text"
+      }
+    ]
+  }
+{% endschema %}

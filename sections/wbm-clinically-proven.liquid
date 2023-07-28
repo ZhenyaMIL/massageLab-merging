@@ -1,0 +1,149 @@
+<div class="ai_ml_section_cnt" style="background-color:{{ section.settings.background-color }}">
+	<div class="page-width ai_ml_inner_cnt row">	
+		{% for block in section.blocks %}
+		  {% if block.type == 'cp-content-with-title' %}      	
+			  <div class="columns small-12 large-12 his-content-with-title ai_ml_text_align_{{ block.settings.text_alignment }}">
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+
+            			{% if block.settings.content != blank %}
+    						<p>{{ block.settings.content }}</p>
+    					{% endif %}	                    
+				
+              </div>        
+		  {% endif %}
+
+		{% endfor %}	
+         <div class="ai_ml_clear"></div>	
+  		{% for block in section.blocks %}
+		  {% if block.type == 'cp-content-with-media' %}      	
+					<div class="small-12 medium-8 cp-content-with-media">
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+
+            			{% if block.settings.image != blank %}
+    						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+    					{% endif %}	    
+
+             			{% if block.settings.video != blank %}
+    						  {% if block.settings.video.media_type == 'video' %}
+                                {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+                              {% endif %}
+    					{% endif %}	 
+                       {% if block.settings.video_url != blank %}
+                          <div class="cp-content-with-video-url ai-ml-video-container">                   
+                              {% if block.settings.video_url.type == "youtube" %}
+                                <iframe src="//www.youtube.com/embed/{{ block.settings.video_url.id }}?rel=0&showinfo=0&vq=720" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+                              {% endif %}
+                              {% if block.settings.video_url.type == "vimeo" %}
+                                <iframe src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?byline=0&portrait=0&badge=0" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+                              {% endif %}                          
+                          </div>
+                        {% endif %} 
+					</div>
+		  {% endif %}
+		{% endfor %}				
+
+    </div>    
+			
+</div>
+
+
+{% schema %}
+  {
+    "name": "Clinically Proven Section",  
+    "tag": "section",
+    "class": "ai_ml_section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      }
+    ],
+    "blocks":[
+      {
+		"type":"cp-content-with-title",
+  	 	"name": "Content With Text",
+     	 "settings": [
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },          
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }	  
+      ]
+      },
+	  {
+		"name": "Content With Media",
+		 "type": "cp-content-with-media",
+		"settings": [
+		  {
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "text"
+		  },
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		  },
+		  {
+			"type": "video",
+			"id": "video",
+			"label": "Video"
+		  },
+		  {
+			"type": "video_url",
+			"id": "video_url",
+			"label": "Video Url",
+            "accept": [
+              "youtube",
+              "vimeo"
+            ]            
+		  }           
+		]
+	  }       
+  	],"presets": [
+      {
+        "name": "Clinically Proven Section",
+        "category": "WBM Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

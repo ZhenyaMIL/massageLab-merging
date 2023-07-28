@@ -1,0 +1,143 @@
+<div class="ai_ml_phy_top_adv_cnt">
+  <p>Advertorial</p>
+</div>
+<div class="shopify-section physical-header">
+  <div class="physical-wrapper">
+    <div class="physicalpopup">
+      <div class="physicalpopuplogoblock">
+            {% if section.settings.site_logo != blank %}
+              <figure>
+                <img class="lazyload" src="{{ section.settings.site_logo | img_url: 'master' }}" alt="Website Logo">
+              </figure>
+            {% endif %}        
+      </div>
+      <div class="physicalpopupblock">
+        <div class="physicalpopupinnerblock">
+          <div class="physicalpopupimage">
+            {% if section.settings.popupimage != blank %}
+              <div class="popupimage">
+                <img class="lazyload" src="{{ section.settings.popupimage | img_url: 'master' }}" alt="Popup Image">
+              </div>
+            {% endif %}
+          </div>
+          <div class="popupdesc">
+            {% if section.settings.popupheading != blank %}
+              <a  class="popup-heading" {% if section.settings.link1 != blank %}href="{{ section.settings.link1 }}"{% else %}role="link" aria-disabled="true"{% endif %}>
+                <strong>{{ section.settings.popupheading }}</strong>
+              </a>
+            {% endif %}
+            {% if section.settings.popupbtn != blank %}
+              <a class="popup-link" {% if section.settings.link2 != blank %}href="{{ section.settings.link2 }}"{% else %}role="link" aria-disabled="true"{% endif %}>
+                {{ section.settings.popupbtn }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="physical-title-inner">
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-header-maintitle">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.date != blank %}
+        <div class="physical-header-date">{{ section.settings.date }}</div>
+      {% endif %}
+      {% if section.settings.title1 != blank %}
+        <div class="physical-header-title">{{ section.settings.title1 }}</div>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="physical-description">{{ section.settings.description }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  #shopify-section-{{ section.id }} .physicalpopupblock{
+    background-color:{{ section.settings.popupbgcolor }};
+  }
+  #shopify-section-{{ section.id }} .physicalpopupblock .popup-heading,
+  #shopify-section-{{ section.id }} .physicalpopupblock .popup-link{
+    color:{{ section.settings.popuptextcolor }};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Header",
+    "class": "physical-header",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "site_logo",
+        "label": "Site Logo",
+        "info": "Website Logo for the page"
+      },    
+      {
+        "type": "color",
+        "id": "popupbgcolor",
+        "label": "Background Color",
+        "default": "#0b348b"
+      },
+      {
+        "type": "color",
+        "id": "popuptextcolor",
+        "label": "Text Color",
+        "default": "#fff"
+      },
+      {
+        "type": "image_picker",
+        "id": "popupimage",
+        "label": "Image",
+        "info": "Size: 72px X 72px"
+      },
+      {
+        "type": "text",
+        "id": "popupheading",
+        "label": "heading",
+        "default": "<u>Expert Confesses: The Secret To Soothing Foot</u> Problems"
+      },
+      {
+        "type": "url",
+        "id": "link1",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "popupbtn",
+        "label": "Button Text",
+        "default": "<u>Click here to find more...</u>"
+      },
+      {
+        "type": "url",
+        "id": "link2",
+        "label": "Button Link"
+      },
+      {
+        "type": "textarea",
+        "id": "maintitle",
+        "label": "Main Title",
+        "default": "Why One Of America’s Top Physical Therapist Says Your “Old Socks” Could Be Causing Foot Problems"
+      },
+      {
+        "type": "text",
+        "id": "date",
+        "label": "Date",
+        "default": "April 7, 2022"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Title",
+        "default": "The Reality Of Neuropathy Pain:"
+      },
+      {
+        "type": "html",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>⇨ What’s the <span>#1 cause of foot problems</span> and foot swelling?</p><p>⇨ The “old sock” secret that help ease foot problems.</p><p>⇨ The safe at-home <span>‘5-second morning ritual’</span> that keeps your feet feeling fresh all day (try this today)</p>"
+      }
+    ]
+  }
+{% endschema %}

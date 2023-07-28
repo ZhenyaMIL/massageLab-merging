@@ -1,0 +1,232 @@
+<div class="ai_ml_section_cnt {{ section.settings.classes }}" style="background-color:{{ section.settings.background-color }}">
+	<div class="page-width ai_ml_inner_cnt row">	
+		{% for block in section.blocks %}
+		  {% if block.type == 'hy-content-with-title' %}      	
+			  <div class="columns small-12 medium-6 hy-content-with-title float-{{ block.settings.block_alignment }} ">
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+                        <div class="hy-content-pie-cnt">
+        					{% for block in section.blocks %}
+                            {% if block.type == 'hy-content-with-points' %} 
+                                <div class="item-list row">
+                                  <div class="columns small-2">
+                                    <div class="value-box" data-percent="{{ block.settings.pie_range }}">
+                                         <div class="count-number"><span class="counter">{{ block.settings.pie_range }}</span>%</div>
+                                    </div>
+                                  </div>  
+                                  <div class="content-block columns small-10">
+                                    {% if block.settings.pie_title != blank %}
+                                      <div class="smallheading">{{ block.settings.pie_title }}</div>
+                                    {% endif %}	
+                                    {% if block.settings.pie_content != blank %}
+                                      <div class="text">{{ block.settings.pie_content }}</div>
+                                    {% endif %}  
+                                  </div>
+                                </div>
+                            {% endif %} 
+                            {% endfor %}  
+                        </div>
+            			{% if block.settings.content != blank %}
+    						<p>{{ block.settings.content }}</p>
+    					{% endif %}	                    
+      					{% if block.settings.button_text != blank %}
+        						<div><a class="ai_ml_wbm_btn" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a></div>
+        			    {% endif %}	  					
+              </div>        
+		  {% endif %}
+
+		{% endfor %}	
+
+  		{% for block in section.blocks %}
+		  {% if block.type == 'hy-content-with-media' %}      	
+					<div class="columns small-12 medium-6 hy-content-with-media float-{{ block.settings.block_alignment }} ">
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+    					
+    					{% if block.settings.sub_title != blank %}
+    						<h3>{{ block.settings.sub_title }}</h3>
+    					{% endif %}	
+
+            			{% if block.settings.image != blank %}
+    						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+    					{% endif %}	    
+
+             			{% if block.settings.video != blank %}
+    						  {% if block.settings.video.media_type == 'video' %}
+                                {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+                              {% endif %}
+    					{% endif %}	                       
+					</div>
+		  {% endif %}
+		{% endfor %}
+
+  
+  <div class="ai_ml_clear"></div>					
+
+    </div>    
+			
+</div>
+
+<script>
+  jQuery(document).ready(function($) {
+
+    $('.value-box').easyPieChart({ 
+      barColor: '#00c2cb',
+      size: 76,
+      trackColor: '#cbeff0',
+      easing: 'easeInOut',
+      scaleColor: false,
+      lineCap: 'circle',
+      lineWidth: 8,
+      animate: 2000
+    });
+    
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Heal Yourself Section",  
+    "tag": "section",
+    "class": "ai_ml_section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      },
+	  {
+        "type": "text",
+        "id": "classes",
+        "label": "Classes"
+      }       
+    ],
+    "blocks":[
+      {
+		"type":"hy-content-with-title",
+  	 	"name": "Content With Text",
+     	 "settings": [
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      },
+	  {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "text"
+      }, 
+	  {
+        "type": "text",
+        "id": "button_link",
+        "label": "Button Link",
+        "default": "text"
+      },            
+      {
+        "type": "select",
+        "id": "block_alignment",
+        "label": "Block alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }	  
+      ]
+      },
+	  {
+		"name": "Content With Media",
+		 "type": "hy-content-with-media",
+		"settings": [
+		  {
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "text"
+		  },
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		  },
+		  {
+			"type": "video",
+			"id": "video",
+			"label": "Video"
+		  },
+          {
+            "type": "select",
+            "id": "block_alignment",
+            "label": "Block alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          }	          
+		]
+	  },
+	  {
+		"name": "Content With Points",
+		 "type": "hy-content-with-points",
+		"settings": [
+		  {
+            "type": "range",
+            "id": "pie_range",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Pie Range",
+            "default": 50
+		  },
+    	  {
+            "type": "text",
+            "id": "pie_title",
+            "label": "Title",
+            "default": "text"
+          },
+    	  {
+            "type": "richtext",
+            "id": "pie_content",
+            "label": "Text",
+            "default": "<p>text</p>"
+          }          
+		]
+	  }       
+  	],"presets": [
+      {
+        "name": "Heal Yourself Section",
+        "category": "WBM Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

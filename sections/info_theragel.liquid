@@ -1,0 +1,105 @@
+<div class="page-width">
+  <div class="aboutus-information grid--1-col-tablet-down grid--2-col-desktop grid image-position-{{ section.settings.image_position }}">
+    
+    <div class="information-container grid__item">
+       {% if section.settings.heading != blank %}
+        <div class="title-container section-header">
+          <h2 class="heading">{{ section.settings.heading }}</h2>
+        </div>
+       {% endif %}
+       {% if section.settings.info != blank %}
+        <div class="list-Aboutus-info rte">
+          {{ section.settings.info }}
+        </div>
+       {% endif %}
+        {% if section.settings.about_btn != blank %}
+        <div class="about-btn">
+          <a href="JavaScript:void(0);" class="btn btn-large  button getmytheragel">
+            {{ section.settings.about_btn }}
+          </a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="aboutus-info grid__item">
+      <div class="heading-part">
+        <span class="heading"></span>
+        <span class="heading">Theragel</span>
+        <span class="heading">Others</span>
+      </div>
+      <div class="info-container">
+        
+         <div class="features-name">
+           <ul>
+             <li>360° coverage</li>
+             <li>Light obscuration</li>
+             <li>Stretchable</li>
+             <li>Lower neck & eye coverage</li>
+             <li>Easy to sleep with</li>
+             <li>100% natural method</li>
+             <li>Satisfaction guarantee</li>
+           </ul>
+         </div>
+        <div class="features-value">
+          
+          <div class="our">
+            <ul>
+              <li><span>{%- render 'icon-checkmark' -%}</span></li>
+              <li><span>{%- render 'icon-checkmark' -%}</span></li>
+              <li><span>{%- render 'icon-checkmark' -%}</span></li>
+              <li><span>{%- render 'icon-checkmark' -%}</span></li>
+              <li><span>{%- render 'icon-checkmark' -%}</span></li>
+              <li><span>{%- render 'icon-checkmark' -%}</span></li>
+              <li><span>{%- render 'icon-checkmark' -%}</span></li>
+            </ul>
+          </div>
+          
+          <div class="other">
+			<ul>
+              <li><span class="icon-close-small">{%- render 'icon-close-small' -%}</span></li>
+              <li><span class="icon-close-small">{%- render 'icon-close-small' -%}</span></li>
+              <li><span class="icon-close-small">{%- render 'icon-close-small' -%}</span></li>
+              <li><span class="icon-close-small">{%- render 'icon-close-small' -%}</span></li>
+              <li><span class="icon-close-small">{%- render 'icon-close-small' -%}</span></li>
+              <li><span class="icon-close-small">{%- render 'icon-close-small' -%}</span></li>
+              <li><span class="icon-close-small">{%- render 'icon-close-small' -%}</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Information of Theragel",
+    "tag": "section",
+	"class": "infotheragel-section aboutus-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "We Have Everything You Need ?"
+      },
+      {
+        "type": "html",
+        "id": "info",
+        "label": "Description",
+        "default": "<p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum.</p>"
+      },
+      {
+        "type": "text",
+        "id": "about_btn",
+        "label": "Button Label",
+        "default": "Contact Us"
+      }
+	],
+	"presets": [
+      {
+        "name": "Information of Theragel"
+      }
+    ]
+  }
+{% endschema %}

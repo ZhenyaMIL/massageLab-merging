@@ -1,0 +1,94 @@
+<div class="reviews-testimonial"> 
+  <div class="reviews-testimonial-inner pagewidth"> 
+    <div class="reviews-testimonial-row">
+      {% for block in section.blocks %} 
+       <div class="wrapper">
+          <span class="starrating loox-rating">
+            <i class="loox-icon loox-star"></i>
+            <i class="loox-icon loox-star"></i>
+            <i class="loox-icon loox-star"></i>
+            <i class="loox-icon loox-star"></i>
+            <i class="loox-icon loox-star"></i>
+          </span>
+          <div class="usertitle">
+            {{ block.settings.usertitle }}
+          </div>
+          <div class="userdesc">
+            {{ block.settings.reviews-desc }}
+          </div>
+          <div class="userdetail">
+            <div class="username">
+              {{ block.settings.reviews-username }}
+            </div>
+            <div class="userdesignation">
+              {{ block.settings.reviews-userdesignation }}
+            </div>
+          </div>
+       </div>
+      {% endfor %}
+     </div>
+  </div>  
+</div>  
+
+<script>
+  jQuery(document).ready(function($) {
+   if(window.matchMedia('(max-width: 1350px)').matches) {
+    $('.reviews-testimonial-row').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      autoplay: false
+    });
+   }
+  });
+</script>
+
+<style type="text/css"> 
+  
+</style>
+
+
+{% schema %}
+  {
+    "name": "Reviews Testimonial",
+    "tag":"section",
+    "settings": [
+     ],
+    "blocks": [
+      { 
+        "type": "image",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "text",
+            "id": "usertitle",
+            "label": "User Title",
+            "default": "Title"
+          },
+          {
+            "type": "html",
+            "id": "reviews-desc",
+            "label": "Description",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          },
+          {
+            "type": "text",
+            "id": "reviews-username",
+            "label": "User Name",
+            "default": "Username"
+          },
+          {
+            "type": "text",
+            "id": "reviews-userdesignation",
+            "label": "User Designation",
+            "default": "User Designation"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+

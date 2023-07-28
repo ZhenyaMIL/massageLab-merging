@@ -1,0 +1,101 @@
+<div class="ai_ml_section_cnt" style="background-color:{{ section.settings.background-color }}">
+	<div class="page-width ai_ml_inner_cnt row">	
+      {% if section.settings.title != blank %}
+        <div class="mbg-content-main_cnt ai_ml_align_center ai_ml_margin_center small-12 medium-8">
+            
+            	{% if section.settings.image != blank %}
+    				<figure class="ai_ml_margin_center"><img src="{{ section.settings.image | img_url: 'master' }}" /></figure>
+        		{% endif %}	
+        
+    			<h1 class="mbg-content-main-title">{{ section.settings.title }}</h1>
+
+                {% if section.settings.sub_title != blank %}
+    				<h1>{{ section.settings.sub_title }}</h1>
+    			{% endif %}	 	           
+          
+                {% if section.settings.content != blank %}
+    				<p>{{ section.settings.content }}</p>
+    			{% endif %}	
+
+               <div class="mbg-partner-content row ai_ml_margin_center">
+                 {% if section.settings.partner_content != blank %}
+                     <div>{{ section.settings.partner_content }} {% if section.settings.partner_logo != blank %} <img src="{{ section.settings.partner_logo | img_url: 'master' }}" /> {% endif %}</div>
+                 {% endif %}            
+               </div> 
+        </div>
+      {% endif %}   
+      
+
+  
+  <div class="ai_ml_clear"></div>					
+
+    </div>    
+			
+</div>
+
+
+{% schema %}
+  {
+    "name": "Money Back Section",  
+    "tag": "section",
+    "class": "ai_ml_section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      },
+ 	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+ 	  {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Title",
+        "default": "text"
+      },      
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      }, 
+	  {
+        "type": "text",
+        "id": "classes",
+        "label": "Classes"
+      },
+	  {
+	    "type": "image_picker",
+	    "id": "image",
+	    "label": "Image"
+	  },
+ 	  {
+        "type": "richtext",
+        "id": "partner_content",
+        "label": "Partner Content",
+        "default": "<p>text</p>"
+      },      
+	  {
+	    "type": "image_picker",
+	    "id": "partner_logo",
+	    "label": "Partner Logo"
+	  }       
+    ],
+    "presets": [
+      {
+        "name": "Money Back Section",
+        "category": "WBM Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,84 @@
+<div class="physical-section" data-section-id="{{ section.id }}" data-section-type="video-section" data-mobile-natural="false">
+    <div class="physical-shopify-section-inner">
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-heading">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.desc1 != blank %}
+        <div class="text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      <div class="videowrapperblock">
+      {% for block in section.blocks %}
+         <div class="videoblock">
+           <div class="video-inner-block">
+             {% if block.settings.image_cover != blank %}
+              <figure>
+                <img src="{{ block.settings.image_cover | img_url: 'master' }}" />
+              </figure>             
+            {%- endif -%}
+             <span class="starrating loox-rating">
+              <i class="loox-icon loox-star"></i>
+              <i class="loox-icon loox-star"></i>
+              <i class="loox-icon loox-star"></i>
+              <i class="loox-icon loox-star"></i>
+              <i class="loox-icon loox-star"></i>
+             </span>
+             {% if block.settings.videodesc != blank %}
+               <div class="video-desc">{{ block.settings.videodesc }}</div>
+             {% endif %}
+             {% if block.settings.videoname != blank %}
+               <div class="video-name">{{ block.settings.videoname }}</div>
+             {% endif %}
+           </div>
+         </div>
+      {% endfor %}
+      </div>
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+
+{% schema %}
+  {
+    "name": "Physical Section5",
+    "class":"physical-video",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Title",
+        "default": "<i>Why Thousands Of People Love Their SootheSocks™</i>"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_cover",
+            "label": "Image Cover"
+          },
+          {
+            "type": "html",
+            "id": "videodesc",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "videoname",
+            "label": "Name"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

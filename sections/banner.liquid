@@ -1,0 +1,216 @@
+<div id="shopify-section-hero" class="shopify-section index-section index-section--flush">
+    <div data-section-id="hero" data-section-type="hero-section" class="page-width">
+       <div class="hero hero--large hero-hero hero__overlay box ratio-container js" id="Hero-hero" data-layout="full_width" data-sizes="auto" data-parent-fit="cover" style="background-position: center;">
+          
+          <div class="hero__inner">
+             <div class="page-width text-left">
+                <div class="mega-text">{{ section.settings.title }}</div>
+                <h2 class="h1 mega-title">{{ section.settings.maintitle }}</h2>
+                <div class="rte-setting mega-subtitle">
+                   {{ section.settings.text }}
+                </div>
+                <a href="{{ section.settings.btn_link }}" class="btn hero__btn" aria-describedby="a11y-external-message">
+                {{ section.settings.btn_text }}
+                </a>
+                <!-- <script>
+                   $(".hero__btn").click(function() {
+                       $('html, body').animate({
+                           scrollTop: $(".collection-main-tag").offset().top
+                       }, 2000);
+                   });
+                </script> -->
+             </div>
+             <div class="hero__inner-bg">
+                <img class="hero-fixed-width__image" data-dsk-src="{{ section.settings.image | img_url: 'master' }}" data-mob-src="{{ section.settings.image | img_url: 'master' }}" src="{{ section.settings.image | img_url: 'master' }}" alt="">
+             </div>
+          </div>
+       </div>
+       <noscript>
+          <div class="hero hero--large hero__overlay" style="background-image: url('{{ section.settings.image | img_url: 'master' }}'); background-position: center center;"></div>
+       </noscript>
+    </div>
+
+
+
+<style>div#shopify-section-hero {
+	padding-bottom: 0;
+}
+
+div#shopify-section-hero .page-width {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#Hero-hero {
+	background-image: unset;
+	display: flex;
+	height: 100%;
+	background-color: #fff;
+}
+
+.hero__inner {
+	display: flex;
+	width: 100%;
+	max-width: 100%;
+	align-items: center;
+	padding-top: 50px;
+}
+
+#Hero-hero::after {
+	display: none;
+}
+
+.hero__overlay::before {
+	display: none;
+}
+
+.hero__inner-bg {
+	height: 100%;
+	width: 60%;
+}
+
+.hero__inner-bg img {
+	max-height: 100%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.hero__inner .page-width.text-left {
+	width: 40%;
+}
+
+.hero__inner .page-width.text-left h2 {
+	/*     padding-right:210px; */
+	font-size: 44px;
+	color: #000;
+	text-shadow: unset;
+}
+
+.review-container {
+	margin-top: 0px;
+	display: flex;
+}
+
+a.review-badge-pupnaps {
+	margin-top: 6px;
+	/*     margin-left:30px; */
+}
+
+.mega-subtitle p,
+.mega-subtitle {
+	color: #69727b;
+	text-shadow: unset !important;
+	font-size: 17px;
+}
+
+.review-container img {
+	height: 80px;
+	padding-right: 35px;
+	object-fit: contain;
+	margin-top: 40px;
+	box-sizing: border-box;
+}
+
+.mega-text {
+	font-size: 22px;
+	font-weight: 700;
+}
+
+@media (min-width: 768px) {
+	#shopify-section-hero {
+		background: #f5f5f5;
+	}
+	#shopify-section-hero .page-width {
+		padding-bottom: 60px;
+	}
+	.hero__inner {
+		background: #f5f5f5;
+	}
+}
+
+@media (max-width:1300px) {
+	.hero__inner {
+		padding: 50px;
+	}
+}
+
+@media (max-width:1030px) {
+	.hero__inner {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.hero__inner .page-width.text-left h2 {
+		font-size: 36px;
+	}
+	.hero__inner-bg img {
+		width: 100%;
+	}
+	.review-container img {
+		padding-left: 0;
+	}
+}
+
+@media (max-width:767px) {
+	.hero__inner {
+		flex-direction: column;
+		padding-top: 20px;
+	}
+	.hero__inner-bg,
+	.hero__inner .page-width.text-left {
+		width: 100%;
+		text-align: center !important;
+	}
+	.hero__inner .page-width.text-left h2 {
+		font-size: 2rem;
+	}
+	.review-container {
+		display: none;
+	}
+}
+</style>
+</div>
+
+{% schema %}
+{
+    "name": "Banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "maintitle",
+            "label": "Main Title"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+        },
+        {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button Url"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Banner",
+            "category": "Image"
+        }
+    ]
+}
+{% endschema %}

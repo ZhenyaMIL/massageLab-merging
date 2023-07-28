@@ -1,0 +1,87 @@
+<div class="physical-section">
+    <div class="physical-shopify-section-inner">
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-heading">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.desc1 != blank %}
+        <div class="text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      <div class="titlebg"> 
+        <div class="titlebox-content">
+          {% if section.settings.title1 != blank %}<div class="text-title"><span class="titleimg">{% if section.settings.titleimg != blank %}<img class="lazyload" src="{{ section.settings.titleimg | img_url: 'master' }}" alt="Section Image1"></span>{% endif %}<div class="titlebox">{{ section.settings.title1 }}</div></div>{% endif %}
+          {% if section.settings.title2 != blank %}<div class="text-title"><span class="titleimg">{% if section.settings.titleimg != blank %}<img class="lazyload" src="{{ section.settings.titleimg | img_url: 'master' }}" alt="Section Image1"></span>{% endif %}<div class="titlebox">{{ section.settings.title2 }}</div></div>{% endif %}
+          {% if section.settings.title3 != blank %}<div class="text-title"><span class="titleimg">{% if section.settings.titleimg != blank %}<img class="lazyload" src="{{ section.settings.titleimg | img_url: 'master' }}" alt="Section Image1"></span>{% endif %}<div class="titlebox">{{ section.settings.title3 }}</div></div>{% endif %}
+          {% if section.settings.title4 != blank %}<div class="text-title"><span class="titleimg">{% if section.settings.titleimg != blank %}<img class="lazyload" src="{{ section.settings.titleimg | img_url: 'master' }}" alt="Section Image1"></span>{% endif %}<div class="titlebox">{{ section.settings.title4 }}</div></div>{% endif %}
+        </div>
+      </div>
+      {% if section.settings.desc2 != blank %}
+        <div class="text-edit">{{ section.settings.desc2 }}</div>
+      {% endif %}
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Section5",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Title",
+        "default": "<i>Why They Work So Well</i>"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1",
+        "default": "<p>It’s because they use breakthrough “compression zone” technology to apply soothing pressure to areas of the feet that need it most.</p><p>The extra blood flow keeps those nerves in your feet healthy, which means you enjoy…</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "titleimg",
+        "label": "Image",
+        "info": "Size: 38px X 38px"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Title1",
+        "default": "Near-instant relief from stabbing pain or burning"
+      },
+      {
+        "type": "text",
+        "id": "title2",
+        "label": "Title2",
+        "default": "Feet that never feel numb or tingly"
+      },
+      {
+        "type": "text",
+        "id": "title3",
+        "label": "Title3",
+        "default": "Reduced swelling and tenderness"
+      },
+      {
+        "type": "text",
+        "id": "title4",
+        "label": "Title4",
+        "default": "Walking, standing, or resting with no pain bothering you"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Description2",
+        "default": "<p>They’re <strong>comfier than normal socks</strong> and support your ankles, feet, heels, toes, and arches all day long.</p><p>They’re <strong>lightweight, breathable, and durable</strong> because they use premium moisture wicking fabric.</p><p>And thanks to <strong>the non-slip cuffs</strong>, SootheSocks won’t fall down or bunch up — even if you’re walking, running, or squatting down.</p><p>Plus, what my husband really loved was that <i><u>they don’t look any different than normal socks.</u></i></p>"
+      },
+      {
+        "type": "html",
+        "id": "desc3",
+        "label": "Description3",
+        "default": "<p>Honestly, it sounds too good to be true. But Dr. Jeremy insists that anyone with foot pain give them a try.</p><p>And so we did!</p>"
+      }
+    ]
+  }
+{% endschema %}

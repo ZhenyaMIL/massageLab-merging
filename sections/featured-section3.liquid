@@ -1,0 +1,43 @@
+<div class="featured-header">
+  <div class="featured-wrapper">
+    {% if section.settings.videolink != blank %}
+      <video class="featured-video" width="100%" autoplay loop muted>
+        <source src="{{ section.settings.videolink }}" type="video/mp4" />
+      </video>
+    {% endif %}
+    
+    {% if section.settings.subheading != blank %}
+      <h2 class="subheading">{{ section.settings.subheading }}</h2>
+    {% endif %}
+    {% if section.settings.desc != blank %}
+      <div class="featured-des">{{ section.settings.desc }}</div>
+    {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Featured Section3",
+    "class": "featured-section3",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "videolink",
+        "label": "Video Link"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "How Do Silverthread Towels Stay Fresher For Longer?"
+      },
+      {
+        "type": "html",
+        "id": "desc",
+        "label": "Decription"
+      }
+    ]
+  }
+{% endschema %}

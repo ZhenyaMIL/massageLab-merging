@@ -1,0 +1,64 @@
+<div class="featured-header">
+  <div class="featured-wrapper">
+    {% if section.settings.subheading != blank %}
+      <h2 class="subheading">{{ section.settings.subheading }}</h2>
+    {% endif %}
+    {% if section.settings.desc1 != blank %}
+      <div class="featured-des">{{ section.settings.desc1 }}</div>
+    {% endif %}
+     {% if section.settings.desc2 != blank or section.settings.desc3 != blank %}
+      <ol class="list-number">
+        {% if section.settings.desc2 != blank %}
+          <li class="list-item">{{ section.settings.desc2 }}</li>
+        {% endif %}
+        {% if section.settings.desc3 != blank %}
+          <li class="list-item">{{ section.settings.desc3 }}</li>
+        {% endif %}
+      </ol>
+    {% endif %}
+    {% if section.settings.note != blank %}
+      <div class="blue-note">
+        <p class="blue-notetext">
+          {{ section.settings.note }}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Featured Section7",
+    "class": "featured-section7",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "How To Try Silverthread Bath Towels, Risk-Free, Today"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Decription1"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Decription2"
+      },
+      {
+        "type": "html",
+        "id": "desc3",
+        "label": "Decription3"
+      },
+      {
+        "type": "html",
+        "id": "note",
+        "label": "Note"
+      }
+    ]
+  }
+{% endschema %}

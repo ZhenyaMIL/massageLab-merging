@@ -1,0 +1,63 @@
+<div class="physical-section">
+    <div class="physical-shopify-section -inner">
+      {% if section.settings.sectionimage != blank %}
+        <div class="sectionimage">
+          <img class="lazyload" src="{{ section.settings.sectionimage | img_url: 'master' }}" alt="Section Image1">
+        </div>
+      {% endif %}
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-header-maintitle">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.desc1 != blank %}
+        <div class="physical-desc1 text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      {% if section.settings.desc2 != blank %}
+        <div class="physical-desc2 text-edit descbg">{{ section.settings.desc2 }}</div>
+      {% endif %}
+      {% if section.settings.desc3 != blank %}
+        <div class="physical-desc3 text-edit">{{ section.settings.desc3 }}</div>
+      {% endif %}
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Section1",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "sectionimage",
+        "label": "Image",
+        "info": "Size: 1360px X 471px"
+      },
+      {
+        "type": "html",
+        "id": "maintitle",
+        "label": "Title",
+        "default": "<i><strong>“Your nerves have an outer casing like a banana”</strong></i> says Doctor of Physical Therapy &amp; U.S. Military Veteran, Jeremy Campbell."
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1",
+        "default": "<p>He points to a drawing on his wall and continues, “That’s the way healthy nerves should look. But in people with foot issues they start to lose their protective coating”</p><p>I’m with my husband Paul sitting in the esteemed Jeremy Campbell’s office, talking about Paul’s foot neuropathy pain. For the first time ever, it was all making sense.</p>"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Description2",
+        "default": "<p><i>“The problem is, Paul, your neuropathy means that the outer casings around millions of nerves in your feet are being peeled back. And just like leaving an unpeeled banana out in the air, your nerves are shriveling up and dying… which is causing the pain, tingling, and numbness you feel.”</i></p>"
+      },
+      {
+        "type": "html",
+        "id": "desc3",
+        "label": "Description3",
+        "default": "<p>So that led to Paul and I asking the same question….</p>"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,3651 @@
+{
+  "current": {
+    "color_text": "#000000",
+    "color_sale_text": "#28932f",
+    "color_button": "#00c2cb",
+    "type_header_font": "montserrat_n7",
+    "type_base_font": "montserrat_n4",
+    "social_twitter_link": "twitter.com",
+    "social_facebook_link": "facebook.com",
+    "social_pinterest_link": "pinterest.com",
+    "social_instagram_link": "instagram.com",
+    "favicon": "shopify:\/\/shop_images\/massage-lab-logo-2.png",
+    "enable_ajax": false,
+    "checkout_logo_image": "shopify:\/\/shop_images\/MassageLab_Checkout.jpg",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "small",
+    "checkout_accent_color": "#00c2cb",
+    "checkout_button_color": "#00c2cb",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "logo": "shopify:\/\/shop_images\/mlab_logo_2.png",
+          "logo_max_width": 80,
+          "main_linklist": "main-menu",
+          "message": true,
+          "home_page_only": false,
+          "message_text": "RESULTS OR A FULL REFUND ON ALL ORDERS",
+          "message_link": "",
+          "color_bg": "#000000",
+          "color_text": "#ffffff"
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "layout": "left",
+          "title": "Foto mit Text",
+          "text": "<p>Kombinieren Sie große Schrift mit einem Foto, um einen Fokus auf Ihr ausgewähltes Produkt, die Kategorie oder einen Blogpost zu legen. Sie können dann Details zur Verfügbarkeit und dem Style oder sogar eine Bewertung hinzufügen.<\/p>",
+          "button_label": ""
+        }
+      },
+      "feature-columns": {
+        "type": "feature-columns",
+        "blocks": {
+          "feature-columns-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Titel oder Text hinzufügen",
+              "text": "<p>Blogposts, Produkte oder Promotions mit Ihren Kunden teilen. Nutzen Sie diesen Text, um Produkte zu beschreiben, Details zu Verfügbarkeit und Stil mitzuteilen oder als Ort, wo Reviews oder FAQs stehen.<\/p>",
+              "button_label": ""
+            }
+          },
+          "feature-columns-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Titel oder Text hinzufügen",
+              "text": "<p>Blogposts, Produkte oder Promotions mit Ihren Kunden teilen. Nutzen Sie diesen Text, um Produkte zu beschreiben, Details zu Verfügbarkeit und Stil mitzuteilen oder als Ort, wo Reviews oder FAQs stehen.<\/p>",
+              "button_label": ""
+            }
+          },
+          "feature-columns-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Titel oder Text hinzufügen",
+              "text": "<p>Blogposts, Produkte oder Promotions mit Ihren Kunden teilen. Nutzen Sie diesen Text, um Produkte zu beschreiben, Details zu Verfügbarkeit und Stil mitzuteilen oder als Ort, wo Reviews oder FAQs stehen.<\/p>",
+              "button_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "feature-columns-0",
+          "feature-columns-1",
+          "feature-columns-2"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "left"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "title": "Vorgestellte Kategorie",
+          "collection": "",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "quotes": {
+        "type": "quotes",
+        "blocks": {
+          "quotes-0": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Kunden-Reviews und Testimonials, die Kundenzufriedenheit beweisen.<\/p>",
+              "author": "Name des Autors"
+            }
+          },
+          "quotes-1": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Kunden-Reviews und Testimonials, die Kundenzufriedenheit beweisen.<\/p>",
+              "author": "Name des Autors"
+            }
+          },
+          "quotes-2": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Kunden-Reviews und Testimonials, die Kundenzufriedenheit beweisen.<\/p>",
+              "author": "Name des Autors"
+            }
+          }
+        },
+        "block_order": [
+          "quotes-0",
+          "quotes-1",
+          "quotes-2"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "blocks": {
+          "image-bar-0": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          },
+          "image-bar-1": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          },
+          "image-bar-2": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "image-bar-0",
+          "image-bar-1",
+          "image-bar-2"
+        ],
+        "settings": {
+          "section_height": "medium"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "59ade0d1-7e21-4936-8a7b-e275ee8efea4": {
+            "type": "link_list",
+            "settings": {
+              "title": "mLab™",
+              "menu": "main-menu"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "title": "Navigation",
+              "menu": "footer"
+            }
+          },
+          "dc2d0b57-55aa-4127-838a-9106dec82bf4": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Join The Family and be the first to know about new product launches and super sales:"
+            }
+          }
+        },
+        "block_order": [
+          "59ade0d1-7e21-4936-8a7b-e275ee8efea4",
+          "footer-0",
+          "dc2d0b57-55aa-4127-838a-9106dec82bf4"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "color_footer_bg": "#f6f6f6",
+          "color_footer_text": "#333232",
+          "show_locale_selector": false,
+          "show_currency_selector": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "heading": "You may also like",
+          "show_vendor": false
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": false
+        }
+      },
+      "1625997579ddfd881f": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/NeckCloud_Features_Pointout.jpg",
+          "layout": "left",
+          "title": "Neck Cloud™️ - Cervical Traction Device",
+          "text": "<p>✔️ Naturally eliminate neck pain and migraines<\/p><p><strong>✔️ <\/strong>Wake up refreshed without a sore neck<\/p><p><strong>✔️ <\/strong>Corrects postural imbalances️<\/p><p>✔️ Stress, anxiety & tension relieving<\/p>",
+          "button_label": "",
+          "button_link": "shopify:\/\/products\/neck-cloud"
+        }
+      },
+      "16259975890f4fb4b1": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Back-Stretcher.jpg",
+          "layout": "right",
+          "title": "MassageLab™️ - Orthopedic Back Stretcher",
+          "text": "<p>✔️ Naturally eliminate chronic back pain and sciatica<\/p><p>✔️ Your own in-home chiropractor <\/p><p>✔️ Corrects postural imbalances<\/p><p>✔️ Instantly relieve lower back pain<\/p>",
+          "button_label": "",
+          "button_link": "shopify:\/\/products\/back-stretcher"
+        }
+      },
+      "16259977751e395efa": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Deep_Sleep_9a32bd58-996e-4eb6-9e5d-d03bb448a947.jpg",
+          "layout": "left",
+          "title": "Deep Sleep™ - Orthopedic Memory Foam Pillow",
+          "text": "<p>✔️ Ergonomic design for out-of-this-world comfort<\/p><p>✔️<strong> <\/strong>Promotes circulation to relieve pressure on problem areas<\/p><p>✔️ Ergonomic design relieves pressure on the lower back<\/p><p>✔️ Correctly positions your head and neck for the best night's sleep<\/p><p><strong>✔️ <\/strong>Wake up refreshed without a sore neck<\/p>",
+          "button_label": "",
+          "button_link": "shopify:\/\/products\/deep-sleep"
+        }
+      },
+      "16259988479b2815bf": {
+        "type": "logo-bar",
+        "blocks": {
+          "16259988479b2815bf-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1_Easy_customer_service.jpg",
+              "link": ""
+            }
+          },
+          "16259988479b2815bf-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Tracked_Insured_Shipping.jpg",
+              "link": ""
+            }
+          },
+          "16259988479b2815bf-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Money_Back_Guarantee.jpg",
+              "link": ""
+            }
+          },
+          "16259988479b2815bf-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/4_CertiPUR-US_Certified.jpg",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "16259988479b2815bf-0",
+          "16259988479b2815bf-1",
+          "16259988479b2815bf-2",
+          "16259988479b2815bf-3"
+        ],
+        "settings": {
+          "title": "WE VALUE OUR CUSTOMERS"
+        }
+      },
+      "1625998915a7e2e0d2": {
+        "type": "newsletter",
+        "settings": {
+          "section_title": "JOIN THE FAMILY",
+          "subheading": "<p>Don't add missing out to your list of pains. Join the MASSAGELAB™ family below!<\/p>",
+          "show_background": true
+        }
+      },
+      "1626602569609be02b": {
+        "type": "feature-columns",
+        "blocks": {
+          "1626602569609be02b-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Regina_Neck_Cloud_Review.png",
+              "title": "Regina about the Neck Cloud™️",
+              "text": "<p>\"It definitely lives up to the name! I'm a nurse and we put people in traction all the time... its definitely where your neck is the most comfortable. I put it behind my neck when I watch TV so its super easy to get those 7 minutes a day in. I wish I found this sooner!\"<\/p><p>- Regina ⭐️⭐️⭐️⭐️⭐️ <\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1626602569609be02b-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Cat_min_1x1_1173a811-89fe-44cd-8c65-64119a509178.jpg",
+              "title": "Isabelle about the Neck Cloud™️",
+              "text": "<p>\"Even my kitty Mochi LOVES it!! I can't believe how much more flexible I am and how good I feel now when I wake up.. I had chronic neck pain but didn't have the money to invest into a good chiro.. I tried different devices in the past and nothing helped really. I still went for the neck cloud because they have a money back guarantee and it was the best decision I have ever made. (after the decision to adopt my little Mochi 🙂🙂).\"<\/p><p>- Isabelle ⭐️⭐️⭐️⭐️⭐️<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1626602569609be02b-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Ethan_About_The_Neck_Cloud_1x1_30524291-fd7c-4761-ae9d-61077009ffe7.jpg",
+              "title": "Ethan about the Neck Cloud™️",
+              "text": "<p>\"I work in front of the computer for hours every single day and it causes me a lot if neck pain and stiffness... Since using this on a daily basis I wake up feeling refreshed without a sore and stiff neck.\"<\/p><p>- Ethan ⭐️⭐️⭐️⭐️⭐️ <\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1626602569609be02b-0",
+          "1626602569609be02b-2",
+          "1626602569609be02b-1"
+        ],
+        "settings": {
+          "title": "Top rated against neck pain",
+          "align_text": "left"
+        }
+      },
+      "1632391725b459a80a": {
+        "type": "banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/pillow_2.png",
+          "title": "Over 15,000 Happy Customers",
+          "maintitle": "Effectively Eliminate Your Pain",
+          "text": "<p>Backed by Science & a Risk-Free Guarantee.<\/p>",
+          "btn_text": "SHOP PRODUCTS 👉",
+          "btn_link": "shopify:\/\/collections\/best-sellers"
+        }
+      },
+      "1632391949aa8ee7fa": {
+        "type": "badges",
+        "blocks": {
+          "9325e24a-c40e-4fc6-b13a-bed19ea39efe": {
+            "type": "badge",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/microscope_1.png",
+              "text": "<strong>Science Backed<\/strong>Results"
+            }
+          },
+          "53e73de3-6601-43ae-b451-ca43155312c2": {
+            "type": "badge",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/waranty_7d3b3b5b-d2d0-4e09-ab9c-517ca54bcd00.png",
+              "text": "<strong>60-Day Money Back<\/strong> Guarantee"
+            }
+          },
+          "f141f36e-3da0-4e17-8513-190c30daafa2": {
+            "type": "badge",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/customer-service.png",
+              "text": "<strong>Easy Customer Service<\/strong>24\/7 via Email"
+            }
+          },
+          "74333a71-a012-4a8e-97fc-7e7bfe10e3a7": {
+            "type": "badge",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/certified.png",
+              "text": "<strong>CertiPUR-US Certified<\/strong>products"
+            }
+          }
+        },
+        "block_order": [
+          "9325e24a-c40e-4fc6-b13a-bed19ea39efe",
+          "53e73de3-6601-43ae-b451-ca43155312c2",
+          "f141f36e-3da0-4e17-8513-190c30daafa2",
+          "74333a71-a012-4a8e-97fc-7e7bfe10e3a7"
+        ],
+        "settings": {}
+      },
+      "theragel-product-template": {
+        "type": "theragel-product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "reviewtext": "Tested, peer reviewed & rated by 100+ people & professionals  ★★★★★ (4.9\/5)",
+          "headingtext": "<b>Naturally relieve your headache or migraine using 360° cold therapy and gentle compression.<\/b> <p><\/p>",
+          "icontext1": "✔ Get a Migraine-free life",
+          "icontext2": "✔ Backed by science",
+          "icontext3": "✔ 60-day satisfaction guarantee",
+          "show_payment_icons": true,
+          "accordion__title1": "Guarantee",
+          "content1": "<p>We have an iron-clad, risk-free 60-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>",
+          "page1": "",
+          "accordion__title2": "Shipping",
+          "content2": "<p><strong>Every order is tracked and insured! <\/strong>Shipping time will be 7-15 business days days. All orders are shipped with a tracking number.<\/p>",
+          "page2": ""
+        }
+      },
+      "benefits": {
+        "type": "benefits",
+        "blocks": {
+          "b0c8e1ac-340a-4650-b428-0f86e54f0a53": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/1658157353963.png",
+              "benefits-title": "Puts you in relaxation mode"
+            }
+          },
+          "d4359aae-f968-4044-a1ef-da7da68ad4ef": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/1658157354968.png",
+              "benefits-title": "360° cooling & compression"
+            }
+          },
+          "bf84c2bf-0057-4048-8a77-f30b2a476047": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/1658157356086.png",
+              "benefits-title": "Reduces Stress"
+            }
+          },
+          "fc27d363-83ad-461c-b514-a71f9b033d34": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/1658157356949.png",
+              "benefits-title": "Cools your temples & eye sockets"
+            }
+          },
+          "0389c5b5-443b-40b3-b2d1-07dba7e82b64": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/1658157362544.png",
+              "benefits-title": "Blocks light"
+            }
+          }
+        },
+        "block_order": [
+          "b0c8e1ac-340a-4650-b428-0f86e54f0a53",
+          "d4359aae-f968-4044-a1ef-da7da68ad4ef",
+          "bf84c2bf-0057-4048-8a77-f30b2a476047",
+          "fc27d363-83ad-461c-b514-a71f9b033d34",
+          "0389c5b5-443b-40b3-b2d1-07dba7e82b64"
+        ],
+        "settings": {
+          "heading": "Eliminate Headache The Natural Way 🌿",
+          "info": "<p>Every single week, millions of people suffer from migraines and headaches and go through their day groggy, irritated or they can’t even get out of bed.\n<\/p>\n<p>The most common solution unfortunately, is just prescription medication that quite often is more harmful than effective.\n<\/p>\n<p>Long term effects of that can lead to chronic inflammations, difficulty thinking, and even trouble functioning.\n<\/p>\n<p>In sharp contrast, the TheraGel™️ headband uses 360° cooling and gentle compression to cool off your head to ease the headache symptoms almost immediately.\n<\/p>\n<strong><p>Backed by science results and a results or a full refund guarantee!\n<\/p><\/strong>",
+          "about_btn": "Get My TheraGel 👉"
+        }
+      },
+      "stepoftheragel": {
+        "type": "stepoftheragel",
+        "settings": {
+          "step1-image": "shopify:\/\/shop_images\/1658157377144.png",
+          "step1-title": "FREEZE YOUR HAT",
+          "step1-desc": "Freeze or refrigerate your headband for at least 20-30 minutes.",
+          "step2-image": "shopify:\/\/shop_images\/1658157386111_e216155e-cbb7-4306-8e2b-c0c176309b02.png",
+          "step2-title": "WEAR 10-20 MINS",
+          "step2-desc": "Wear your hat for 10-20 mins depending on your headache severity.",
+          "step3-image": "shopify:\/\/shop_images\/1658157387286.png",
+          "step3-title": "PAIN RELIEF",
+          "step3-desc": "Enjoy immediate relief, relaxation and your pain-free day!"
+        }
+      },
+      "video-text": {
+        "type": "video-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/1658157287411.jpg",
+          "image_position": "right",
+          "heading": "Say Goodbye to Headache Days 👋",
+          "about_btn": "Get My TheraGel 👉",
+          "value1": 95,
+          "itemheading1": "",
+          "itemtext1": "Said the severity of their Headache or Migraine was significantly reduced",
+          "value2": 94,
+          "itemheading2": "",
+          "itemtext2": "Noticed reduced lengths of the migraine attacks",
+          "value3": 90,
+          "itemheading3": "",
+          "itemtext3": "Were able to continue with their day after 30 minutes of relaxation with the TheraGel™️"
+        }
+      },
+      "about-banner": {
+        "type": "about-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_1.gif",
+          "image_position": "left",
+          "heading": "The Breakthrough Discovery 👩‍🔬",
+          "info": "<p>The old ways of treating headaches has been tested by many but has helped few. This still happens at the current age of advanced technology.\n<\/p>\n<p>Selling medication is just simply more lucrative.\n<\/p>\n<p>After years of research &amp; development, interviews and countless of prototypes &amp; tests, the team at TheraGel™️ carefully engineered the most 4 important elements.\n<\/p>\n<p>The main innovation of the TheraGel™️ comes from combining the most effective solutions to neck pain:\n<\/p>\n<ul> <b>\n<li>360° cold therapy - for the head, temples, eye sockets and lower neck \n<\/li>\n<li>360° gentle compression therapy\n<\/li>\n<li>Light obscuration\n<\/li>\n<li>20-30 minutes of relaxation\n<\/li>\n<\/b>\n<\/ul>\n<p>By combining the 4 most important concepts, the TheraGel™️ results in an almost instant relief of chronic migraines and headaches.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "testimonial": {
+        "type": "testimonial",
+        "blocks": {
+          "69b519f9-e650-4bd9-bdaf-7a75331099b7": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/1658157420785.jpg",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Janet R. - Verified Buyer",
+              "testimonial_description": "<p>I'm totally blown away.<\/p><p>\"The cooling effect, the slight pressure all over and the eye coverage make this more effective than anything for me. I bought this for family too.\"<\/p>"
+            }
+          },
+          "df63abf4-d489-4340-acf9-1e6042cec093": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/1658157417036.jpg",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Robert T. - Verified Buyer",
+              "testimonial_description": "<p>It's groundbreaking.<\/p><p>\"After years and years of regular migranes this is the only thing I found that was actually helpful and that helps me relax and nod off.\"<\/p>"
+            }
+          },
+          "48567fea-fb6f-4312-b6a9-ce9ce6909a3a": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/1658157418042.jpg",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Greyson V. - Verified Buyer",
+              "testimonial_description": "<p>A good solution.<\/p><p>\"I really don't like taking painkillers so this came as a saviour, it's super soothing the second I put it on, I even go to sleep with this sometimes.\"<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "69b519f9-e650-4bd9-bdaf-7a75331099b7",
+          "df63abf4-d489-4340-acf9-1e6042cec093",
+          "48567fea-fb6f-4312-b6a9-ce9ce6909a3a"
+        ],
+        "settings": {
+          "maintitle": "What Our Client Say About Us"
+        }
+      },
+      "info_theragel": {
+        "type": "info_theragel",
+        "settings": {
+          "heading": "How we compare to other solutions",
+          "info": "<p>In every aspect, the TheraGel™️ is superior in quality, method, research and customer satisfaction.\n<\/p>\n<p>Backed by a 100% satisfaction guarantee.\n<\/p>",
+          "about_btn": "Get My TheraGel 👉"
+        }
+      },
+      "guarantee": {
+        "type": "guarantee",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/mlab_logo_2_a97b5321-732f-4bc4-ba25-6363aa37bd85.png",
+          "image_position": "right",
+          "heading": "Results or a FULL Refund Guarantee",
+          "info": "<p>We love our TheraGel™️ Headband and are confident you will too! That’s why we're offering a 60-Day, Risk-Free Trial. If you're not in love with your results, we'll give you a refund. Pinky swear.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "productfaq": {
+        "type": "productfaq",
+        "blocks": {
+          "88b3b044-0c5d-4384-8ec2-daf55779761c": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Will this be effective for my type of headache?",
+              "faq-subtitle": "Cold temperatures are very effective to lessen the pain of almosrt any types headaches and chronic migraines. The cold effect serves to constrict blood vessels and reduce the neurotransmission of pain."
+            }
+          },
+          "2154e3fb-e5c7-4cdb-81ca-f206e8123303": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Will this fit my head?",
+              "faq-subtitle": "The TheraGel™️ headband is a one size fits all. THE DESIGN OF THE HAT MAKES IT STRETCHABLE AND FEATURES DOUBLE SEAMED STITCHING TO ENHANCE COMFORT."
+            }
+          },
+          "40b6592a-1daf-461a-bdea-e4965effc69c": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How long will it remain cold?",
+              "faq-subtitle": "The TheraGel™️ headband is one of the most comfortable and relaxing experiences you'll ever have. It's engineered to freeze or heat at the perfect temperatures every time you use it. The expert-grade inside gel and premium insulation work to hold an almost constant temperature up to 30 minutes to help relieve even the most severe headaches. After 30 minutes, the temperature increase or decrease very slowly."
+            }
+          },
+          "8b142d7a-d4eb-4a8e-8871-90d02c400079": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can I sleep with TheraGel™?",
+              "faq-subtitle": "Absolutely! The TheraGel™️ headband was designed to be super comfortable to wear, and you can easily fall asleep with it due the its 100% snug fit!"
+            }
+          },
+          "850a3ec4-2444-4660-9dea-e1423f537f34": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How do I clean it?",
+              "faq-subtitle": "HAND WASH WITH DAMP TOWEL \/ DO NOT SUBMERGE THE HAT IN WATER \/ LAY FLAT AND AIR DRY \/ DO NOT MACHINE WASH \/ DO NOT IRON"
+            }
+          },
+          "b65ebebe-1ef8-4007-9aee-3b71138afb82": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Do you offer product warranty?",
+              "faq-subtitle": "Absolutely. Our products come with a 30 Day warranty. If you are not happy in anyway, please reach out to us. We will find a solution for you.\n<br>\n<p><strong>WARNING<\/strong><\/p>\nPRIOR USING THE HAT, CHECK FOR TEARS IN THE INNER LINING AND DO NOT USE IF ANY GEL IS VISIBLE \/ DO NOT USE ON CHILDREN UNDER AGE 10 \/ DO NOT USE IF YOU ARE PREGNANT OR NURSING OR IF YOU HAVE HEART DISEASE, DIABETES, SKIN PROBLEMS OR ANY CIRCULATORY PROBLEMS \/ DO NOT WEAR IF TOO COLD OR WARM TO TOUCH WITH YOUR FINGERS \/ APPLY ON DRY SKIN ONLY \/ NEVER WEAR YOUR COLD OR WARM HAT MORE THAN 30 MINUTES STRAIGHT \/ DO NOT MICROWAVE MORE THAN 20 SECONDS INCREMENTS \/ DO NOT APPLY TO AREAS WITH POOR BLOOD CIRCULATION OR ON ANY WOUNDS \/ IF FOR ANY REASON THE GEL COMES IN CONTACT WITH THE SKIN OR EYES, IMMEDIATELY WASH THE AREA WITH SOAP AND WATER \/ IF FOR ANY REASON YOU HAVE AN ALLERGIC REACTION, CLEAN THE AREA WITH SOAP AND WATER AND CONSULT YOUR DOCTOR \/ IF PAIN CONTINUES OR GET WORSE, CONSULT A PHYSICIAN AND\/OR SEEK MEDICAL ATTENTION."
+            }
+          }
+        },
+        "block_order": [
+          "88b3b044-0c5d-4384-8ec2-daf55779761c",
+          "2154e3fb-e5c7-4cdb-81ca-f206e8123303",
+          "40b6592a-1daf-461a-bdea-e4965effc69c",
+          "8b142d7a-d4eb-4a8e-8871-90d02c400079",
+          "850a3ec4-2444-4660-9dea-e1423f537f34",
+          "b65ebebe-1ef8-4007-9aee-3b71138afb82"
+        ],
+        "settings": {
+          "show_counter": true,
+          "maintitle": "FAQs"
+        }
+      },
+      "compressMD-product-template": {
+        "type": "compressMD-product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "reviewtext": "Dr. Cohen and 15.332 others are raving about CompressMD™️ ★★★★★ (4.9\/5)",
+          "headingtext": "<b> Chronic Foot Pain? <\/b> Eliminate pain, stabilize your feet & ankles and be comfortable on your feet for hours with CompressMD™️, the medical-grade compression socks.",
+          "icontext1": "✔ Ultra Comfy Nano-Fiber (12+ hrs wear)",
+          "icontext2": "✔ Reduce Swelling & Inflammation",
+          "icontext3": "✔ Increase Blood Flow",
+          "icontext4": "✔ Relieve Heel & Arch Pain from Plantar Fasciitis",
+          "icontext5": "✔ Increased foot and ankle stability to decrease chances of injury",
+          "show_payment_icons": true,
+          "accordion__title1": "Guarantee",
+          "content1": "<p>We have an iron-clad, risk-free 30-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>",
+          "page1": "",
+          "accordion__title2": "Shipping",
+          "content2": "<p>Every order is tracked and insured! Shipping time will be 7-15 business days days. All orders are shipped with a tracking number.<\/p>",
+          "page2": ""
+        }
+      },
+      "about-banner-compressMD": {
+        "type": "about-banner-compressMD",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/5_Compression_Zones_cfc65d2f-a189-447a-9630-2f7fd0216248.jpg",
+          "image_position": "left",
+          "heading": "Nano-Fiber: The Breakthrough Discovery 👩‍🔬",
+          "info": "<p>After years of research &amp; development, interviews and countless prototypes &amp; tests, the team at MLab™️ carefully engineered the Nano-Fiber which precisely targets the 5 most essential elements to relieving foot aches.\n<\/p>\n<p>The main innovation of the CompressMD™️ comes from combining the most effective solutions to treat any foot ache:\n<\/p>\n<ul>\n<li>360° Targeted Nano-Fiber Compression \n<\/li>\n<li>Foot &amp; Ankle Stability\n<\/li>\n<li>Muscle-Like Arch Support\n<\/li>\n<li>Deep Cradle Heel Support &amp; Stability\n<\/li>\n<li>Increased Blood Flow\n<\/li>\n<\/ul>\n<p>By combining the 5 most important concepts, the <b> CompressMD™️ reduces inflammation and allows your foot to heal, which results in a reversal of Chronic feet aches.<\/b>\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "stepofcompressMD": {
+        "type": "stepofcompressMD",
+        "settings": {
+          "step1-image": "shopify:\/\/shop_images\/foot.png",
+          "step1-title": "Start Wearing CompressMD™️",
+          "step1-desc": "Have them on every day while you are on your feet.",
+          "step2-image": "shopify:\/\/shop_images\/footprint.png",
+          "step2-title": "Start Simple Foot Exercises",
+          "step2-desc": "Shorten recovery time by doing simple exercises at home",
+          "step3-image": "shopify:\/\/shop_images\/active.png",
+          "step3-title": "Lasting Change",
+          "step3-desc": "CompressMD™️ will help you maintain a pain free life"
+        }
+      },
+      "benefits-compressMD": {
+        "type": "benefits-compressMD",
+        "blocks": {
+          "05cc2cbe-7a35-4087-8848-120c90d80e27": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/target.png",
+              "benefits-title": "5 Compression Zones"
+            }
+          },
+          "e23ccbfe-7bb2-475b-a95f-52e0ca633970": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/fiber.png",
+              "benefits-title": "Durable Nano-Fiber"
+            }
+          },
+          "5b920cfa-c65c-4bce-af13-950363cafe86": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/doctor.png",
+              "benefits-title": "Podiatrist Approved"
+            }
+          },
+          "6780a730-2e80-475e-9fc3-c4d5e3db6224": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/pain.png",
+              "benefits-title": "Deep Cradle Heel Support"
+            }
+          },
+          "41bcdd2e-2f11-4397-9e13-f1a744464ff2": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/12-hours.png",
+              "benefits-title": "12+ Hrs of Easy Wear"
+            }
+          }
+        },
+        "block_order": [
+          "05cc2cbe-7a35-4087-8848-120c90d80e27",
+          "e23ccbfe-7bb2-475b-a95f-52e0ca633970",
+          "5b920cfa-c65c-4bce-af13-950363cafe86",
+          "6780a730-2e80-475e-9fc3-c4d5e3db6224",
+          "41bcdd2e-2f11-4397-9e13-f1a744464ff2"
+        ],
+        "settings": {
+          "heading": "Lasting Change: How CompressMD™️ Treats The Root Cause",
+          "info": "<p>For the CompressMD™️ compression socks to be the nr. 1 most successful in helping anyone, they needed to <b>treat every muscle, gristle and bone in and around the foot and ankle.<\/b>\n<\/p>\n<p>This is what the Nano-Fiber was developed for. With the help of Nano-Fiber top Podiatrists were able to specifically engineer CompressMD™️ to target exact spots &amp; muscles in the foot and around the ankle.\n<\/p>\n\n<strong><p>Backed by clinical studies and a results or a full refund guarantee!\n<\/p><\/strong>",
+          "about_btn": "Get Pain Relief Now 👉"
+        }
+      },
+      "video-text-compressMD": {
+        "type": "video-text-compressMD",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/CompressionMD.webp",
+          "image_position": "right",
+          "heading": "Clinically Proven Results",
+          "about_btn": "Get Pain Relief Now 👉",
+          "value1": 95,
+          "itemheading1": "Reduced Foot Pain",
+          "itemtext1": "Said the severity of their foot ache was significantly reduced",
+          "value2": 97,
+          "itemheading2": "Less Swelling",
+          "itemtext2": "Have experienced reduced swelling and increased blood flow to their feet",
+          "value3": 90,
+          "itemheading3": "Stay Longer On Their Feet",
+          "itemtext3": "Said that they can stay on their feet longer"
+        }
+      },
+      "testimonial-compressMD": {
+        "type": "testimonial-compressMD",
+        "blocks": {
+          "fabab1fb-2fa6-43aa-8cec-f57cf7726e47": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/Screenshot_2022-12-15_at_10.36.48.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Greyson V. - Verified Buyer",
+              "testimonial_description": "<p>A hug for my arch.<\/p><p>\"They are great. I work in a kitchen and stand all day and it was like getting a hug for my arch all day long. No pain finally!!\"<\/p>"
+            }
+          },
+          "943417d8-0353-4523-9102-fda440452ead": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/Screenshot_2022-12-15_at_10.40.14.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Lisa T. - Verified Buyer",
+              "testimonial_description": "<p>Life-changing<\/p><p>\"I am truly amazed with the effectiveness of these socks. I have had plantar fasciitis for a year and have seen a podiatrist, chiropractor, and physical therapist.The impact that these socks have made on my pain has been life-changing and that is not an exaggeration.\"<\/p>"
+            }
+          },
+          "bae45d07-a33b-4a5f-85ce-4e9fc4edc9cd": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/Screenshot_2022-12-15_at_10.42.00.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Lilly R. - Verified Buyer",
+              "testimonial_description": "<p>My neuropathy is gone.<\/p><p>\"I bought these as I have Neuropathy and these really help. My pain in my feet is gone and I can now sleep at night without any pain. I will buy more.\"<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "fabab1fb-2fa6-43aa-8cec-f57cf7726e47",
+          "943417d8-0353-4523-9102-fda440452ead",
+          "bae45d07-a33b-4a5f-85ce-4e9fc4edc9cd"
+        ],
+        "settings": {
+          "maintitle": "What Our Clients Say About Us"
+        }
+      },
+      "info_compressMD": {
+        "type": "info_compressMD",
+        "settings": {
+          "heading": "How we compare to other solutions",
+          "info": "<p>In every aspect, the TheraGel™️ is superior in quality, method, research and customer satisfaction.\n<\/p>\n<p>Backed by a 100% satisfaction guarantee.\n<\/p>",
+          "about_btn": "Get Pain Relief Now 👉"
+        }
+      },
+      "guarantee-compressMD": {
+        "type": "guarantee-compressMD",
+        "settings": {
+          "image_position": "right",
+          "heading": "Results or a FULL Refund Guarantee",
+          "info": "<p>We love our CompressMD™️ Compression Socks and are confident you will too! That’s why we're offering a 30-Day, Risk-Free Trial. If you're not in love with your results, we'll give you a refund.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "productfaq-compressMD": {
+        "type": "productfaq-compressMD",
+        "blocks": {
+          "a917e91b-2a22-4005-bc51-b7b20214cdf5": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How does CompressMD™️ \"Targeted Nano-Fiber\" work?",
+              "faq-subtitle": "CompressMD™️ are socks that use compression zone technology. With specialized weaves of strong elastic to create pressure on the muscles in the legs, ankles and feet, the pain relief is almost instant. The socks are tighter at the bottom than they are on top, which gently pushes the blood from the bottom of your foot up the top. This helps improve blood circulation and reduce swelling, alleviating pain in your ankle, feet, and legs."
+            }
+          },
+          "d21d3dc4-a677-4d6c-a2a8-d5ebe7ded19f": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "What kind of pain does this help with?",
+              "faq-subtitle": "CompressMD™️ help relieve pain due to plantar fasciitis, achilles tendonitis, feet that fall asleep, flat feet, throbbing and burning nerve foot pain, arthritis, heel strike pain, weak and lazy legs, edeme, arch pain, foot injury, heel spurs, and foot injuries."
+            }
+          },
+          "361f1958-781a-46e4-9cb7-82d011be89b0": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Is this safe to use?",
+              "faq-subtitle": "The CompressMD™️ compression socks are safe in most instances. However if you suffer from peripheral arterial disease or congestive heart failure, then you should ask your doctor about the advantages of SootheSocks Compression Socks before using them."
+            }
+          },
+          "a48a25a0-7d81-4327-a2d9-19fa7cf2cab5": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Who should wear these?",
+              "faq-subtitle": "If you stand all day at work or at home, have circulation problems, suffer from foot, heel, or leg pain, or simply want to get relief from heavy, swollen, legs, then the CompressMD™️ Compression Socks are for you."
+            }
+          },
+          "befb3de7-5920-49ae-a356-0c898f0c9d26": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can I Wear CompressMD™️ Socks For Plantar Fasciitis At Night?",
+              "faq-subtitle": "Yes, compression socks can help to provide some relief while you sleep and for those first few painful steps in the morning. If you are like most people who suffer from plantar fasciitis pain, taking that first step out of bed every morning is generally the most painful time of day. This is, in part, because your plantar fascia rests in a shortened position while you sleep and is stretched quickly (and painfully!) with those first few steps. The light compression and mild arch support may help reduce the pain in those first steps out of bed in the morning."
+            }
+          },
+          "e1d32d58-959f-46d4-8351-0273f7e4c808": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can I return my order?",
+              "faq-subtitle": "The 30-Day Money-Back Guarantee is our way of ensuring your complete satisfaction with our products. If you are not satisfied with the product, then let us know within 30 calendar days of receiving your order, and we will give you a full refund. The company might request additional information from the customer in case the device is reported as defective or faulty. The cost of shipping for returned items is covered by customers."
+            }
+          }
+        },
+        "block_order": [
+          "a917e91b-2a22-4005-bc51-b7b20214cdf5",
+          "d21d3dc4-a677-4d6c-a2a8-d5ebe7ded19f",
+          "361f1958-781a-46e4-9cb7-82d011be89b0",
+          "a48a25a0-7d81-4327-a2d9-19fa7cf2cab5",
+          "befb3de7-5920-49ae-a356-0c898f0c9d26",
+          "e1d32d58-959f-46d4-8351-0273f7e4c808"
+        ],
+        "settings": {
+          "show_counter": true,
+          "maintitle": "FAQs"
+        }
+      },
+      "reviews-header": {
+        "type": "reviews-header",
+        "settings": {
+          "reviews_background": "#f7f8fa",
+          "reviews_padding": 60,
+          "textcolor1": "#303036",
+          "textcolor2": "#00c2cb",
+          "title1": "REAL PEOPLE. REAL RESULTS",
+          "title2": "Join the 10’s of thousands of customers that are now living healthier, pain-free lives."
+        }
+      },
+      "reviews-videos": {
+        "type": "reviews-videos",
+        "blocks": {
+          "22efac90-8a20-414e-a7e9-4683490dbe94": {
+            "type": "image",
+            "settings": {
+              "bannerimage1": "shopify:\/\/shop_images\/Deborah.png",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=_2x0WWJ6D2c",
+              "reviews-videos-desc": "<p>\"My posture is so much better now!\" - Deborah B.<\/p>"
+            }
+          },
+          "55ecddd5-c60d-4a78-a4c5-f10fa6dfb638": {
+            "type": "image",
+            "settings": {
+              "bannerimage1": "shopify:\/\/shop_images\/N1QW1C1sn_mid.jpg",
+              "video_url": "",
+              "reviews-videos-desc": "<p>\"Almost completely eliminated my neck hump.\" - Joanne D.<\/p>"
+            }
+          },
+          "0b7e9740-f1cd-4d6e-bf8b-7246bd6a7d53": {
+            "type": "image",
+            "settings": {
+              "bannerimage1": "shopify:\/\/shop_images\/4yyXgB2F3_mid.jpg",
+              "video_url": "",
+              "reviews-videos-desc": "<p>\"My neck hump in noticeably better!\" - Irene E.<\/p>"
+            }
+          },
+          "22f77741-0373-48c5-8879-07cf1fa728ce": {
+            "type": "image",
+            "settings": {
+              "bannerimage1": "shopify:\/\/shop_images\/Screenshot_2022-09-26_at_20.42.20.png",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=lCAnUXL2BXQ",
+              "reviews-videos-desc": "<p>\"I'm a nurse, we put people in traction all the time.\" - Regina C.<\/p>"
+            }
+          },
+          "c73cf39e-b5c6-47b5-b266-c9c0d52d2c5c": {
+            "type": "image",
+            "settings": {
+              "bannerimage1": "shopify:\/\/shop_images\/Screenshot_2022-09-26_at_20.55.49.png",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=ipHw6NxeiuM",
+              "reviews-videos-desc": "<p>\"It eliminates my neck pain.\" Taylor D.<\/p>"
+            }
+          },
+          "bdb5a6c0-998b-493c-85d8-f05408e8215f": {
+            "type": "image",
+            "settings": {
+              "bannerimage1": "shopify:\/\/shop_images\/EkNPZAkA9_mid.jpg",
+              "video_url": "",
+              "reviews-videos-desc": "<p>\"literally the best thing I've purchased.\" Jennifer H.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "22efac90-8a20-414e-a7e9-4683490dbe94",
+          "55ecddd5-c60d-4a78-a4c5-f10fa6dfb638",
+          "0b7e9740-f1cd-4d6e-bf8b-7246bd6a7d53",
+          "22f77741-0373-48c5-8879-07cf1fa728ce",
+          "c73cf39e-b5c6-47b5-b266-c9c0d52d2c5c",
+          "bdb5a6c0-998b-493c-85d8-f05408e8215f"
+        ],
+        "settings": {
+          "reviews_video_padding": 60,
+          "reviews-videos-btn": "Show More",
+          "reviews-videos-link": ""
+        }
+      },
+      "reviews-parallax": {
+        "type": "reviews-parallax",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/physician_1400x_36534b51-4c95-4920-8e03-e5f70530cf58.jpg",
+          "reviews_background": "#003958",
+          "reviews_padding": 140,
+          "textcolor1": "#ffffff",
+          "title1": "Physician Review",
+          "title2": "MassageLab really created something unique here. The Neck Cloud not only treats neck pain and neck hump extremely effectively but also helps maintain a natural posture and flexibility thus preventing any future issues and injuries.\" - Dr. Murguia",
+          "playimage": "shopify:\/\/shop_images\/playbtn.png",
+          "video_url": ""
+        }
+      },
+      "reviews-testimonial": {
+        "type": "reviews-testimonial",
+        "blocks": {
+          "845d7e44-662b-4111-ad22-ea181c07646c": {
+            "type": "image",
+            "settings": {
+              "usertitle": "Definitely works",
+              "reviews-desc": "“Massage Lab has almost completely eliminated my neck hump. I have far less neck pain and am standing up much straighter. I absolutely love this product and would highly recommend it to anyone who wants better posture.”",
+              "reviews-username": "Joanne D.",
+              "reviews-userdesignation": "Austin TX"
+            }
+          },
+          "f7e16de3-f859-420b-9d17-1195a7470bee": {
+            "type": "image",
+            "settings": {
+              "usertitle": "Neck Pain Therapy",
+              "reviews-desc": "\"I have a lot of neck pains which sometimes go to my arms because of the posture I am taking all day due to office work. After a day of work, I look forward to relaxing 10 min with my relaxer. Think of it like this: we almost never really relax anymore so these 10 min are the least we can do. It's a great relief for my spine and neck\/head muscles.\"",
+              "reviews-username": "Cindy M.",
+              "reviews-userdesignation": "Messa AZ"
+            }
+          },
+          "56215804-ce41-4ac6-8f40-c744b0d6cac5": {
+            "type": "image",
+            "settings": {
+              "usertitle": "So Far So Good!",
+              "reviews-desc": "\"I was doubtful that this would help and I looked at devices like this online--wrote customer service to ask why theirs would be better than others....loved the personalized and prompt response.  I bought one for myself and it keeps disappearing to my son's room.  I'll have to get him his own.  I can feel my stiff neck loosening and feeling better!   Thanks!\"",
+              "reviews-username": "Jana H.",
+              "reviews-userdesignation": "Newark NJ"
+            }
+          },
+          "7a3c22b6-3e72-4561-a39d-bc605498005d": {
+            "type": "image",
+            "settings": {
+              "usertitle": "I see a measurable difference",
+              "reviews-desc": "\"I love laying on the pillow\nI use it in the morning while meditate. I also lay on the pillow at night before I sleep and I see a measurable difference\"",
+              "reviews-username": "Jane G.",
+              "reviews-userdesignation": "Palm Beach FL"
+            }
+          },
+          "66f755e8-7f32-42f1-839c-f59c9621933e": {
+            "type": "image",
+            "settings": {
+              "usertitle": "Such a great product",
+              "reviews-desc": "“I've had a herniated disc and sciatica for 3 years so I tried this out and it really works I haven't had as much neck pain as before. It was such a big relief I use it daily and recommend it for those with similar problems.”",
+              "reviews-username": "Sophia N.",
+              "reviews-userdesignation": "San Diego CA"
+            }
+          },
+          "56175903-7d41-4968-83b5-5bcf7e7826bf": {
+            "type": "image",
+            "settings": {
+              "usertitle": "Fantastic",
+              "reviews-desc": "“After years of back pain and going to Drs, physical therapy etc I was ready to give up…I have herniated discs in c5-c6 among other issues with my back. This was my last hope and I was not expecting the results I have had. Thank god I did not do the surgery...I have my life back again. I do not crawl out of bed in the morning walking around like a banana any more. Thank you from the bottom of my heart. I can even dance again now and use my elliptical…Thank you so very much.”",
+              "reviews-username": "Sue H.",
+              "reviews-userdesignation": "Cleveland OH"
+            }
+          }
+        },
+        "block_order": [
+          "845d7e44-662b-4111-ad22-ea181c07646c",
+          "f7e16de3-f859-420b-9d17-1195a7470bee",
+          "56215804-ce41-4ac6-8f40-c744b0d6cac5",
+          "7a3c22b6-3e72-4561-a39d-bc605498005d",
+          "66f755e8-7f32-42f1-839c-f59c9621933e",
+          "56175903-7d41-4968-83b5-5bcf7e7826bf"
+        ],
+        "settings": {}
+      },
+      "2reviews-upsell": {
+        "type": "2reviews-upsell",
+        "settings": {
+          "reviews_background": "#f0f4f4",
+          "reviews_padding": 25,
+          "textcolor1": "#00c2cb",
+          "image": "shopify:\/\/shop_images\/chiropractice_neck_shoulder_mature_man_iStock-1140390355_cb472ee2-3b14-4549-bb62-6a1afca3cfc4.jpg",
+          "heading": "Start Your Journey To Lasting Pain Relief With Our 60 Day At-Home Trial.",
+          "btn_text": "Shop Now 👉",
+          "btn_link": "https:\/\/massage-lab.com\/products\/neck-cloud"
+        }
+      },
+      "1reviews-upsell": {
+        "type": "1reviews-upsell",
+        "settings": {
+          "reviews_background": "#f0f4f4",
+          "reviews_padding": 25,
+          "textcolor1": "#00c2cb",
+          "image": "shopify:\/\/shop_images\/chiropractice_neck_shoulder_mature_man_iStock-1140390355_cb472ee2-3b14-4549-bb62-6a1afca3cfc4.jpg",
+          "heading": "Start Your Journey To Lasting Pain Relief With Our 60 Day At-Home Trial.",
+          "btn_text": "Shop Now 👉",
+          "btn_link": "https:\/\/massage-lab.com\/products\/neck-cloud"
+        }
+      },
+      "compressMDfeaturedin": {
+        "type": "compressMDfeaturedin",
+        "settings": {
+          "heading": "<b>FEATURED IN<\/b>",
+          "image": "shopify:\/\/shop_images\/CompressMD_As_Seen_in.jpg"
+        }
+      },
+      "physical-header": {
+        "type": "physical-header",
+        "settings": {
+          "site_logo": "shopify:\/\/shop_images\/ml-logo-medium.png",
+          "popupbgcolor": "#0b348b",
+          "popuptextcolor": "#ffffff",
+          "popupimage": "shopify:\/\/shop_images\/f-image-03.jpg",
+          "popupheading": "<u>Expert Confesses: The Secret To Soothing Foot<\/u> Problems",
+          "link1": "https:\/\/offer.massage-lab.com\/compression-socks",
+          "popupbtn": "<u>Click here to find more...<\/u>",
+          "link2": "#",
+          "maintitle": "Why One Of America’s Top Physical Therapist Says Your “Old Socks” Could Be Causing Foot Problems",
+          "date": "<i>September 17, 2022<\/i>",
+          "title1": "The Reality Of Neuropathy Pain:",
+          "description": "<p>⇨ What’s the <span>#1 cause of foot problems<\/span> and foot swelling?<\/p><p>⇨ The “old sock” secret that help ease foot problems.<\/p><p>⇨ The safe at-home <span>‘5-second morning ritual’<\/span> that keeps your feet feeling fresh all day (try this today)<\/p>"
+        }
+      },
+      "physical-section1": {
+        "type": "physical-section1",
+        "settings": {
+          "sectionimage": "shopify:\/\/shop_images\/61c0499191144d2e6e614b0c_varicose-vein-ankle-feet-best-treatments__1.jpg",
+          "maintitle": "<i><strong>“Your nerves have an outer casing like a banana”<\/strong><\/i> says Doctor of Physical Therapy &amp; U.S. Military Veteran, Richard Neumann.",
+          "desc1": "<p>He points to a drawing on his wall and continues, “That’s the way healthy nerves should look. But in people with foot issues they start to lose their protective coating”<\/p><p>I’m with my husband Paul sitting in the esteemed Richard Neumann’s office, talking about Paul’s foot neuropathy pain. For the first time ever, it was all making sense.<\/p>",
+          "desc2": "<p><i>“The problem is, Paul, your neuropathy means that the outer casings around millions of nerves in your feet are being peeled back. And just like leaving an unpeeled banana out in the air, your nerves are shriveling up and dying… which is causing the pain, tingling, and numbness you feel.”<\/i><\/p>",
+          "desc3": "<p>So that led to Paul and I asking the same question….<\/p>"
+        }
+      },
+      "physical-section2": {
+        "type": "physical-section2",
+        "settings": {
+          "maintitle": "Is There Anything You Can Do About Foot Problems (Neuropathy Pain)?",
+          "desc1": "<p>Most experts will tell you there’s not much you can do for damaged nerves in the feet.<\/p><p>But if you’ve been in agony with foot pain then hearing “there’s nothing you can do” can be frustrating.<\/p><p>But Dr. Richard Neumann has some good news….<\/p>",
+          "sectionimage": "shopify:\/\/shop_images\/Dr_Richard_Neumann.jpg",
+          "desc2": "<p>Multiple studies performed by scientists have shown that a deep tissue massage can offer dramatic relief from foot discomfort.<\/p><p>The problem is, most people don’t have the time or money to get several professional foot massages a day.<\/p>",
+          "maintitle2": "<i>But NOW there’s something that has changed all that…<\/i>",
+          "desc3": "<p><i>“It sounds strange, but I’ve been giving my patients special massage socks to help with their foot problems” , says Dr. Neumann.<\/i><\/p>"
+        }
+      },
+      "physical-section3": {
+        "type": "physical-section3",
+        "settings": {
+          "sectionimage": "shopify:\/\/shop_images\/2.jpg",
+          "maintitle": "CompressMD™ use compression technology to squeeze certain points of the foot to improve blood flow and soothe nerve pain",
+          "desc1": "<p>The socks have been designed by a team of pain management experts and podiatrists. The company is called mLab and what they’ve done is remarkable.<\/p><p>They’ve developed a breakthrough fabric and weaving structure unlike anything else. The result is a revolutionary sock with 5 “compression zones” that actively massage key areas of the feet, to soothe neuropathy pain.<\/p>",
+          "desc2": "<p><i>“Many of my patients wear these socks all day and never have foot problems again. They say it’s just like having a massage therapist working on their feet 24\/7”<\/i><\/p>",
+          "desc3": "<p>Honestly, it sounds too good to be true. But Dr. Neumann insists that anyone with foot pain give them a try.<\/p><p>And so we did!<\/p>"
+        }
+      },
+      "physical-section4": {
+        "type": "physical-section4",
+        "settings": {
+          "heading": "<i>My Husband’s Experience With CompressMD…<\/i>",
+          "sectionimage": "shopify:\/\/shop_images\/3.jpg",
+          "desc1": "<p>When we heard about the results people were getting with these socks we ordered a few pairs. When they arrived, we were pleasantly surprised by how “normal” the socks look.<\/p><p>“No way these things are gonna do anything,” my husband said, tossing the socks on the table.<\/p><p>But I convinced him to give them a shot, just for a day.<\/p><p>Within seconds Paul’s eyes lit up.<\/p><p>“OK, These definitely feel different. It’s like they’re pushing the stabbing out of my feet. This is amazing, It’s like someone’s giving me a massage!” he says, grinning ear to ear.<\/p>",
+          "desc2": "<strong>UPDATE:<\/strong> It’s now been 6 weeks and we couldn’t live without CompressMD™️. Paul's stabbing pain, tingling, or numbness have eased considerably and he’s back to his old self. Things have never been better between us. I have my husband back."
+        }
+      },
+      "physical-section5": {
+        "type": "physical-section5",
+        "settings": {
+          "maintitle": "<i>Why They Work So Well<\/i>",
+          "desc1": "<p>It’s because they use breakthrough “compression zone” technology to apply soothing pressure to areas of the feet that need it most.<\/p><p>The extra blood flow keeps those nerves in your feet healthy, which means you enjoy…<\/p>",
+          "titleimg": "shopify:\/\/shop_images\/icons8-right-arrow-64__2.png",
+          "title1": "Near-instant relief from stabbing pain or burning",
+          "title2": "Feet that almost never feel numb or tingly",
+          "title3": "Reduced swelling and tenderness",
+          "title4": "Walking, standing, or resting with considerably less pain and discomfort",
+          "desc2": "<p>They’re <strong>comfier than normal socks<\/strong> and support your ankles, feet, heels, toes, and arches all day long.<\/p><p>They’re <strong>lightweight, breathable, and durable<\/strong> because they use premium moisture wicking fabric.<\/p><p>And thanks to <strong>the non-slip cuffs<\/strong>, CompressMD™️ won’t fall down or bunch up — even if you’re walking, running, or squatting down.<\/p><p>Plus, what my husband really loved was that <i><u>they don’t look any different than normal socks.<\/u><\/i><\/p>",
+          "desc3": "<p>Honestly, it sounds too good to be true. But Dr. Jeremy insists that anyone with foot pain give them a try.<\/p><p>And so we did!<\/p>"
+        }
+      },
+      "physical-video": {
+        "type": "physical-video",
+        "blocks": {
+          "ab28a81a-4ca8-4334-a4ca-ce396b7be0ab": {
+            "type": "logo_image",
+            "settings": {
+              "image_cover": "shopify:\/\/shop_images\/Screenshot_2022-12-15_at_22.13.25.png",
+              "videodesc": "I've always had nagging pain in both feet and as cliche as it sounds, these socks have changed my life!",
+              "videoname": "- Mike Wilson"
+            }
+          },
+          "cf8701d1-25ad-437b-9172-757d81b8fb77": {
+            "type": "logo_image",
+            "settings": {
+              "image_cover": "shopify:\/\/shop_images\/Screenshot_2022-12-15_at_10.40.14.png",
+              "videodesc": "I've had Plantar Fasciitis problems for over a year - these socks are literally the only thing that's helped ease the pain.",
+              "videoname": "- Ava Herrera"
+            }
+          },
+          "ff369df9-6307-4b6b-8f83-d7a9fea89d4d": {
+            "type": "logo_image",
+            "settings": {
+              "image_cover": "shopify:\/\/shop_images\/Screenshot_2022-12-15_at_10.42.00.png",
+              "videodesc": "These compression socks have given me pain relief in my left heel like nothing else I've tried before.",
+              "videoname": "- Lisa Jackson"
+            }
+          }
+        },
+        "block_order": [
+          "ab28a81a-4ca8-4334-a4ca-ce396b7be0ab",
+          "cf8701d1-25ad-437b-9172-757d81b8fb77",
+          "ff369df9-6307-4b6b-8f83-d7a9fea89d4d"
+        ],
+        "settings": {
+          "maintitle": "<i>Why Thousands Of People Love Their CompressMD™️<\/i>",
+          "desc1": "<p>It turns out we weren’t the only ones with a great experience. People everywhere are <a href=\"https:\/\/offer.massage-lab.com\/compression-socks\">making the switch to CompressMD™️<\/a> and are experiencing incredible near-instant relief.<\/p>"
+        }
+      },
+      "physical-testimonial": {
+        "type": "physical-testimonial",
+        "blocks": {
+          "45ff0e6c-6eaf-4b14-a7de-aef0c2e3c58d": {
+            "type": "logo_image",
+            "settings": {
+              "testimonialrating": "shopify:\/\/shop_images\/Screenshot_2022-07-27_at_21.48.07.jpg",
+              "testimonialdesc": "<i>“Just received mine in the mail the other day and have been using them nonstop.. the results are fantastic so far... I have almost no pain in my feet and I can walk without issues again. great for heel and neuropathy pain.”<\/i>",
+              "testimonialimage": "shopify:\/\/shop_images\/60d201cef22fc4bbd3ec798e_tman3__1.png",
+              "testimonialname": "Steven",
+              "testimonialdesignation": "- Chula Vista, CA"
+            }
+          },
+          "311eb04a-a0bd-4526-ac35-7e3f885f1e8a": {
+            "type": "logo_image",
+            "settings": {
+              "testimonialrating": "shopify:\/\/shop_images\/Screenshot_2022-07-27_at_21.48.07.jpg",
+              "testimonialdesc": "<i>\"I had already tried exercises, orthotics, stretching, icing and even got a cortisone shot to my heel. I have only had these socks for 2 weeks, but have seen improvement already. I also have neuropathy in my feet… So far these socks are amazing\"<\/i>",
+              "testimonialimage": "shopify:\/\/shop_images\/image_2022-08-04_172721340.png",
+              "testimonialname": "John K.",
+              "testimonialdesignation": "- Ill,CH"
+            }
+          },
+          "6dbec190-8d0e-4523-8d8e-0295864a872d": {
+            "type": "logo_image",
+            "settings": {
+              "testimonialrating": "shopify:\/\/shop_images\/Screenshot_2022-07-27_at_21.48.07.jpg",
+              "testimonialdesc": "<i>“I’ve been suffering from foot neuropathy ever since I had my 3rd son.. I've been basically limping around all year. These socks gave instant relief as soon as I pulled them over my feet!”<\/i>",
+              "testimonialimage": "shopify:\/\/shop_images\/60a6bb5aea0c7ed4caee753e_f-2.png",
+              "testimonialname": "Caroline",
+              "testimonialdesignation": "- NY, NY"
+            }
+          },
+          "40ded6a9-1773-4084-ad86-f54a6a2f9fd6": {
+            "type": "logo_image",
+            "settings": {
+              "testimonialrating": "shopify:\/\/shop_images\/Screenshot_2022-07-27_at_21.48.07.jpg",
+              "testimonialdesc": "<i>“I am SOO glad I ordered my CompressMD! They arrived quickly and have literally been a lifesaver, AMAZING!!”<\/i>",
+              "testimonialimage": "shopify:\/\/shop_images\/image_2022-08-05_130820914.png",
+              "testimonialname": "Cecilia B.",
+              "testimonialdesignation": "- Madison, WI"
+            }
+          },
+          "8eb4b4db-cfc2-4cc2-ad09-e1212ca6cc91": {
+            "type": "logo_image",
+            "settings": {
+              "testimonialrating": "shopify:\/\/shop_images\/Screenshot_2022-07-27_at_21.48.07.jpg",
+              "testimonialdesc": "<i>“They provide just the right amount of support, are lightweight, and are not irritating to the skin like heavier elastic socks”<\/i>",
+              "testimonialimage": "shopify:\/\/shop_images\/image_2022-08-04_172748427.png",
+              "testimonialname": "Mike",
+              "testimonialdesignation": "- Villas, NJ"
+            }
+          }
+        },
+        "block_order": [
+          "45ff0e6c-6eaf-4b14-a7de-aef0c2e3c58d",
+          "311eb04a-a0bd-4526-ac35-7e3f885f1e8a",
+          "6dbec190-8d0e-4523-8d8e-0295864a872d",
+          "40ded6a9-1773-4084-ad86-f54a6a2f9fd6",
+          "8eb4b4db-cfc2-4cc2-ad09-e1212ca6cc91"
+        ],
+        "settings": {
+          "maintitle": "<i>The Verdict? Over 93,000 5-star reviews say CompressMD™️ Socks are amazing...<\/i>"
+        }
+      },
+      "physical-section6": {
+        "type": "physical-section6",
+        "settings": {
+          "maintitle": "If these socks can actually help foot pain, they must be expensive, right?",
+          "desc1": "<p>But we were stunned to see just how affordable they are.<\/p><p>In fact, when we saw the price, my husband whispered that they’re an absolute steal!<\/p><p>So we bought several pairs because it never hurts to have extra socks in the drawer. And now, Dr. Neumann and his team have even sweetened the deal and are offering a <u> <strong>huge discount for new customers, making their prices unbeatable.<\/strong><\/u><\/p>",
+          "heading1": "RIGHT NOW You can get up to 62%",
+          "heading2": "OFF on <a href=\"https:\/\/offer.massage-lab.com\/compression-socks\">this page right here.<\/a>",
+          "btn": "Check Availability + Save Up To 62%",
+          "btndesc": "INSURED SHIPPING INCLUDED",
+          "maintitle2": "CompressMD™️ also come with an iron-clad 30-day money back guarantee so they are 100% risk-free to try.",
+          "desc2": "<p>Dr. Neumann told us that if the socks didn’t work for my husband, he’d give us our money back no questions asked.<\/p><p>That same “Doctor’s Guarantee” is being offered to anyone who grabs a pair on this page.<\/p><p>So if you ask me, it’s a no brainer because there’s no risk to try them.<\/p>"
+        }
+      },
+      "physical-section7": {
+        "type": "physical-section7",
+        "settings": {
+          "maintitle": "How To Get The Most Out Of CompressMD™️",
+          "sectionimage": "shopify:\/\/shop_images\/61813bfa668ac59eef6870f5_Soothesocks-4.jpg",
+          "desc1": "<p><strong>Step 1:<\/strong> \n Wear one or both socks when you wake up like any other pair of socks to help switch off pain, tingling, or numbness.<\/p><p><strong>Step 2:<\/strong> Keep your <a href=\"https:\/\/offer.massage-lab.com\/compression-socks\">CompressMD™️<\/a>on all day, with or without shoes for all-day relief.<\/p><p><strong>Step 3:<\/strong> Go about your day as normal, walking, running, standing, or resting without your feet bothering you again.<\/p>",
+          "updatetitle": "**IMPORTANT UPDATE**",
+          "updatedesc": "<p>CompressMD™️ has experienced a surge in demand since this article was written.<\/p><p>Stock is running dangerously low. Tap the button below to claim your discount and check availability now!<\/p>",
+          "btn": "Check Availability + Save Up To 62%",
+          "btndesc": "INSURED SHIPPING INCLUDED"
+        }
+      },
+      "featured-header": {
+        "type": "featured-header",
+        "settings": {
+          "heading": "Burning foot pain? These Genius New Socks Use \"Targeted\" Muscle-Like Nanofiber Compression",
+          "authorimage": "shopify:\/\/shop_images\/Avatar_3Avatar_2.png",
+          "authordate": "By <strong>Anna Coulter<\/strong> | October 17, 2022",
+          "quoteicon": "shopify:\/\/shop_images\/quote_1quote.png",
+          "quotetext": "<em>“Unbelievable results: perfect arch, heel AND ankle support!” — Cheryl D.<\/em>",
+          "towelimage": "shopify:\/\/shop_images\/Image_1_38335b36-2434-4274-a67d-2d6d30aa1e73.jpg",
+          "subheading": "Traditional Bath Towels: Breeding Grounds for Mildew & Odors?",
+          "desc": "<p>Most towels are made of cheap cotton or synthetic blends that are virtually impossible to dry out completely. Since these fabrics retain so much moisture, they can harbor mildew, bacterial odors, and other nasty particles.<\/p><p>So, every time you dry off with a damp towel, you’re not only making yourself instantly dirty again, you may actually be rubbing mildew &amp; odor-causing bacteria onto your skin.<\/p><p>According to Chuck Gerba, PhD, a professor of microbiology at the University of Arizona, <strong>drying-off with a dirty towel can be risky<\/strong>.<span class=\"upper\">1<\/span><\/p>"
+        }
+      },
+      "featured-section1": {
+        "type": "featured-section1",
+        "settings": {
+          "towelimage": "shopify:\/\/shop_images\/Image_2.jpg",
+          "subheading": "Ordinary Bath Towels Don’t Stay Clean...But What Can Be Done?",
+          "desc": "<p>In most bathrooms, the towel-drying bar is located about 7' away from the nastiest thing in the house: the toilet. We all <span class=\"underline\">assume<\/span> this is okay… but in a 2013 study, scientists proved that the particles in toilets spray all around the room (a phenomenon nown as “toilet plume”).<span class=\"upper\">2<\/span><br><\/p><p>What can be done? You can do what experts recommend by washing or replacing your towels every 3 days, but who has the time or energy for that? You could stop hanging up towels in the bathroom altogether, but walking to the linen closet with wet feet creates a real slipping hazard.<\/p><p>But what if there was a smart, easy solution to help keep bath towels clean, dry, and fresh-smelling without sacrificing comfort and quality?<\/p>"
+        }
+      },
+      "featured-section2": {
+        "type": "featured-section2",
+        "blocks": {
+          "9f2a6487-f337-4923-8c20-7c32beb0ab3c": {
+            "type": "image",
+            "settings": {
+              "featuresimage": "shopify:\/\/shop_images\/super_absorbent.png",
+              "featurestext": "Silver Ions Help Resist Odors & Mildew"
+            }
+          },
+          "e5b560a6-19c9-48e1-8b90-e821605d6bca": {
+            "type": "image",
+            "settings": {
+              "featuresimage": "shopify:\/\/shop_images\/wick_away_moisture.png",
+              "featurestext": "Quick-Drying, Super Absorbent"
+            }
+          },
+          "1f7af247-1a36-40c2-aa44-b5103bdaf637": {
+            "type": "image",
+            "settings": {
+              "featuresimage": "shopify:\/\/shop_images\/stay_soft.png",
+              "featurestext": "100% CA-Grown Pima Cotton"
+            }
+          },
+          "dbb099c6-0826-4244-bfaf-20daca6e6a43": {
+            "type": "image",
+            "settings": {
+              "featuresimage": "shopify:\/\/shop_images\/more_hygienic.png",
+              "featurestext": "Stays Clean & Fresh-Smelling"
+            }
+          },
+          "0084a5d5-96af-4533-846e-d6ca72bc8a47": {
+            "type": "image",
+            "settings": {
+              "featuresimage": "shopify:\/\/shop_images\/dual_purpose.png",
+              "featurestext": "Luxurious European Waffle-Weave"
+            }
+          },
+          "6851a494-cc1f-4d97-b5e5-483537667e9b": {
+            "type": "image",
+            "settings": {
+              "featuresimage": "shopify:\/\/shop_images\/saves_money_time.png",
+              "featurestext": "Less Washing Than Regular Towels"
+            }
+          }
+        },
+        "block_order": [
+          "9f2a6487-f337-4923-8c20-7c32beb0ab3c",
+          "e5b560a6-19c9-48e1-8b90-e821605d6bca",
+          "1f7af247-1a36-40c2-aa44-b5103bdaf637",
+          "dbb099c6-0826-4244-bfaf-20daca6e6a43",
+          "0084a5d5-96af-4533-846e-d6ca72bc8a47",
+          "6851a494-cc1f-4d97-b5e5-483537667e9b"
+        ],
+        "settings": {
+          "subheading": "Stop Using Damp, Dirty Towels And Switch To This Innovative New Solution",
+          "towelimage": "shopify:\/\/shop_images\/WashCloth_Cutout_4.jpg",
+          "featuresbutton": "CLICK HERE FOR FREE HAND TOWELS ON SELECT ORDERS ≫",
+          "desc1": "<p><a href=\"#\">Sutera Silverthread Towels\"<\/a> are a luxury bathroom breakthrough that offers a clean, dry, fresh-smelling way to dry-off after each and every shower.<\/p><p>Forget about exposing yourself to mildew and musty odors after showering: Silverthread Towels are infused with Silver Ions — shown in scientific studies to help fabrics resist mildew and bacterial odors.<span class=\"upper\">3<\/span><\/p><p>Silverthread’s 100% CA-Grown Pima Cotton is woven into a unique waffle-weave texture, which dries your body faster than conventional towels and allows for <span class=\"underline\">complete<\/span> moisture evaporation, so towels air-dry in minutes.<\/p>",
+          "desc2": "<p>Thousands of Americans are moving away from traditional towels to Sutera’s cleaner, fresher, and more luxurious innovation.<\/p><p>But fair warning: the word about Silverthread Towels is spreading like wildfire and most customers are buying in bundles to claim their free hand towels (up to 4 FREE).<\/p><p>We strongly suggest ordering now and <strong>claiming up to 4 FREE hand towels<\/strong>, before inventory runs low or supplies completely sell out again. (Available in both White and Grey Color, but check the next page for inventory as one color could be sold out already!)<\/p>"
+        }
+      },
+      "featured-section3": {
+        "type": "featured-section3",
+        "settings": {
+          "videolink": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/84a673f107b444df85170824f5f65d2e.mp4",
+          "subheading": "How Do Silverthread Towels Stay Fresher For Longer?",
+          "desc": "<p>Silver has been used for centuries to help keep wounds clean, and surgeons still use it to this day. In an extraordinary recent breakthrough, scientists discovered a way to infuse silver ions into fabrics — helping the fabric naturally resist mildew and bacterial odors.<span class=\"upper\">2<\/span><\/p><p>To create Silverthread Towels, we infused these innovative silver ions into ultra-soft, 100% California-grown Pima cotton. The silver ions are “activated” whenever any excess moisture exists in the fabric, leaving the towels clean and fresh-smelling.<\/p><p>So, the Silver Ion infusion is how <a href=\"#\">Sutera Silverthread<\/a> Towels <strong>stay fresher than regular towels<\/strong>!<\/p><p>They’re also why Silverthread Towels can be washed less frequently than conventional towels — yet still look, smell, and feel cleaner.<\/p>"
+        }
+      },
+      "featured-section4": {
+        "type": "featured-section4",
+        "settings": {
+          "towelimage": "shopify:\/\/shop_images\/img5-1.jpg",
+          "subheading": "They Feel Softer, Look More Elegant, & Last Longer Than Store-Bought Towels",
+          "desc": "<p>100% of the fabric in every <a href=\"#\">Silverthread Towel<\/a> is made from California-grown <strong>Pima Cotton<\/strong>. American grown Pima cotton is quite possibly the highest-quality cotton in the world. Its staple fibers can be up to 30-50% longer than Egyptian cotton… producing softer, more durable fabrics that are more resistant to “pilling.”<\/p><p>Silverthread’s luxurious, European-style waffle pattern features two types of weaves — each with a different function. The smooth <strong>loose-weave<\/strong> makes each towel strong and long-lasting; the <strong>open-weave<\/strong> accounts for its moisture-wicking and rapid-evaporation properties.<\/p><p>This unique texture is why <a href=\"#\">Silverthread<\/a> is more lightweight than ordinary towels, yet absorbs more moisture and air-dries more completely. You’ll literally <u>fell<\/u> it drying and warming your body. In-between showers, touch your Silverthread Towel with dry hands and you’ll notice no lingering dampness or odor!<\/p>"
+        }
+      },
+      "featured-section5": {
+        "type": "featured-section5",
+        "blocks": {
+          "7c33c393-df0b-4839-8c8f-d44513091892": {
+            "type": "review",
+            "settings": {
+              "text": "\"I truly appreciate the quality of the Sutera towels, look and feel amazing and I'm dry in seconds , love it !!!!\"",
+              "name": "— Valerie B."
+            }
+          },
+          "ce796b80-8c4c-4905-a749-e1fc247731a4": {
+            "type": "review",
+            "settings": {
+              "text": "\"Best towels ever! Never felt dryer quicker fresh out of the shower. Live in a very humid climate, and no damp smelly towels anymore! In fact, I threw away all my other towels!\"",
+              "name": "— Raymond S."
+            }
+          },
+          "3ee4112a-f750-45b1-a6d2-11797b112e4b": {
+            "type": "review",
+            "settings": {
+              "text": "\"I love my silver head towels they really absolutely are so soft and absorb the water love the waffle. Texture I will be buying more very 😊 customer and l love the size nice and big\"",
+              "name": "— Branda L."
+            }
+          }
+        },
+        "block_order": [
+          "7c33c393-df0b-4839-8c8f-d44513091892",
+          "ce796b80-8c4c-4905-a749-e1fc247731a4",
+          "3ee4112a-f750-45b1-a6d2-11797b112e4b"
+        ],
+        "settings": {
+          "towelimage": "shopify:\/\/shop_images\/Silverthread_Image_6-1.jpg",
+          "subheading": "Here’s What Satisfied Silverthread Customers Had To Say:",
+          "desc": "<p>Don’t take it from us:<\/p>"
+        }
+      },
+      "featured-section6": {
+        "type": "featured-section6",
+        "blocks": {
+          "724a510c-e1d2-4430-a0cb-a63ef5237003": {
+            "type": "image",
+            "settings": {
+              "text1": "Silver Ions help resist odors & mildew",
+              "text2": "Can harbor odors, mildew, & nasty particles"
+            }
+          },
+          "ca9bd537-596f-42f1-970d-05f0ae7e494b": {
+            "type": "image",
+            "settings": {
+              "text1": "100% CA-Grown Pima Cotton",
+              "text2": "Low-quality import cotton or synthetic blends"
+            }
+          },
+          "196786af-aa6e-47d4-9b63-930ad1c2f280": {
+            "type": "image",
+            "settings": {
+              "text1": "Always feels soft & smells fresh",
+              "text2": "Musty odor can appear quickly after use"
+            }
+          },
+          "453d9232-1664-4027-9c94-99c06506418d": {
+            "type": "image",
+            "settings": {
+              "text1": "Double-waffle pattern = long-lasting, gets softer over time",
+              "text2": "Cheap texture becomes rough, plasticky, & frays easily"
+            }
+          },
+          "8ed3d94d-f919-4645-ae95-ab99e3f619a4": {
+            "type": "image",
+            "settings": {
+              "text1": "Quick absorption, <strong>fast moisture<\/strong> evaporation",
+              "text2": "Typically retains moisture, can breed mildew"
+            }
+          },
+          "8d5c491f-58d1-407c-8edf-c67e7ced33c5": {
+            "type": "image",
+            "settings": {
+              "text1": "Requires less washing & upkeep",
+              "text2": "EXPERTS: should be washed every 3 uses"
+            }
+          }
+        },
+        "block_order": [
+          "724a510c-e1d2-4430-a0cb-a63ef5237003",
+          "ca9bd537-596f-42f1-970d-05f0ae7e494b",
+          "196786af-aa6e-47d4-9b63-930ad1c2f280",
+          "453d9232-1664-4027-9c94-99c06506418d",
+          "8ed3d94d-f919-4645-ae95-ab99e3f619a4",
+          "8d5c491f-58d1-407c-8edf-c67e7ced33c5"
+        ],
+        "settings": {
+          "towelimage": "shopify:\/\/shop_images\/Silverthread_4-panel-Image_1.jpg",
+          "subheading": "How Does Sutera Silverthread Compare To Regular Bath Towels?",
+          "compareimage": "shopify:\/\/shop_images\/cutout_300x_66eebf93-3b3e-425a-bb9e-a2eb7d34f8d5.png",
+          "comparename": "Ordinary Towels",
+          "desc1": "<p>When I first saw this towel online, I was a complete skeptic… it’s really supposed to keep mildew and odors at bay? To me, it sounded “too good to be true.” But I knew the brand, Sutera, had a good reputation for quality products. I skimmed through the rave reviews and was convinced to try it.<\/p><p>Right off the bat, I noticed Silverthread felt softer than I expected. It was a pleasant sensation: it feels plush, elegant... more than anything, it feels like <em>quality.<\/em> I’m a huge Pima cotton fan, and this fabric does <u>not<\/u> disappoint: it feels strong yet lightweight, smooth yet breathable.<\/p><p>I gave it a shot that same day. I went through my usual shower routine, but one thing immediately stood out: I was fully dry before I knew it. I hung the half-damp towel like I always do and checked back after about 15 minutes. Normally, my towel would still be cold-to-the-touch and dripping wet at this time, but I was shocked to find it dry as a bone.<\/p>",
+          "desc2": "<p>After a couple weeks of use, I can confidently say: <a href=\"#\">Silverthread<\/a> is the last towel I will ever use. It gets the job done better than any other towel, and it doesn’t ever smell musty. Plus, I love not having to worry about washing it all the time because it stays clean for weeks.<\/p><p><strong>BOTTOM LINE:<\/strong> If you’re tired of your towels never drying out completely, plus getting nasty and musty fast… if you’re concerned about damp towels rubbing mildew and odors all over your skin… or if you simply want towels you don’t have to wash every 3 days... <a href=\"#\"><em>Sutera Silverthread Towels<\/em><\/a> are a truly innovative, classy, &amp; convenient product. I highly recommend them.<\/p>"
+        }
+      },
+      "featured-section7": {
+        "type": "featured-section7",
+        "settings": {
+          "subheading": "How To Try Silverthread Bath Towels, Risk-Free, Today",
+          "desc1": "<p><a href=\"#\"><em>Sutera Silverthread Towels<\/em><\/a> are not available in stores and can only be found online through the link on this page.<\/p><p>Now that you’ve discovered how these soft, elegant bath towels can stay clean, dry, and fresh-smelling — without constant laundering — follow these steps to get started:<\/p>",
+          "desc2": "Go to the official <a href=\"#\">Sutera<\/a> website to place your order (White and Grey Towels Available)",
+          "desc3": "Grab a clean, fresh, super-soft towel after EVERY shower.",
+          "note": "<a href=\"#\">Sutera<\/a> wants to nudge you off the fence by giving you up to <strong>4 FREE Hand Towels<\/strong> <a href=\"#\">Check here to see if stock is still available  ⋙<\/a>"
+        }
+      },
+      "featured-section8": {
+        "type": "featured-section8",
+        "settings": {
+          "offerimage": "shopify:\/\/shop_images\/cutout_300x_5c6f95ea-4cf3-46bb-8d06-f95ddd3c8d80.png",
+          "subheading": "INTERNET ONLY OFFER",
+          "offerdesc": "This FREE Hand Towel deal is in high demand and stock keeps selling out.",
+          "buttontext": "✓ Check Current Availability",
+          "offersubtitle": "This special offer is valid until",
+          "sources": "<strong>SOURCES<\/strong><br>\n\t<span><strong>1.<\/strong><\/span> <em>How Bad Is It to Not Wash Your Bath Towels Every Week?<\/em>. Reader's Digest. (2021). Retrieved 23 March 2021, from https:\/\/www.rd.com\/article\/washing-bath-towels-often\/.<br>\n\t<strong>2.<\/strong> Johnson D, Mead K, Lynch R, Hirst D. Lifting the lid on toilet plume aerosol: A literature review with suggestions for future research. \n    <em>Am J Infect Control<\/em>. 2013;41(3):254-258.doi:10.1016\/j.ajic.2012.04.330. <br>\n    <strong>3.<\/strong>  Wakshlak R, Pedahzur R, Avnir D. Antibacterial activity of silver-killed bacteria: the \"zombies\" effect. <em>Sci Rep<\/em>. 2015;5(1). doi:10.1038\/srep09555. <br>\n    <strong>4.<\/strong> Jung W, Koo H, Kim K, et al. Antibacterial Activity and Mechanism of Action of the Silver Ion in Staphylococcus aureus and Escherichia coli. <em>Appl Environ Microbiol<\/em>. 2008;74(7):2171-2178. doi:10.1128\/aem.02001-07."
+        }
+      },
+      "featuredright-header": {
+        "type": "featuredright-header",
+        "settings": {
+          "heading": "Featured",
+          "featuredproductimage": "shopify:\/\/shop_images\/CompressMD_With_Packaging.jpg",
+          "button": "CompressMD™️ Socks »"
+        }
+      },
+      "compressiongloves-product-template": {
+        "type": "compressiongloves-product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "reviewtext": "Tested, peer reviewed & rated by 100+ people & professionals  ★★★★★ (4.9\/5)",
+          "headingtext": "<b>Naturally relieve your arthritis pain using gentle compression and therapeutic heat.<\/b> <p><\/p>",
+          "icontext1": "✔ Get a pain-free life",
+          "icontext2": "✔ Backed by science",
+          "icontext3": "✔ 60-day satisfaction guarantee",
+          "icontext4": "",
+          "icontext5": "",
+          "show_payment_icons": true,
+          "accordion__title1": "Guarantee",
+          "content1": "<p>We have an iron-clad, risk-free 60-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>",
+          "page1": "",
+          "accordion__title2": "Shipping",
+          "content2": "<p><strong>Every order is tracked and insured! <\/strong>Shipping time will be 7-15 business days days. All orders are shipped with a tracking number.<\/p>",
+          "page2": ""
+        }
+      },
+      "compressiongloves-about-banner": {
+        "type": "compressiongloves-about-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/GIF-Gloves_4ef47998-92f9-4739-8a0f-55652bc20bde.gif",
+          "image_position": "left",
+          "heading": "The Breakthrough Discovery 👩‍🔬",
+          "info": "<p>The old ways of treating arthritis pain has been tested by many but has helped few. This still happens at the current age of advanced technology.\n<\/p>\n<p>Selling medication is just simply more lucrative.\n<\/p>\n<p>After years of research &amp; development and tests the team at mLab™️ carefully engineered the most 3 important elements.\n<\/p>\n<p>The main innovation of the Arthritis Compression Gloves comes from combining the most effective solutions to joint &amp; muscle pain:\n<\/p>\n<ul>\n<li>Improved blood circulation due to mild pressure being exerted \n<\/li>\n<li>Therapeutic heat supporting muscle fibers &amp; joints\n<\/li>\n\n<li> Used fabric and design allows natural freedom of movement\n<\/li>\n<\/ul>\n<p>By combining the 3 most important concepts, the use of mLab™️ - Arthritis Compression Gloves result in an almost instant relief of arthritis &amp; hand pain.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "stepofcompressiongloves": {
+        "type": "stepofcompressiongloves",
+        "settings": {
+          "step1-image": "shopify:\/\/shop_images\/1658157377144.png",
+          "step1-title": "FREEZE YOUR HAT",
+          "step1-desc": "Freeze or refrigerate your headband for at least 20-30 minutes",
+          "step2-image": "shopify:\/\/shop_images\/1658157386111_e216155e-cbb7-4306-8e2b-c0c176309b02.png",
+          "step2-title": "WEAR 10-20 MINS",
+          "step2-desc": "Wear your hat for 10-20 mins depending on your headache severity.",
+          "step3-image": "shopify:\/\/shop_images\/1658157387286.png",
+          "step3-title": "PAIN RELIEF",
+          "step3-desc": "Enjoy immediate relief, relaxation and your pain-free day!"
+        }
+      },
+      "benefits-compressiongloves": {
+        "type": "benefits-compressiongloves",
+        "blocks": {
+          "9211b3df-ddb7-40e5-a32a-8b0fdf1966d5": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/arthritis.png",
+              "benefits-title": "Arthritis"
+            }
+          },
+          "3d727c3a-8b1b-4b39-8a91-b0019d47350c": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/swollen.png",
+              "benefits-title": "Swelling"
+            }
+          },
+          "0bfc8829-aea6-459e-892f-ffad72a3f9c9": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/numb.png",
+              "benefits-title": "Numbness"
+            }
+          },
+          "802cbb3f-9d77-41f8-9b2a-36b28af7ddec": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/weakness.png",
+              "benefits-title": "Overuse"
+            }
+          },
+          "2b9aea44-2551-4208-a481-d4e5ddd29337": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/1658157356949.png",
+              "benefits-title": "Neuropathy"
+            }
+          }
+        },
+        "block_order": [
+          "9211b3df-ddb7-40e5-a32a-8b0fdf1966d5",
+          "3d727c3a-8b1b-4b39-8a91-b0019d47350c",
+          "0bfc8829-aea6-459e-892f-ffad72a3f9c9",
+          "802cbb3f-9d77-41f8-9b2a-36b28af7ddec",
+          "2b9aea44-2551-4208-a481-d4e5ddd29337"
+        ],
+        "settings": {
+          "heading": "<br>Eliminate Joint Pain The Natural Way 🌿",
+          "info": "<p>With arthritis being the main condition when turning to problems with hands, millions of people are facing difficulties doing basic daily tasks, leaving them dependent on help.\n<\/p>\n<p>Unfortunately the most common solution, being prescription medication, often is more harmful than effective.\n<\/p>\n<p>Long term effects of that can lead to chronic inflammations, and a series of unwanted events.\n<\/p>\n<p>In sharp contrast, mLab™️ - Compression Gloves use gentle compression to improve blood circulation, supporting muscle fibers &amp; joints easing the symptoms almost immediately.\n<\/p>\n<strong><p>Backed by science results and a results or a full refund guarantee!\n<\/p><\/strong>",
+          "about_btn": "Add To Cart  👉"
+        }
+      },
+      "video-text-compressiongloves": {
+        "type": "video-text-compressiongloves",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/1658157287411.jpg",
+          "image_position": "right",
+          "heading": "Say Goodbye to Headache Days 👋",
+          "about_btn": "Get My TheraGel 👉",
+          "value1": 95,
+          "itemheading1": "",
+          "itemtext1": "Said the severity of their Headache or Migraine was significantly reduced",
+          "value2": 94,
+          "itemheading2": "",
+          "itemtext2": "Noticed reduced lengths of the migraine attacks",
+          "value3": 90,
+          "itemheading3": "",
+          "itemtext3": "Were able to continue with their day after 30 minutes of relaxation with the TheraGel™️"
+        }
+      },
+      "testimonial-compressiongloves": {
+        "type": "testimonial-compressiongloves",
+        "blocks": {
+          "35221188-3632-4c20-8418-80533a5f7a10": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/2_d0a45901-2d9e-4a19-a143-581e0e8c2d16.jpg",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Sandra B. - Verified Buyer",
+              "testimonial_description": "<p>It's groundbreaking.<\/p><p>\"These are very comfortable to sleep in at night or use during the day and they do help ease my arthritic pain, especially wearing them at night.\"<\/p>"
+            }
+          },
+          "57742c5f-0b49-4f97-9002-3ba00ffd7a6e": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/4_4a291df4-6d57-450c-8af4-da5357694f7e.jpg",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Karen D. - Verified Buyer",
+              "testimonial_description": "<p>I'm totally blown away.<\/p><p>\"I have severe arthritis in my hands, and these gloves actually give me some relief! Also the rubber dots on the fabric improve my grip.\"<\/p>"
+            }
+          },
+          "91061be5-e110-4c02-aaca-9a080431454a": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/2_d0a45901-2d9e-4a19-a143-581e0e8c2d16.jpg",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Duncan C. - Verified Buyer",
+              "testimonial_description": "<p>A good solution.<\/p><p>\"I really don't like taking painkillers so this came as a saviour. Super comfortable & hand pain has subsided. I'm typing now and feel the compression working!\"<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "35221188-3632-4c20-8418-80533a5f7a10",
+          "57742c5f-0b49-4f97-9002-3ba00ffd7a6e",
+          "91061be5-e110-4c02-aaca-9a080431454a"
+        ],
+        "settings": {
+          "maintitle": "What Our Clients Say About Us"
+        }
+      },
+      "info_compressiongloves": {
+        "type": "info_compressiongloves",
+        "settings": {
+          "heading": "How we compare to other solutions",
+          "info": "<p>In every aspect, the mLab™️ - Arthritis compression gloves are superior in quality, method, research and customer satisfaction.\n<\/p>\n<p>Backed by a 100% satisfaction guarantee.\n<\/p>",
+          "about_btn": "Add To Cart  👉"
+        }
+      },
+      "guarantee-compressiongloves": {
+        "type": "guarantee-compressiongloves",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/mlab_logo_2_a97b5321-732f-4bc4-ba25-6363aa37bd85.png",
+          "image_position": "right",
+          "heading": "Results or a FULL Refund Guarantee",
+          "info": "<p>We love our mLab™️ - Arthritis compression gloves and are confident you will too! That’s why we're offering a 60-Day, Risk-Free Trial. If you're not in love with your results, we'll give you a refund. Pinky swear.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "productfaq-compressiongloves": {
+        "type": "productfaq-compressiongloves",
+        "blocks": {
+          "a7fb5e45-9d1f-4898-bc62-00066fb37404": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Will they fit my hands?",
+              "faq-subtitle": "Check the sizing chart at the top of the page. We recommend measuring before ordering. If between sizes we recommend sizing up."
+            }
+          },
+          "7357b8a5-d975-4675-b392-5680ddd6c835": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Will this be effective for my type of hand pain?",
+              "faq-subtitle": "A variety of symptoms &amp; therefore pains can be eased wearing the gloves. Starting from numbness, swelling on to arthritis."
+            }
+          },
+          "ceffa76d-f524-494a-9cd7-7e362ddfd611": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can I wash the gloves?",
+              "faq-subtitle": "Yes! To maintain the effect and quality, we recommend hand washing them in cold water with soap before air drying them."
+            }
+          },
+          "8ce80cdd-1d93-462e-be00-2c1eeece9119": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can I use them having sensitive skin?",
+              "faq-subtitle": "Absolutely! We designed these gloves &amp; our woven fabric to be comfortable for people with even the most sensitive skin."
+            }
+          },
+          "6127c4ce-d444-43b6-a698-70538b2ded25": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Typing won´t be a problem?",
+              "faq-subtitle": "Thanks to our open-finger-design &amp; the smooth fitting all activities can be performed without an issue."
+            }
+          },
+          "c9c3f380-cda8-4f14-9026-bb2362a18514": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Do you offer product warranty?",
+              "faq-subtitle": "Absolutely. Our products come with a 30 Day warranty. If you are not happy in anyway, please reach out to us. We will find a solution for you.\n<br>"
+            }
+          }
+        },
+        "block_order": [
+          "a7fb5e45-9d1f-4898-bc62-00066fb37404",
+          "7357b8a5-d975-4675-b392-5680ddd6c835",
+          "ceffa76d-f524-494a-9cd7-7e362ddfd611",
+          "8ce80cdd-1d93-462e-be00-2c1eeece9119",
+          "6127c4ce-d444-43b6-a698-70538b2ded25",
+          "c9c3f380-cda8-4f14-9026-bb2362a18514"
+        ],
+        "settings": {
+          "show_counter": true,
+          "maintitle": "FAQs"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 4,
+          "show_collection_image": false,
+          "show_vendor": false,
+          "sort_enable": false,
+          "tags_enable": false
+        }
+      },
+      "f82907b0-37ec-4281-933d-3c5af86e0158": {
+        "type": "collection",
+        "settings": {
+          "title": "BEST Sellers",
+          "collection": "best-sellers",
+          "grid": 3,
+          "rows": 1,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "compressionsleeve-product-template": {
+        "type": "compressionsleeve-product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "reviewtext": "Dr. Anderson and 3.497 others are raving about KneeRelievePro™️ ★★★★★ (4.9\/5)",
+          "headingtext": "<b> Struggling with knee pain? <\/b> Get relief without medication, injections or expensive surgery.",
+          "icontext1": "✔ Ultra Comfy Nano-Fiber",
+          "icontext2": "✔ Reduce Swelling & Inflammation",
+          "icontext3": "✔ Increase Blood Flow & Nutrient Supply in Joints",
+          "icontext4": "✔ Eliminate knee pain the healthy way (no more painkillers)",
+          "icontext5": "✔ Increased knee stability to decrease chances of injury",
+          "show_payment_icons": true,
+          "accordion__title1": "Guarantee",
+          "content1": "<p>We have an iron-clad, risk-free 30-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>",
+          "page1": "",
+          "accordion__title2": "Shipping",
+          "content2": "<p>Every order is tracked and insured! Shipping time will be 7-15 business days days. All orders are shipped with a tracking number.<\/p>",
+          "page2": ""
+        }
+      },
+      "compressionsleevefeaturedin": {
+        "type": "compressionsleevefeaturedin",
+        "settings": {
+          "heading": "<b>FEATURED IN<\/b>",
+          "image": "shopify:\/\/shop_images\/CompressMD_As_Seen_in.jpg"
+        }
+      },
+      "about-banner-compressionsleeve": {
+        "type": "about-banner-compressionsleeve",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Knee_Relieve_ICON_CIRCLE.png",
+          "image_position": "left",
+          "heading": "Get Back To The Life You Love!",
+          "info": "<p>Do you know the feeling, when your knee is starting to feel less stable or even pain arises? Worn-out joints or a former injury have taken their toll over time. \n<\/p>\n<p>All you want is relief, but without the dangerous and addictive pain pills, painful cortisone shots and invasive surgeries. \n<\/p>\n\n<p>The Knee Relieve Pro™️ helps you to support &amp; stabilize your knee, while allowing you to move freely resulting in increased blood flow supplying essential nutrients for joints, tendons and ligaments. \n<\/p>\n<p>Stay confident knowing that your knees will always be soothed and supported! No more sitting at home and missing out on time with your loved ones, enjoyable activities or work.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "stepofcompressionsleeve": {
+        "type": "stepofcompressionsleeve",
+        "settings": {
+          "step1-image": "shopify:\/\/shop_images\/knee_support.png",
+          "step1-title": "Start Wearing Knee Relieve Pro™️",
+          "step1-desc": "Have them on every day while you are on your feet.",
+          "step2-image": "shopify:\/\/shop_images\/pilates.png",
+          "step2-title": "Start Simple Knee Exercises",
+          "step2-desc": "Shorten recovery time by doing simple exercises at home",
+          "step3-image": "shopify:\/\/shop_images\/active.png",
+          "step3-title": "Lasting Change",
+          "step3-desc": "Knee Relieve Pro™️ will help you maintain a pain free life"
+        }
+      },
+      "benefits-compressionsleeve": {
+        "type": "benefits-compressionsleeve",
+        "blocks": {
+          "d601c238-7ed5-4ec6-8a6f-1c8148d72d41": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/target.png",
+              "benefits-title": "5 Compression Zones"
+            }
+          },
+          "8fd02900-5288-4ac8-ae72-6207345c3d3d": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/fiber.png",
+              "benefits-title": "Durable Nano-Fiber"
+            }
+          },
+          "cc5950d1-7240-4481-8bc8-de6ea7a670c7": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/doctor.png",
+              "benefits-title": "Podiatrist Approved"
+            }
+          },
+          "1ea174ac-7efa-4d5f-add3-d1e099c8c57f": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/pain.png",
+              "benefits-title": "Deep Cradle Heel Support"
+            }
+          },
+          "715a0b70-c41c-489c-9279-30a157ae2c0a": {
+            "type": "image",
+            "settings": {
+              "benefits-svg": "",
+              "benefits-image": "shopify:\/\/shop_images\/12-hours.png",
+              "benefits-title": "12+ Hrs of Easy Wear"
+            }
+          }
+        },
+        "block_order": [
+          "d601c238-7ed5-4ec6-8a6f-1c8148d72d41",
+          "8fd02900-5288-4ac8-ae72-6207345c3d3d",
+          "cc5950d1-7240-4481-8bc8-de6ea7a670c7",
+          "1ea174ac-7efa-4d5f-add3-d1e099c8c57f",
+          "715a0b70-c41c-489c-9279-30a157ae2c0a"
+        ],
+        "settings": {
+          "heading": "Lasting Change: How CompressMD™️ Treats The Root Cause",
+          "info": "<p>All you want is relief, but without the dangerous and addictive pain pills, painful cortisone shots and invasive surgeries. \n<\/p>\n<ul>\n<li>360° Targeted Nano-Fiber Compression \n<\/li>\n<li>Foot &amp; Ankle Stability\n<\/li>\n<li>Muscle-Like Arch Support\n<\/li>\n<li>Deep Cradle Heel Support &amp; Stability\n<\/li>\n<li>Increased Blood Flow\n<\/li>\n<\/ul>\n\n<strong><p>Backed by clinical studies and a results or a full refund guarantee!\n<\/p><\/strong>",
+          "about_btn": "Get Pain Relief Now 👉"
+        }
+      },
+      "video-text-compressionsleeve": {
+        "type": "video-text-compressionsleeve",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/CompressionMD.webp",
+          "image_position": "right",
+          "heading": "Clinically Proven Results",
+          "about_btn": "Get Pain Relief Now 👉",
+          "value1": 95,
+          "itemheading1": "Reduced Foot Pain",
+          "itemtext1": "Said the severity of their foot ache was significantly reduced",
+          "value2": 97,
+          "itemheading2": "Less Swelling",
+          "itemtext2": "Have experienced reduced swelling and increased blood flow to their feet",
+          "value3": 90,
+          "itemheading3": "Stay Longer On Their Feet",
+          "itemtext3": "Said that they can stay on their feet longer"
+        }
+      },
+      "testimonial-compressionsleeve": {
+        "type": "testimonial-compressionsleeve",
+        "blocks": {
+          "d76f2869-6a4e-434f-a557-dc2e98b456ed": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/2022-10-28_14h52_45.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Brenda S. - Verified Buyer",
+              "testimonial_description": "<p>My personal champion<\/p><p>\"I´ve suffered with knee pain most of my adult life. I tried some klunkier, heavier knee braces in the past. But they don´t even come close to the results I´m having with these.\"<\/p>"
+            }
+          },
+          "fb34fa08-e266-4458-99cb-a580228a66d9": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/2022-10-26_Knee_Relieve_Pro_6.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Steven R. - Verified Buyer",
+              "testimonial_description": "<p>Fits like a glove.<\/p><p>\"I used to work full time on the construction site! I had some serious chronic knee issues. But I heard about these knee sleeves so I tried them and now I feel like a new person! Perfect support for my aching knees. I wish I had found them earlier.\"<\/p>"
+            }
+          },
+          "6ff9024c-8c8b-4a62-bc5c-f6205ab3005d": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/2022-10-28_14h48_26.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Peter N. - Verified Buyer",
+              "testimonial_description": "<p>What a great investment<\/p><p>\"So comfortable, great support, easy to put on and can be worn all day. From severe knee pain to a reduction of 3\/4 of the pain in a very short time. I like the stabilizer side supports. Helps keep swelling down!\"<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "d76f2869-6a4e-434f-a557-dc2e98b456ed",
+          "fb34fa08-e266-4458-99cb-a580228a66d9",
+          "6ff9024c-8c8b-4a62-bc5c-f6205ab3005d"
+        ],
+        "settings": {
+          "maintitle": "What Our Clients Say About Us"
+        }
+      },
+      "guarantee-compressionsleeve": {
+        "type": "guarantee-compressionsleeve",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/MassageLab_Black_1300x200_8512d75b-0ce4-41af-82dd-ad363a878486.png",
+          "image_position": "right",
+          "heading": "Results or a FULL Refund Guarantee",
+          "info": "<p>We love our Knee Relieve Pro™️ Nano-Fiber Compression Sleeves and are confident you will too! That’s why we're offering a 30-Day, Risk-Free Trial. If you're not in love with your results, we'll give you a refund.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "productfaq-compressionsleeve": {
+        "type": "productfaq-compressionsleeve",
+        "blocks": {
+          "63548310-c6fd-4f96-a454-5ee3c573be68": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Will the Knee Relieve Pro™ - Compression Sleeves help me?",
+              "faq-subtitle": "If you´re experienced any kind of knee pain or are recovering from an former injury, wearing our Knee Relieve Pro™️ - Nano-Fiber Compression Sleeves help you to support &amp; stabilize your knee, while allowing you to move freely resulting in increased blood flow supplying essential nutrients for joints, tendons and ligaments."
+            }
+          },
+          "82a5a307-f903-4e82-8e09-0de5dd47d2be": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How do I put them on?",
+              "faq-subtitle": "1. Stretch out the Knee Relieve Pro™ and start from your toes.\n\n2. Pull through your calf and ensure it's straight.\n3. Ensure your knee is aligned with the gel liners and edges are straight.\n4. You´re good to go now."
+            }
+          },
+          "5972e9e0-c633-430c-9c5b-e7768f0aa4ad": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How long should I wear them for?",
+              "faq-subtitle": "The Knee Relieve Pro™ can be used everyday whenever you feel any sort of pain in your knee. Thanks to the discrete &amp; slim design you can wear them under any pants."
+            }
+          },
+          "b5ecf113-255e-4f62-b614-f35dc5e6a135": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How long do compression sleeves last?",
+              "faq-subtitle": "Our customers reported, that they can last approximately 6 months to a year. This depends on how frequently the Knee Relieve Pro™ were used and for what kind of activity &amp; purpose."
+            }
+          },
+          "72d1771c-e203-479c-a57d-e373f9f59149": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can the Compression Sleeves be washed?",
+              "faq-subtitle": "Taking good care of your knee sleeves will extend their life span. After all, we sweat a lot, and knee sleeves can get pretty musty after intense usage.\n\n- The easiest way to prevent the smell is turning your sleeves inside out after a session and simply letting them air dry.\n\n- Depending on frequency of use and smell, add them to your regular laundry and ideally let them air dry afterwards."
+            }
+          },
+          "c8cbf2b1-fd64-4e99-bac3-c9623a10e92e": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "What if it doesn't work for me?",
+              "faq-subtitle": "With every purchase we have an iron-clad, risk-free 30-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact hello@massage-lab.com and we will help you out."
+            }
+          }
+        },
+        "block_order": [
+          "63548310-c6fd-4f96-a454-5ee3c573be68",
+          "82a5a307-f903-4e82-8e09-0de5dd47d2be",
+          "5972e9e0-c633-430c-9c5b-e7768f0aa4ad",
+          "b5ecf113-255e-4f62-b614-f35dc5e6a135",
+          "72d1771c-e203-479c-a57d-e373f9f59149",
+          "c8cbf2b1-fd64-4e99-bac3-c9623a10e92e"
+        ],
+        "settings": {
+          "show_counter": true,
+          "maintitle": "Questions? Look here!"
+        }
+      },
+      "about-banner-compressionsleeve1": {
+        "type": "about-banner-compressionsleeve1",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/KneeRelieve_Pro_LP.jpg",
+          "image_position": "left",
+          "heading": "The Breakthrough Discovery",
+          "info": "<p>The old ways of treating knee pain has been tested by many but has helped few. This still happens at the current age of advanced technology.\n<\/p>\n<p>\nAfter years of research &amp; development, interviews and countless of prototypes &amp; tests, the team at MassageLab carefully engineered the most important 3 elements:\n<\/p><p>\nOur revolutionary Nano-fiber fabric keeps your knees warm, lubricating your joints and preventing injuries.\n<\/p><p>\nThe compression technology reduces pain, inflammation and strain, all while enhancing blood circulation in the areas, which need it the most to function to it´s full capacity.\n<\/p><p>\nA viscoelastic omega pad surrounds &amp; cushions the kneecap to relieve pain in the knee and connective tissue. Simultaneously the meniscus wings provide a gentle massage during movement, all while the Soft Hoffa pads exerts light support, relieving pressure on common pain spots.\n\n<\/p><p>\nBy combining the 3 most important concepts of neck pain the Knee Relieve Pro™️ results in instant relief of chronic knee pain and stiffness.<\/p>",
+          "about_btn": ""
+        }
+      },
+      "flexstrap-product-template": {
+        "type": "flexstrap-product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "reviewtext": "Tested, peer reviewed & rated by 100+ people & professionals  ★★★★★ (4.9\/5)",
+          "headingtext": "<b>If you’re tired lower back pain, stiff & tight muscles, or overpriced chiropractors - this muscle stretcher is for you!<\/b> <p><\/p> <p>🎉 Free Exercise Guide With Every Order!<\/p>",
+          "icontext1": "✔ Relieve Lower Back Pain The Natural Way",
+          "icontext2": "✔ Eliminate Tight & Stiff Muscles",
+          "icontext3": "✔ Regain Flexibility Without Injuries",
+          "show_payment_icons": true,
+          "accordion__title1": "Guarantee",
+          "content1": "<p>We have an iron-clad, risk-free 30-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>",
+          "page1": "",
+          "accordion__title2": "Shipping",
+          "content2": "<p><strong>Every order is tracked and insured! <\/strong>Shipping time will be 7-15 business days days. All orders are shipped with a tracking number.<\/p>",
+          "page2": ""
+        }
+      },
+      "about-flexstrap": {
+        "type": "about-flexstrap",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/FlexBand_LP_GIF.gif",
+          "image_position": "left",
+          "heading": "The Easiy and Beginner Friendly Way To Relieve Pain 🙌",
+          "info": "<p>Eliminating pain and regaining flexibility shouldn't cost you a fortune or a lifetime of exercising.\n<\/p>\n<p>The main innovation of the <strong> FlexBand™️<\/strong> comes from combining the most effective solutions to pain:\n<\/p>\n<ul>\n<li>The right amount stretching (avoiding injuries) \n<\/li>\n<li>Decompressing tight tendons &amp; tissue \n<\/li>\n<li>Improving healing and regeneration time\n<\/li>\n<li>Improving blood circulation\n<\/li>\n<\/ul>\n<p>By combining the 4 most important concepts, the <strong> FlexBand™️<\/strong> results in an almost instant relief of painfrom plantar fasciitis, Achilles tendonitis, muscle tension and ankle injuries.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "stepofflexstrap": {
+        "type": "stepofflexstrap",
+        "settings": {
+          "step1-image": "shopify:\/\/shop_images\/stretching.png",
+          "step1-title": "SIT OR LAY DOWN",
+          "step1-desc": "We recommend stretching while sitting or lying down for beginners.",
+          "step2-image": "shopify:\/\/shop_images\/foot_031c21b5-87d6-49d9-ab61-60efa8af2aa9.png",
+          "step2-title": "STRAP UP",
+          "step2-desc": "Simply put your foot into the loop and strap up!",
+          "step3-image": "shopify:\/\/shop_images\/smile.png",
+          "step3-title": "GENTLE STRETCH",
+          "step3-desc": "While keeping your neck & shoulders relaxed, gently pull back and feel immediate relief."
+        }
+      },
+      "benefitsflexstrap": {
+        "type": "benefitsflexstrap",
+        "blocks": {
+          "655914b1-3dfa-4c0a-aad4-ebb275b2bd3e": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/ok.png",
+              "benefits-title": "Easy To Use"
+            }
+          },
+          "23522e9f-a74d-4247-9d2a-3284d091b938": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/airplane.png",
+              "benefits-title": "Portable & Lightweight"
+            }
+          },
+          "c34ddbc0-2ccc-4d04-b088-47b57c7a426c": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/success.png",
+              "benefits-title": "Instant Pain Relief"
+            }
+          },
+          "6815440a-6f2f-4df5-9f60-ec77acf4edf2": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/sand-clock.png",
+              "benefits-title": "Science-Backed Results"
+            }
+          },
+          "47197fff-fd42-40f1-bc26-76af11024a5c": {
+            "type": "image",
+            "settings": {
+              "benefits-image": "shopify:\/\/shop_images\/premium-quality.png",
+              "benefits-title": "Durable Material"
+            }
+          }
+        },
+        "block_order": [
+          "655914b1-3dfa-4c0a-aad4-ebb275b2bd3e",
+          "23522e9f-a74d-4247-9d2a-3284d091b938",
+          "c34ddbc0-2ccc-4d04-b088-47b57c7a426c",
+          "6815440a-6f2f-4df5-9f60-ec77acf4edf2",
+          "47197fff-fd42-40f1-bc26-76af11024a5c"
+        ],
+        "settings": {
+          "heading": "Take Relief Into Your Own Hands 🌿",
+          "info": "<strong>Easy to use: <\/strong> No complicated exercises. Just simply strap on and start stretching!\n<p><\/p><p><\/p>\n<strong>Portable &amp; Lightweigth:<\/strong> The FlexBand™️ is made out of lightweight, durable &amp; easily portable materials.\n<p><\/p>\n<strong>Instant Pain Relief: <\/strong> Relieve pain with just a few stretched a day!\n<p><\/p>\n<strong>Science-Backed Results: <\/strong> All results are scientifically proven to work.\n<p><\/p>\n<p><\/p>\n<strong><p>Backed by a full refund guarantee!\n<\/p><\/strong>",
+          "about_btn": "Get My FlexBand™️ 👉"
+        }
+      },
+      "flexstrapvideo-text": {
+        "type": "flexstrapvideo-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/FlexBand_Benefits.jpg",
+          "image_position": "right",
+          "heading": "The Future is Pain-Free!",
+          "about_btn": "Get My FlexBand™️ 👉",
+          "value1": 95,
+          "itemheading1": "Improved flexibility and range of motion and eliminated stiffness after 5 days",
+          "itemtext1": "",
+          "value2": 91,
+          "itemheading2": "Experienced significantly less lower back pain after 10 minues of stretching",
+          "itemtext2": "",
+          "value3": 97,
+          "itemheading3": "Experienced long-term improvement and benefits in flexiblity",
+          "itemtext3": ""
+        }
+      },
+      "flexstraptestimonial": {
+        "type": "flexstraptestimonial",
+        "blocks": {
+          "e2b3befd-63cf-4d54-bd55-e9e49d63c5fd": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/janet_e014dd7a-7d92-48c1-9f82-795dadca1166.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Monica L. - Verified Buyer",
+              "testimonial_description": "<p>I'm totally blown away.<\/p><p>\"I bought it for my plantar fascitis, after someone recommended it. It gives a great stretch for my feet and calves. I use this at the first sign of pain & it has help tremendously.\"<\/p>"
+            }
+          },
+          "fd5c80b5-701c-423f-9fe4-457db2804140": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/2022-11-21_18h04_23_869ba472-c1bf-4e53-abb2-f1332f4ccf9f.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Norman C. - Verified Buyer",
+              "testimonial_description": "<p>What an investment.<\/p><p>\"Ordered this as a last-ditch idea, and what a godsend. Two days of stretching with it for just a couple of minutes on each leg and the pain I've had for over a year is almost gone! \"<\/p>"
+            }
+          },
+          "ffcdfd37-2d43-4446-8900-9bab5051657d": {
+            "type": "text",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/2022-11-21_18h03_34_cb3ba8a8-4a36-46f3-8e69-3a954dff2d35.png",
+              "showratting": true,
+              "review": "5",
+              "testimonial_title": "Susan D. - Verified Buyer",
+              "testimonial_description": "<p>It's groundbreaking.<\/p><p>\"The loops help you keep your movements in control and give a gentle stretch for a longer period of time than plain ol’ stretching.\"<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "e2b3befd-63cf-4d54-bd55-e9e49d63c5fd",
+          "fd5c80b5-701c-423f-9fe4-457db2804140",
+          "ffcdfd37-2d43-4446-8900-9bab5051657d"
+        ],
+        "settings": {
+          "maintitle": "What Our Clients Say About Us"
+        }
+      },
+      "info_flexstrap": {
+        "type": "info_flexstrap",
+        "settings": {
+          "heading": "How we compare to other solutions 🏆",
+          "info": "<p>In every aspect, the FlexBand™️ is superior in quality, method, research and customer satisfaction.\n<\/p>\n<p>Backed by a 100% satisfaction guarantee.\n<\/p>",
+          "about_btn": "Get My FlexBand™️👉"
+        }
+      },
+      "flexstrapguarantee": {
+        "type": "flexstrapguarantee",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/FlexStrap_2_735_x_365_px.jpg",
+          "image_position": "right",
+          "heading": "Results or a FULL Refund Guarantee",
+          "info": "<p>We love our FlexBand™️ and are confident you will too! That’s why we're offering a 30-Day, Risk-Free Trial. If you're not in love with your results, we'll give you a refund. Pinky swear.\n<\/p>",
+          "about_btn": ""
+        }
+      },
+      "flexstrapproductfaq": {
+        "type": "flexstrapproductfaq",
+        "blocks": {
+          "6fbb87f7-4003-4379-8698-c6e23a355c7a": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How do I use my FlexBand™️?",
+              "faq-subtitle": "Very simple! You can use the FlexBand™️ in multiple ways! You can easily stretch your muscles standing up, sitting down or lying on the ground. Fix the fascia stretcher appropriately and give a gentle stretch to enjoy your exercises in different positions."
+            }
+          },
+          "76f07ce3-19d4-404f-9b68-74f4248f7968": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How long should I use it for?",
+              "faq-subtitle": "You can use it for a couple of minutes; 5 to 10 minutes is ideal for everyday use. You can also use it for a 2 to 3 min stretch in the morning when you wake up or before you go to bed for desirable results."
+            }
+          },
+          "fad678bb-4a3f-468d-97ea-97b0e3adc62d": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Is it durable?",
+              "faq-subtitle": "Yes, our FlexBand™️ fascia stretcher is very durable as it is made from high-quality materials for your comfort and ease."
+            }
+          },
+          "26c8984b-ef39-48c8-b1ba-dbfff54bf480": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Is the FlexBand™ dangerous?",
+              "faq-subtitle": "Absolutely not! FlexBand™ is designed to maintain your fitness, improve mobility and relieve pains associated with tight muscles."
+            }
+          },
+          "0bb431b5-1b81-47c9-84af-f6d4167a7964": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Does the FlexBand™️ actually work?",
+              "faq-subtitle": "Yes! The FlexBand™️ works incredibly to relieve pain and improve flexibility and mobility. It also promotes overall better fitness to your body."
+            }
+          },
+          "0a02827c-7b62-4120-b96e-55534eea3c2e": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Do you offer product warranty?",
+              "faq-subtitle": "Absolutely. Our products come with a 30 Day warranty. If you are not happy in anyway, please reach out to us. We will find a solution for you."
+            }
+          }
+        },
+        "block_order": [
+          "6fbb87f7-4003-4379-8698-c6e23a355c7a",
+          "76f07ce3-19d4-404f-9b68-74f4248f7968",
+          "fad678bb-4a3f-468d-97ea-97b0e3adc62d",
+          "26c8984b-ef39-48c8-b1ba-dbfff54bf480",
+          "0bb431b5-1b81-47c9-84af-f6d4167a7964",
+          "0a02827c-7b62-4120-b96e-55534eea3c2e"
+        ],
+        "settings": {
+          "show_counter": true,
+          "maintitle": "FAQs"
+        }
+      },
+      "common-align-media-text-columns": {
+        "type": "common-align-media-text-columns",
+        "blocks": {
+          "7b58e502-1ed5-4d5f-ac51-2d25bf8af28c": {
+            "type": "content-with-title",
+            "settings": {
+              "pre_title": "4.9\/5 based on 15,000+ purchases",
+              "title": "Eliminate Back Pain & Stiffness The Natural Way",
+              "sub_title": "",
+              "content": "<p>Millions of Americans simply take pain killers, rest in bed and hope that it they won't need a surgery to relieve their pain.<\/p><p><\/p><p>Recent clinical studies have shown that staying moderately active is important to speed up recovery time and reduce the likelihood of further injuries.<\/p><p><\/p><p>This is why the NooroPad was designed to help you stay active all day long while keeping your pain levels in order.<\/p><p><\/p><p><strong>Customers and therapists and professional product testers have reported up to 90% less lower back pain.<\/strong><\/p>",
+              "button_text": "<b> View Order Options <\/b>",
+              "button_link": "#shopify-section-wbm-pricing-tables",
+              "small_text": "Insured Shipping  •  60 Days Money back",
+              "block_alignment": "left"
+            }
+          },
+          "2ead9b56-f187-484a-9ebe-c4e65b307b45": {
+            "type": "content-with-media",
+            "settings": {
+              "title": "",
+              "sub_title": "",
+              "image": "shopify:\/\/shop_images\/NR_LP_GIF_2.gif",
+              "block_alignment": "right"
+            }
+          }
+        },
+        "block_order": [
+          "7b58e502-1ed5-4d5f-ac51-2d25bf8af28c",
+          "2ead9b56-f187-484a-9ebe-c4e65b307b45"
+        ],
+        "settings": {
+          "background-color": "#fcfbf3",
+          "classes": "ai_ml_intro_cnt ai_ml_align_center_cols"
+        }
+      },
+      "common-logo-slider": {
+        "type": "common-logo-slider",
+        "blocks": {
+          "9318cdb9-d608-4563-933a-f7cd820172e7": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/yahoo-new-2019-seeklogo.com-2_240x240_a36b9dad-9ca9-4ae0-aa8a-f726abf19b2e.png"
+            }
+          },
+          "9b57c92f-3702-4a57-85b8-8447bbb0d57a": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/usa-today-seeklogo.com_240x240_f23f93aa-b1ef-4756-ac3c-e5adde8167a0.png"
+            }
+          },
+          "080ec718-6621-4222-ae1a-9e3a8b5af072": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/us-weekly-magazine_1us-weekly-magazine_120x120_11982afc-e62d-44b6-9861-d645284875d0.png"
+            }
+          },
+          "18a7b687-1e1e-4c97-8dda-7217dc56ea99": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-atlantic-magazine-seeklogo.com_240x240_b46ef2f0-2a48-42f1-91d3-a198e2162949.png"
+            }
+          },
+          "12eda88e-b131-4c2c-80cf-a5dea2ca68b9": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw_120x120_04675510-91cf-4d92-81a4-96d75d9424ab.png"
+            }
+          },
+          "e4f18c5d-d90f-48fd-8a4d-9d150de16198": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NBC_1NBC_120x120_739871e6-81ca-4cf7-9b7e-382284bf4cd8.png"
+            }
+          },
+          "3d8509a6-9942-4949-a7d0-ca0627b7b0e6": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/futurism_240x240_17ce4230-7035-47db-bc23-5e87f797294e.png"
+            }
+          },
+          "9c807e39-536d-4ba8-90c4-d6b140a0c8f0": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bustle-ar21_1bustle-ar21_240x240_65d80a06-4d56-4a62-8de8-60e8f032df38.png"
+            }
+          },
+          "f925ddf8-e7f5-4d58-8dd6-aa673dd7f753": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Allure_logo_120x120_2074e2e9-5ee9-4f1e-9055-c88f54e591e0.png"
+            }
+          },
+          "e2aacc1b-a200-4668-bfba-925d55f5771e": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bi_logo_120x120_abd757e2-3f94-48ae-8f8c-1ee4df6ea017.png"
+            }
+          },
+          "d40f27c3-9203-4bed-af4d-099e409c9776": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hp_logo_120x120_ef13a21c-aca8-4eb6-b439-936200cd98c7.png"
+            }
+          },
+          "7fe3d4cd-0bd2-4d8a-bf6d-3f8e3b2f71e2": {
+            "type": "slider-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lat_logo_240x240_bab80b88-f00b-4890-a146-e328ce2075d1.png"
+            }
+          }
+        },
+        "block_order": [
+          "9318cdb9-d608-4563-933a-f7cd820172e7",
+          "9b57c92f-3702-4a57-85b8-8447bbb0d57a",
+          "080ec718-6621-4222-ae1a-9e3a8b5af072",
+          "18a7b687-1e1e-4c97-8dda-7217dc56ea99",
+          "12eda88e-b131-4c2c-80cf-a5dea2ca68b9",
+          "e4f18c5d-d90f-48fd-8a4d-9d150de16198",
+          "3d8509a6-9942-4949-a7d0-ca0627b7b0e6",
+          "9c807e39-536d-4ba8-90c4-d6b140a0c8f0",
+          "f925ddf8-e7f5-4d58-8dd6-aa673dd7f753",
+          "e2aacc1b-a200-4668-bfba-925d55f5771e",
+          "d40f27c3-9203-4bed-af4d-099e409c9776",
+          "7fe3d4cd-0bd2-4d8a-bf6d-3f8e3b2f71e2"
+        ],
+        "settings": {
+          "background-color": "",
+          "title": "15.000+ <br> Real Satisfied Customers",
+          "content": "",
+          "classes": ""
+        }
+      },
+      "wbm-here-it-is": {
+        "type": "wbm-here-it-is",
+        "blocks": {
+          "b9fcbe5c-8382-4e57-96c3-8e62f4c391e2": {
+            "type": "his-content-with-media",
+            "settings": {
+              "title": "",
+              "sub_title": "",
+              "image": "shopify:\/\/shop_images\/3_9755bb8a-ba64-4e22-b0ee-f4e112125b1d.jpg",
+              "block_alignment": "left"
+            }
+          },
+          "fc516920-4782-4a7a-8551-34e143c7c901": {
+            "type": "his-content-with-title",
+            "settings": {
+              "title": "The Breakthrough Discovery",
+              "sub_title": "",
+              "content": "<p>After years of research & development, interviews and countless of prototypes & tests, the team at MassageLab carefully engineered the most 3 important elements against back pain.<br\/><br\/>The main innovation of the NooroPad™️ comes from combining the most effective solutions to back pain.<br\/><br\/><strong>By combining the 3 most important concepts of back pain the NooroPad™️ results in instant relief of chronic back pain and sciatica:<\/strong><\/p>",
+              "button_text": "<b> View Order Options <\/b>",
+              "button_link": "#shopify-section-wbm-pricing-tables",
+              "block_alignment": "right"
+            }
+          },
+          "b8ca2b27-a3e4-4aa9-9773-04568df4a3da": {
+            "type": "his-content-with-points",
+            "settings": {
+              "point": "<b>1:<\/b> Active pain suppression by gently stimulating the nerves"
+            }
+          },
+          "8dbe5e3b-a514-4c3c-97d2-c5ce8e9a65a5": {
+            "type": "his-content-with-points",
+            "settings": {
+              "point": "<b>2:<\/b> Reducing muscle stiffness and increasing flexibility"
+            }
+          },
+          "3a3b22d4-c9e8-4f19-81e4-da821fabc9a5": {
+            "type": "his-content-with-points",
+            "settings": {
+              "point": "<b>3:<\/b> Increasing blood flow for faster recovery"
+            }
+          }
+        },
+        "block_order": [
+          "b9fcbe5c-8382-4e57-96c3-8e62f4c391e2",
+          "fc516920-4782-4a7a-8551-34e143c7c901",
+          "b8ca2b27-a3e4-4aa9-9773-04568df4a3da",
+          "8dbe5e3b-a514-4c3c-97d2-c5ce8e9a65a5",
+          "3a3b22d4-c9e8-4f19-81e4-da821fabc9a5"
+        ],
+        "settings": {
+          "background-color": "",
+          "classes": "ai_ml_align_center_cols"
+        }
+      },
+      "wbm-before-after-comparison": {
+        "type": "wbm-before-after-comparison",
+        "blocks": {
+          "b4a2658a-74f2-4970-930b-f4212f5bcdf0": {
+            "type": "bac-content-image-points",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/recommendation.png",
+              "title": "Wireless & Hands Free",
+              "content": "<p>Seamless design, wearable under shirt during activities.<\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "eedd8ee0-284c-458c-ba08-627b29723160": {
+            "type": "bac-content-image-points",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/back.png",
+              "title": "Active Pain Relief",
+              "content": "<p>Reduces pain almost instantly.<\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "dd1849f2-30fb-4f72-8323-ba83e1c6c108": {
+            "type": "bac-content-image-points",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/regeneration.png",
+              "title": "Speedy recovery",
+              "content": "<p>Help you stay active and recover faster.<\/p>",
+              "block_alignment": "right"
+            }
+          },
+          "7c14698f-b5b9-4caf-8d1e-f64718ef91e9": {
+            "type": "bac-content-image-points",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cooler.png",
+              "title": "Simply portable",
+              "content": "<p>Take it with you anywhere. No wires, no complications.<\/p>",
+              "block_alignment": "right"
+            }
+          },
+          "50ac2811-a118-450c-942e-98b14811dacf": {
+            "type": "bac-content-with-ba",
+            "settings": {
+              "title": "",
+              "before-image": "shopify:\/\/shop_images\/1_968e80fd-3a06-49a0-9db7-a27c65537eb8.jpg",
+              "after-image": "shopify:\/\/shop_images\/2_86bf9830-ee97-4869-9536-d6329b6a7bbb.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "b4a2658a-74f2-4970-930b-f4212f5bcdf0",
+          "eedd8ee0-284c-458c-ba08-627b29723160",
+          "dd1849f2-30fb-4f72-8323-ba83e1c6c108",
+          "7c14698f-b5b9-4caf-8d1e-f64718ef91e9",
+          "50ac2811-a118-450c-942e-98b14811dacf"
+        ],
+        "settings": {
+          "background-color": "",
+          "title": "Decompresses Stiff Muscles & Relieves Pain",
+          "content": "<p>The NooroPad can help you relieve muscle stiffness and regain stability and flexiblity in your lower back area.<\/p>"
+        }
+      },
+      "wbm-how-to-use": {
+        "type": "wbm-how-to-use",
+        "blocks": {
+          "988f5158-2f0b-4b7f-8e1e-9178a96815b9": {
+            "type": "htu-content-with-title",
+            "settings": {
+              "title": "Simple and Easy To Use",
+              "sub_title": "",
+              "content": "",
+              "button_text": "<b> View Order Options <\/b>",
+              "button_link": "#shopify-section-wbm-pricing-tables",
+              "block_alignment": "left"
+            }
+          },
+          "e461ecfa-6b1b-4bf4-b948-84d59c5b9ae3": {
+            "type": "htu-content-with-points",
+            "settings": {
+              "point": "<b>STEP ONE:<\/b>   Select the location where you want to place the pad depending on your pain location. Use the image below for guidance."
+            }
+          },
+          "0767b78b-f752-48da-9771-82ddd54f7cc4": {
+            "type": "htu-content-with-points",
+            "settings": {
+              "point": "<b>STEP TWO:<\/b>  Press the ON button twice so that the light flashes on the device."
+            }
+          },
+          "2be4cda5-7fa7-47ea-80b2-ebe0e39abc34": {
+            "type": "htu-content-with-points",
+            "settings": {
+              "point": "<b>STEP THREE:<\/b> Select your desired program with the PROGRAM button and increase\/decrease intensity with the ON or OFF buttons."
+            }
+          },
+          "1a1aad34-b939-4d6e-a85d-b17e5afba444": {
+            "type": "htu-content-with-media",
+            "settings": {
+              "title": "",
+              "sub_title": "",
+              "image": "shopify:\/\/shop_images\/NR_LP_GIF.gif",
+              "block_alignment": "right"
+            }
+          }
+        },
+        "block_order": [
+          "988f5158-2f0b-4b7f-8e1e-9178a96815b9",
+          "e461ecfa-6b1b-4bf4-b948-84d59c5b9ae3",
+          "0767b78b-f752-48da-9771-82ddd54f7cc4",
+          "2be4cda5-7fa7-47ea-80b2-ebe0e39abc34",
+          "1a1aad34-b939-4d6e-a85d-b17e5afba444"
+        ],
+        "settings": {
+          "background-color": "",
+          "classes": "ai_ml_align_center_cols"
+        }
+      },
+      "wbm-heal-yourself": {
+        "type": "wbm-heal-yourself",
+        "blocks": {
+          "ae369ae6-60db-4a81-a707-d941b2f6ac15": {
+            "type": "hy-content-with-media",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/Improved_Lower_Back.jpg",
+              "block_alignment": "left"
+            }
+          },
+          "8b3d2fe2-00f4-4d8d-9a68-155dca3a13e6": {
+            "type": "hy-content-with-title",
+            "settings": {
+              "title": "Relieve Pain & Stay Active",
+              "content": "<p><strong>Stop increasing your recovery times by laying in bed all day and start being active again with the NooroPad!<\/strong><\/p>",
+              "button_text": "<b> View Order Options <\/b>",
+              "button_link": "#shopify-section-wbm-pricing-tables",
+              "block_alignment": "right"
+            }
+          },
+          "9dd65f7d-1d1e-42f5-8229-9284a47480b0": {
+            "type": "hy-content-with-points",
+            "settings": {
+              "pie_range": 95,
+              "pie_title": "",
+              "pie_content": "<p>of patients experience instant relief.<\/p>"
+            }
+          },
+          "0f188779-2206-4e97-9ed9-c273d9a5287d": {
+            "type": "hy-content-with-points",
+            "settings": {
+              "pie_range": 89,
+              "pie_title": "",
+              "pie_content": "<p>of patients notice long-term improvements.<\/p>"
+            }
+          },
+          "db3cba60-4172-49da-ad74-65eb6657f7f6": {
+            "type": "hy-content-with-points",
+            "settings": {
+              "pie_range": 90,
+              "pie_title": "",
+              "pie_content": "<p>of patience start being active again  within a day.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "ae369ae6-60db-4a81-a707-d941b2f6ac15",
+          "8b3d2fe2-00f4-4d8d-9a68-155dca3a13e6",
+          "9dd65f7d-1d1e-42f5-8229-9284a47480b0",
+          "0f188779-2206-4e97-9ed9-c273d9a5287d",
+          "db3cba60-4172-49da-ad74-65eb6657f7f6"
+        ],
+        "settings": {
+          "background-color": "",
+          "classes": "ai_ml_align_center_cols"
+        }
+      },
+      "wbm-clinically-proven": {
+        "type": "wbm-clinically-proven",
+        "blocks": {
+          "b470e05d-6839-4a77-bc6f-eb227d14e3ca": {
+            "type": "cp-content-with-title",
+            "settings": {
+              "title": "Clinically Proven To Be Effective",
+              "content": "<p>The NooroPad™ has been recommended and used by therapists and professionals as an simple, effective, non-invasive, drug-free and low cost treatment to relieve sciatica pain, chronic lower back pain, and soothe stiff muscles.<\/p>",
+              "text_alignment": "center"
+            }
+          },
+          "043c2c50-ef1c-4feb-a81d-19baf9d7fba8": {
+            "type": "cp-content-with-media",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/Add_a_heading_1.jpg",
+              "video_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "b470e05d-6839-4a77-bc6f-eb227d14e3ca",
+          "043c2c50-ef1c-4feb-a81d-19baf9d7fba8"
+        ],
+        "settings": {
+          "background-color": ""
+        }
+      },
+      "common-before-after": {
+        "type": "common-before-after",
+        "blocks": {
+          "63276ea1-65a6-43e2-9afe-1a5657c98b6b": {
+            "type": "cba-content-with-ba",
+            "settings": {
+              "title": "",
+              "content": "<p>\"I have had chronic sciatica, nerve impingement of LCFN, very painful and debilitating. I have used all kinds of meds and I am also getting nerve blocks. With the combination of massage and the NooroPad  I’m getting better overall control of pain. I would recommend this brand.\" <strong>- ★★★★★ Elly T.<\/strong><\/p>",
+              "before-image": "shopify:\/\/shop_images\/A8321b50d554a44278451fc8082669bed4.webp",
+              "after-image": "shopify:\/\/shop_images\/A8321b50d554a44278451fc8082669bed4.webp"
+            }
+          },
+          "78dc4912-a8b5-4822-9bc5-fc06a64ace4b": {
+            "type": "cba-content-with-ba",
+            "settings": {
+              "title": "",
+              "content": "<p><strong>\"<\/strong>Pulled mylowerbackand my friend told me about this device and tried it for 30 minutes when it arrived and major improvement! Great for muscle strains!!\" - <strong>★★★★★ John O.<\/strong><\/p>",
+              "before-image": "shopify:\/\/shop_images\/A79d6167ac48e41629dd47b8df3f94c74L.webp",
+              "after-image": "shopify:\/\/shop_images\/A79d6167ac48e41629dd47b8df3f94c74L.webp"
+            }
+          },
+          "690900a5-c0ad-4ad8-8e27-dc18f488a51c": {
+            "type": "cba-content-with-ba",
+            "settings": {
+              "title": "",
+              "content": "<p>\"By using this unit I have not had to take my usual 1200 mg Ibprophen to ease the pain on mylowerback. I even wore it under my scrubs & worked with it on.\" - <strong>★★★★★<\/strong> <strong> Susan T.<\/strong><\/p>",
+              "before-image": "shopify:\/\/shop_images\/Ad55204abccb342998be5720696bf2f558.webp",
+              "after-image": "shopify:\/\/shop_images\/Ad55204abccb342998be5720696bf2f558.webp"
+            }
+          }
+        },
+        "block_order": [
+          "63276ea1-65a6-43e2-9afe-1a5657c98b6b",
+          "78dc4912-a8b5-4822-9bc5-fc06a64ace4b",
+          "690900a5-c0ad-4ad8-8e27-dc18f488a51c"
+        ],
+        "settings": {
+          "background-color": "",
+          "title": "Don't take our word for it. Listen to the proven results:",
+          "content": "",
+          "classes": "ai_ml_wbm_before_after_cnt"
+        }
+      },
+      "wbm-special-benefits": {
+        "type": "wbm-special-benefits",
+        "blocks": {
+          "64d48342-a775-46bf-97b1-0bdae4189198": {
+            "type": "sb-content-with-title",
+            "settings": {
+              "title": "What Makes The NooroPad Better?",
+              "sub_title": "",
+              "content": "",
+              "block_alignment": "left"
+            }
+          },
+          "8565004e-157c-44bd-a4e3-119594bc1016": {
+            "type": "sb-content-with-points",
+            "settings": {
+              "feature": "Relieves pain instantly",
+              "in_nooro": "yes",
+              "in_mediciations": "no"
+            }
+          },
+          "29688aea-9d40-499f-b955-9ca9ec7f12a3": {
+            "type": "sb-content-with-points",
+            "settings": {
+              "feature": "No medication",
+              "in_nooro": "yes",
+              "in_mediciations": "no"
+            }
+          },
+          "8925f743-9670-456d-b61b-a967b3b3d5de": {
+            "type": "sb-content-with-points",
+            "settings": {
+              "feature": "Long-term pain relief",
+              "in_nooro": "yes",
+              "in_mediciations": "no"
+            }
+          },
+          "b5a70918-d752-4d17-b037-f45bf74d2572": {
+            "type": "sb-content-with-points",
+            "settings": {
+              "feature": "Simple and easy to use",
+              "in_nooro": "yes",
+              "in_mediciations": "no"
+            }
+          },
+          "df8d5b2e-b87d-498b-8c29-016fe3d3fd3d": {
+            "type": "sb-content-with-points",
+            "settings": {
+              "feature": "Side effects",
+              "in_nooro": "no",
+              "in_mediciations": "yes"
+            }
+          },
+          "cfaab3fb-1290-4a56-a1f7-0fb4dcde0ed2": {
+            "type": "sb-content-with-points",
+            "settings": {
+              "feature": "Cost $$$",
+              "in_nooro": "no",
+              "in_mediciations": "yes"
+            }
+          }
+        },
+        "block_order": [
+          "64d48342-a775-46bf-97b1-0bdae4189198",
+          "8565004e-157c-44bd-a4e3-119594bc1016",
+          "29688aea-9d40-499f-b955-9ca9ec7f12a3",
+          "8925f743-9670-456d-b61b-a967b3b3d5de",
+          "b5a70918-d752-4d17-b037-f45bf74d2572",
+          "df8d5b2e-b87d-498b-8c29-016fe3d3fd3d",
+          "cfaab3fb-1290-4a56-a1f7-0fb4dcde0ed2"
+        ],
+        "settings": {
+          "background-color": "",
+          "classes": ""
+        }
+      },
+      "wbm-your-hands-deserve-rest": {
+        "type": "wbm-your-hands-deserve-rest",
+        "blocks": {
+          "96607d40-4f9e-4691-980b-ed2d9a4f265c": {
+            "type": "yhdr-content-with-title",
+            "settings": {
+              "title": "Rest And Recover Without The Hassle",
+              "sub_title": "",
+              "content": "<p>The NooroPad was developed to be completely <strong>simple and easy to use<\/strong> while requiring minimal input from the user (or anyone else) AND <strong>providing the best results<\/strong>.<\/p><p><\/p><p>This is why the NooroPad:<\/p><p><\/p><p>• No complicated app<\/p><p>• No wires<\/p><p>• No remote<\/p><p><\/p><p>Just one simple & seamless design.<\/p>",
+              "button_text": "<b> View Order Options <\/b>",
+              "button_link": "#shopify-section-wbm-pricing-tables",
+              "block_alignment": "right"
+            }
+          },
+          "4cbd4422-415f-4c54-967f-3aa3c4e14318": {
+            "type": "yhdr-content-with-media",
+            "settings": {
+              "title": "",
+              "sub_title": "",
+              "image": "shopify:\/\/shop_images\/1_bb578054-6cbd-4eb7-92d8-fc52300a9150.jpg",
+              "block_alignment": "left"
+            }
+          }
+        },
+        "block_order": [
+          "96607d40-4f9e-4691-980b-ed2d9a4f265c",
+          "4cbd4422-415f-4c54-967f-3aa3c4e14318"
+        ],
+        "settings": {
+          "background-color": "#fcfbf3",
+          "classes": "ai_ml_align_center_cols"
+        }
+      },
+      "wbm-bonus": {
+        "type": "wbm-bonus",
+        "blocks": {
+          "51ba24b3-0333-4132-abd3-c6be5cc22206": {
+            "type": "bot-content-with-title",
+            "settings": {
+              "title": "",
+              "sub_title": "",
+              "content": "<p><strong>Normally valued at $19.95 <\/strong>, our exercise guide comes FREE with every purchase.<\/p><p><span style=\"text-decoration:underline\"><strong>Revealed Inside:<\/strong><\/span><\/p><p><strong>1. The three best exercises for sciatica & lower back pain chiropractors don't want you to know about!<\/strong><\/p><p><strong>2. How to stay active with your NooroPad.<\/strong><\/p><p><em>**Offer valid today only**<\/em><\/p>",
+              "block_alignment": "right"
+            }
+          },
+          "bf7621d2-8ce9-4750-a0e4-c6a61a3ca3b3": {
+            "type": "bot-content-with-media",
+            "settings": {
+              "title": "",
+              "sub_title": "",
+              "image": "shopify:\/\/shop_images\/Ebook_1.jpg",
+              "block_alignment": "left"
+            }
+          }
+        },
+        "block_order": [
+          "51ba24b3-0333-4132-abd3-c6be5cc22206",
+          "bf7621d2-8ce9-4750-a0e4-c6a61a3ca3b3"
+        ],
+        "settings": {
+          "background-color": "",
+          "title": "<u><b>BONUS:<\/b><\/u>  Order Today and Receive A FREE Back Pain Exercise Guide",
+          "sub_title": "",
+          "content": "",
+          "classes": "ai_ml_align_center_cols"
+        }
+      },
+      "wbm-90-day-money-back": {
+        "type": "wbm-90-day-money-back",
+        "settings": {
+          "background-color": "#fcfbf3",
+          "title": "Results or a full refund guarantee:",
+          "sub_title": "60 DAYS",
+          "content": "<p>Starting from the day you receive your order, you can return your product without any questions asked.<\/p>",
+          "classes": "",
+          "image": "shopify:\/\/shop_images\/Satisfaction-Guarantee-TP-webp_1.webp",
+          "partner_content": ""
+        }
+      },
+      "wbm-buy-more-save-more": {
+        "type": "wbm-buy-more-save-more",
+        "settings": {
+          "background-color": "#56766c",
+          "title": "Buy More, Save More!",
+          "sub_title": "",
+          "content": "<p><strong>Why spend much when you can save a lot instead..<\/strong><\/p>",
+          "classes": ""
+        }
+      },
+      "wbm-pricing-tables": {
+        "type": "wbm-pricing-tables",
+        "blocks": {
+          "d97b8f74-bd07-44f1-bde6-d95eb0798469": {
+            "type": "pt-content-with-pricing",
+            "settings": {
+              "variation_title": "2x NooroPad™",
+              "price": "$159.95",
+              "disounted_price": "$89.95",
+              "per_piece_price": "$44.97 each",
+              "featured_label": "Most Popular",
+              "stars": "★★★★★",
+              "happy_customers": "12.500+ Happy Customers",
+              "content": "<p>2x Set NooroPad™<\/p><p>You Save $70<\/p><p>60 Days Moneyback Guarantee<\/p><p>Insured Shipping<\/p>",
+              "button_text": "<b>Add To Cart<\/b>",
+              "button_link": "https:\/\/massage-lab.com\/cart\/add?id=43752923070728&quantity=1",
+              "image": "shopify:\/\/shop_images\/7_5c30f67a-8dd7-4748-b7fb-cfea8b0f9c06.jpg"
+            }
+          },
+          "0835ffff-73f9-4c15-b247-8614ff1ba0e5": {
+            "type": "pt-content-with-pricing",
+            "settings": {
+              "variation_title": "3x NooroPad™",
+              "price": "$239.95",
+              "disounted_price": "$119.95",
+              "per_piece_price": "$39.98 each",
+              "featured_label": "Best Value",
+              "stars": "★★★★★",
+              "happy_customers": "12.500+ Happy Customers",
+              "content": "<p>3x Set NooroPad™<\/p><p>You Save $120<\/p><p>60 Days Moneyback Guarantee<\/p><p>Insured Shipping<\/p>",
+              "button_text": "<b>Add To Cart<\/b>",
+              "button_link": "https:\/\/massage-lab.com\/cart\/add?id=43752923103496&quantity=1",
+              "image": "shopify:\/\/shop_images\/8_c1ec294b-e36a-4bf4-aef7-fd0f9925bd37.jpg"
+            }
+          },
+          "57bdf3d2-4e0d-4e1b-af13-d597883203c9": {
+            "type": "pt-content-with-pricing",
+            "settings": {
+              "variation_title": "1x NooroPad™",
+              "price": "$79.95",
+              "disounted_price": "$49.95",
+              "per_piece_price": "$49.95 each",
+              "featured_label": "Basic Offer",
+              "stars": "★★★★★",
+              "happy_customers": "12.500+ Happy Customers",
+              "content": "<p>1 Set Whole Body Massager™<\/p><p>You Save $30<\/p><p>60 Days Moneyback Guarantee<\/p><p>Insured Shipping<\/p>",
+              "button_text": "<b>Add To Cart<\/b>",
+              "button_link": "https:\/\/massage-lab.com\/cart\/add?id=43752923037960&quantity=1",
+              "image": "shopify:\/\/shop_images\/6_2f462425-6bf9-4c16-94fd-b5dab53bab27.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "d97b8f74-bd07-44f1-bde6-d95eb0798469",
+          "0835ffff-73f9-4c15-b247-8614ff1ba0e5",
+          "57bdf3d2-4e0d-4e1b-af13-d597883203c9"
+        ],
+        "settings": {
+          "background-color": "",
+          "title": "<b>Select Your Bundle<\/b>",
+          "sub_title": "",
+          "content": "",
+          "classes": ""
+        }
+      },
+      "wbm-before-footer-icons": {
+        "type": "wbm-before-footer-icons",
+        "blocks": {
+          "bd80bc9b-ff3d-41c9-b9a4-352fe48525a6": {
+            "type": "bfi-content-with-media",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/shipped.png",
+              "content": "<p><strong>INSURED SHIPPING<\/strong><\/p>"
+            }
+          },
+          "e77e072d-4c76-4c63-84f4-f73d02adbe6a": {
+            "type": "bfi-content-with-media",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/customer-service_8cc584ba-09d9-4541-9b80-17229223d7f9.png",
+              "content": "<p><strong>24\/7 CUSTOMER SERVICE<\/strong><\/p>"
+            }
+          },
+          "dbfc9d89-8660-4cac-b939-2ae41fe938f4": {
+            "type": "bfi-content-with-media",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/money-back.png",
+              "content": "<p><strong>60-DAY MONEY BACK GUARANTEE<\/strong><\/p>"
+            }
+          },
+          "c6726166-1f31-4f98-b741-1adbe18e1306": {
+            "type": "bfi-content-with-media",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/satisfaction.png",
+              "content": "<p><strong>OVER 100,000 HAPPY CUSTOMERS<\/strong><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "bd80bc9b-ff3d-41c9-b9a4-352fe48525a6",
+          "e77e072d-4c76-4c63-84f4-f73d02adbe6a",
+          "dbfc9d89-8660-4cac-b939-2ae41fe938f4",
+          "c6726166-1f31-4f98-b741-1adbe18e1306"
+        ],
+        "settings": {
+          "background-color": "",
+          "title": "",
+          "content": "",
+          "classes": ""
+        }
+      },
+      "wbm-product-details": {
+        "type": "wbm-product-details",
+        "blocks": {
+          "a5047dd8-645e-453a-98e8-9d5bec89bc7a": {
+            "type": "pd-meta-testimony",
+            "settings": {
+              "name": "Susan Baxter",
+              "content": "<p><em>\"My husband was raving about how much it helps him with his sciatica so I bought one too. <\/em><em><strong>We can do ANY activity again with a LOT less pain!!!<\/strong><\/em><em>\"<\/em><\/p>",
+              "image": "shopify:\/\/shop_images\/profile.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "a5047dd8-645e-453a-98e8-9d5bec89bc7a"
+        ],
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "reviewtext": "12,500+ Happy Customers",
+          "headingtext": "",
+          "icontext1": "",
+          "icontext2": "",
+          "icontext3": "",
+          "show_payment_icons": false,
+          "button_text": "VIEW ORDER OPTIONS",
+          "button_link": "#shopify-section-wbm-pricing-tables"
+        }
+      },
+      "wbm-faq": {
+        "type": "wbm-faq",
+        "blocks": {
+          "973f7a10-7645-440c-b906-448603150c14": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How will this help me?",
+              "faq-subtitle": "<p>1. Lower back pain and sciatica pain relief with every use. <\/p><p>2. Stronger lower back muscles that results in less pain and more stability.<\/p><p>3. Less stiff muscles and more flexiblity and range of motion.<\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "fc106f52-304a-4d6f-88c1-d72ffb696298": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Do you have a guarantee?",
+              "faq-subtitle": "<p>We have an iron-clad, risk-free 60-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "be1ead05-c2d6-473d-bb0b-2345e74c0068": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Is there a warranty on the product?",
+              "faq-subtitle": "<p>Every NooroPad comes with a 12 month warranty.<\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "ec572b7d-3f7c-4cae-aba2-ed7eadd3db2c": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "What does the the NooroPad treat?",
+              "faq-subtitle": "<p>The NooroPad was created to help with any lower back and sciatica issues by improving the overall back health.<\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "79e96de9-b744-4a26-9a4f-143130c05838": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "What is the shipping cost and delivery time?",
+              "faq-subtitle": "<p><strong>We offer an insured USA and International Shipping with tracking.<\/strong> Packages are being shipped out 24\/7 from our warehouse to keep up with the demand.<\/p><p>Every order is tracked and insured! Shipping time will be 7-15 business days days. All orders are shipped with a tracking number.<\/p>",
+              "block_alignment": "right"
+            }
+          },
+          "9c897865-6844-48b9-bbee-842e32392e81": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can I cancel my order?",
+              "faq-subtitle": "<p>Please call or email us as soon as possible. You can cancel your order within 24 hrs of placing your order.<\/p>",
+              "block_alignment": "right"
+            }
+          },
+          "1ad4c350-d2ba-4643-96ec-f7e6b5e79b5d": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can I use this during therapy?",
+              "faq-subtitle": "<p>We reccommend you to consult with your therapist first.<\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "85d766c4-eb44-435b-ba57-c8bd4f734848": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Can people with heart disease use this product?",
+              "faq-subtitle": "<p>Please consult with an expert before using the NooroPad<\/p>",
+              "block_alignment": "left"
+            }
+          },
+          "eacf7bac-8f90-40bf-8d1d-e90d00ed5401": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "What is your return policy?",
+              "faq-subtitle": "<p>We have an iron-clad, risk-free 60-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>",
+              "block_alignment": "right"
+            }
+          },
+          "07ab7ee1-22fe-4979-b98e-f7d052ca30ae": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "Which payment methods do you accept?",
+              "faq-subtitle": "<p>We accept most credit cards and Paypal.<\/p>",
+              "block_alignment": "right"
+            }
+          },
+          "67620a8c-8fb6-40f3-a889-b4a3a0258657": {
+            "type": "faq-block",
+            "settings": {
+              "faq-title": "How can I track my order?",
+              "faq-subtitle": "<p>Please wait a few days after you have placed and order and received shipping confirmation before checking the status. <\/p><p>You'll be able to track you package here: https:\/\/massage-lab.com\/apps\/parcelpanel<\/p>",
+              "block_alignment": "right"
+            }
+          }
+        },
+        "block_order": [
+          "973f7a10-7645-440c-b906-448603150c14",
+          "fc106f52-304a-4d6f-88c1-d72ffb696298",
+          "be1ead05-c2d6-473d-bb0b-2345e74c0068",
+          "ec572b7d-3f7c-4cae-aba2-ed7eadd3db2c",
+          "79e96de9-b744-4a26-9a4f-143130c05838",
+          "9c897865-6844-48b9-bbee-842e32392e81",
+          "1ad4c350-d2ba-4643-96ec-f7e6b5e79b5d",
+          "85d766c4-eb44-435b-ba57-c8bd4f734848",
+          "eacf7bac-8f90-40bf-8d1d-e90d00ed5401",
+          "07ab7ee1-22fe-4979-b98e-f7d052ca30ae",
+          "67620a8c-8fb6-40f3-a889-b4a3a0258657"
+        ],
+        "settings": {
+          "show_counter": false,
+          "maintitle": "Frequently Asked Questions"
+        }
+      },
+      "physical-section8": {
+        "type": "physical-section8",
+        "settings": {
+          "btn": "Click Here To Get Up To 62% OFF"
+        }
+      },
+      "physical-footer": {
+        "type": "physical-footer",
+        "blocks": {
+          "571619eb-ea48-470d-b46a-01af6debe578": {
+            "type": "py-content-with-title",
+            "settings": {
+              "title": "",
+              "content": "<p>THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER PROTECTION UPDATE<\/p><p><\/p><p>THE STORY DEPICTED ON THIS SITE AND THE PERSON DEPICTED IN THE STORY ARE NOT ACTUAL NEWS. RATHER, THIS STORY IS BASED ON THE RESULTS THAT SOME PEOPLE WHO HAVE USED THESE PRODUCTS HAVE ACHIEVED. THE RESULTS PORTRAYED IN THE STORY AND IN THE COMMENTS ARE ILLUSTRATIVE, AND MAY NOT BE THE RESULTS THAT YOU ACHIEVE WITH THESE PRODUCTS. THIS PAGE COULD RECEIVE COMPENSATION FOR CLICKS ON OR PURCHASE OF PRODUCTS FEATURED ON THIS SITE.<\/p><p><\/p><p>*This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p><p>© Copyright 2022 The Healthy Life Magazine - All Rights Reserved<\/p>"
+            }
+          },
+          "b77384cd-2c42-4025-85d1-21ccbbfa07e7": {
+            "type": "py-footer-links",
+            "settings": {
+              "name": "Privacy Policy",
+              "link": "\/policies\/privacy-policy"
+            }
+          },
+          "7ba3b132-fe10-4a2f-a88d-a86f74dc900d": {
+            "type": "py-footer-links",
+            "settings": {
+              "name": "Terms of Service",
+              "link": "\/policies\/terms-of-service"
+            }
+          },
+          "ba989f60-b890-42e3-9d3e-465943358a26": {
+            "type": "py-footer-links",
+            "settings": {
+              "name": "Return Policy",
+              "link": "\/policies\/refund-policy"
+            }
+          }
+        },
+        "block_order": [
+          "571619eb-ea48-470d-b46a-01af6debe578",
+          "b77384cd-2c42-4025-85d1-21ccbbfa07e7",
+          "7ba3b132-fe10-4a2f-a88d-a86f74dc900d",
+          "ba989f60-b890-42e3-9d3e-465943358a26"
+        ],
+        "settings": {
+          "background-color": "#97979e",
+          "classes": "",
+          "phone": "(844)-493-2391",
+          "email": "hello@massage-lab.com"
+        }
+      },
+      "pagefly-home": {
+        "type": "pagefly-home",
+        "settings": {}
+      },
+      "bundle-product-details": {
+        "type": "bundle-product-details",
+        "blocks": {
+          "49474f58-11dc-4a56-af5b-74dd0d3408d3": {
+            "type": "bpd-meta-testimony",
+            "settings": {
+              "name": "Susan Tracey",
+              "content": "<p>I got the belt because the reviews were so stellar… Minute I put it on, I felt relief! The next morning was the first time in a while where my lower back didn’t ache!!!<\/p>",
+              "image": "shopify:\/\/shop_images\/avatar-rvw.png"
+            }
+          },
+          "d480e11d-1eb4-423f-98ae-609701760175": {
+            "type": "bpd-featured-claim",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/sciencebacked-results-1000x150-1676465421284.jpg"
+            }
+          },
+          "ceb76718-2757-4a2e-a7eb-3ce083d55f2b": {
+            "type": "bpd-bundle-points",
+            "settings": {
+              "content": "<p><strong>FREE<\/strong> Delivery every single month<\/p>"
+            }
+          },
+          "e5e79203-e121-47e5-b46f-5ebac118718c": {
+            "type": "bpd-bundle-points",
+            "settings": {
+              "content": "<p><strong>FREE <\/strong>Salmon Bites with first delivery<\/p>"
+            }
+          },
+          "b016e8d7-6030-4735-89e4-7facde21f19c": {
+            "type": "bpd-bundle-points",
+            "settings": {
+              "content": "<p><strong>NO CONTRACT<\/strong> Cancel with ease<\/p>"
+            }
+          },
+          "f298fe9d-a120-487e-98a5-0bbd030e0db4": {
+            "type": "bpd-auto-accord-items",
+            "settings": {
+              "title": "60 Day Guarantee",
+              "content": "<p>We have an iron-clad, risk-free 60-day guarantee that begins only when you receive the product! If you don't have a positive experience for any reason, contact us any time and we will help you out. <\/p>"
+            }
+          },
+          "89033220-7769-4595-a270-6efa08df3c48": {
+            "type": "bpd-auto-accord-items",
+            "settings": {
+              "title": "Insured Shipping",
+              "content": "<p>Every order is tracked and insured! Shipping time will be 7-15 business days. All orders are shipped with a tracking number.<\/p>"
+            }
+          },
+          "91d4855b-9e38-4644-a373-471d955da604": {
+            "type": "bpd-addon-product",
+            "settings": {
+              "addon_product": "clear-ears-therapy"
+            }
+          }
+        },
+        "block_order": [
+          "49474f58-11dc-4a56-af5b-74dd0d3408d3",
+          "d480e11d-1eb4-423f-98ae-609701760175",
+          "ceb76718-2757-4a2e-a7eb-3ce083d55f2b",
+          "e5e79203-e121-47e5-b46f-5ebac118718c",
+          "b016e8d7-6030-4735-89e4-7facde21f19c",
+          "f298fe9d-a120-487e-98a5-0bbd030e0db4",
+          "89033220-7769-4595-a270-6efa08df3c48",
+          "91d4855b-9e38-4644-a373-471d955da604"
+        ],
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      }
+    },
+    "content_for_index": [
+      "1632391725b459a80a",
+      "1632391949aa8ee7fa",
+      "1625997579ddfd881f",
+      "16259975890f4fb4b1",
+      "16259977751e395efa",
+      "1626602569609be02b",
+      "16259988479b2815bf",
+      "f82907b0-37ec-4281-933d-3c5af86e0158",
+      "1625998915a7e2e0d2"
+    ],
+    "blocks": {
+      "16156609502398088594": {
+        "type": "shopify:\/\/apps\/omega-multi-facebook-pixels\/blocks\/app-embed-block\/ecdcc423-3dbd-480c-85e8-fdb9789cf058",
+        "disabled": false,
+        "settings": {}
+      },
+      "6279071938380501511": {
+        "type": "shopify:\/\/apps\/powerful-contact-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero-1": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "text_size": "large"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "feature-columns": {
+          "type": "feature-columns",
+          "blocks": {
+            "feature-columns-0": {
+              "type": "text_block",
+              "settings": {}
+            },
+            "feature-columns-1": {
+              "type": "text_block",
+              "settings": {}
+            },
+            "feature-columns-2": {
+              "type": "text_block",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "feature-columns-0",
+            "feature-columns-1",
+            "feature-columns-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "grid": 4
+          }
+        },
+        "hero-2": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "quotes": {
+          "type": "quotes",
+          "blocks": {
+            "quotes-0": {
+              "type": "quote",
+              "settings": {}
+            },
+            "quotes-1": {
+              "type": "quote",
+              "settings": {}
+            },
+            "quotes-2": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "quotes-0",
+            "quotes-1",
+            "quotes-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "image-bar": {
+          "type": "image-bar",
+          "blocks": {
+            "image-bar-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "image-bar-1": {
+              "type": "image",
+              "settings": {}
+            },
+            "image-bar-2": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image-bar-0",
+            "image-bar-1",
+            "image-bar-2"
+          ],
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1"
+          ],
+          "settings": {
+            "show_payment_icons": true
+          }
+        }
+      },
+      "content_for_index": [
+        "hero-1",
+        "feature-row",
+        "feature-columns",
+        "collection",
+        "hero-2",
+        "quotes",
+        "image-bar"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "media_size": "medium",
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+            "color_footer_bg": "#f8f8f8",
+            "color_footer_text": "#6d6d6d"
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

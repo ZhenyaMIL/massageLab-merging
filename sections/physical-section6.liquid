@@ -1,0 +1,94 @@
+<div class="physical-section">
+    <div class="physical-shopify-section-inner">
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-heading">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.desc1 != blank %}
+        <div class="physical-desc1 text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      <div class="physical-text-heading">
+        {% if section.settings.heading1 != blank %}
+          <div class="physical-heading1 text-heading">{{ section.settings.heading1 }}</div>
+        {% endif %}
+        {% if section.settings.heading2 != blank %}
+          <div class="physical-heading2 text-heading">{{ section.settings.heading2 }}</div>
+        {% endif %}
+      </div>
+      {% if section.settings.btn != blank %}
+        <div class="link-btn">
+          <a href="https://offer.massage-lab.com/compression-socks" class="physical-button">{{ section.settings.btn }}</a>
+        </div>
+      {% endif %}
+      {% if section.settings.btndesc != blank %}
+        <div class="link-btn-desc">
+          {{ section.settings.btndesc }}
+        </div>
+      {% endif %}
+      {% if section.settings.maintitle2 != blank %}
+        <div class="physical-heading">{{ section.settings.maintitle2 }}</div>
+      {% endif %}
+      {% if section.settings.desc2 != blank %}
+        <div class="physical-desc2 text-edit">{{ section.settings.desc2 }}</div>
+      {% endif %}
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Section6",
+    "class": "physical-section6",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Title1",
+        "default": "If these socks can actually help foot pain, they must be expensive, right?"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1",
+        "default": "<p>But we were stunned to see just how affordable they are.</p><p>In fact, when we saw the price, my husband whispered that they’re an absolute steal!</p><p>So we bought several pairs because it never hurts to have extra socks in the drawer.And now, Dr. Jeremy and his team have even sweetened the deal and are offering a <u> <strong>huge discount for new customers, making their prices unbeatable.</strong></u></p>"
+      },
+      {
+        "type": "text",
+        "id": "heading1",
+        "label": "Heading1",
+        "default": "RIGHT NOW You can get up to 62%"
+      },
+      {
+        "type": "html",
+        "id": "heading2",
+        "label": "Heading2"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text",
+        "default": "Check Availability + Save Up To 62%"
+      },
+      {
+        "type": "text",
+        "id": "btndesc",
+        "label": "Button Desc",
+        "default": "FREE SHIPPING INCLUDED"
+      },
+      {
+        "type": "text",
+        "id": "maintitle2",
+        "label": "Title2",
+        "default": "SootheSocks™ also come with an iron-clad 90-day money back guarantee so they are 100% risk-free to try."
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Description2",
+        "default": "<p>Dr. Jeremy told us that if the socks didn’t work for my husband, he’d give us our money back no questions asked.</p><p>That same “Doctor’s Guarantee” is being offered to anyone who grabs a pair on this page.</p><p>So if you ask me, it’s a no brainer because there’s no risk to try them.</p>"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,54 @@
+<div class="featured">
+  {% if section.settings.heading != blank %}
+    <h2 class="featured-text">{{ section.settings.heading }}</h2>
+  {% endif %}
+  <div class="breaker-line"></div>
+  <div class="featured__product">
+    {% if section.settings.featuredproductimage != blank %}
+      <img src="{{ section.settings.featuredproductimage | img_url: 'master' }}" alt="Featured__Product" class="featuredproductimage">
+    {% endif %}
+    {% if section.settings.button != blank %}
+      <a href="#" target="_blank" class="sidebabtn">
+        <div class="text-w-bg">{{ section.settings.button }}</div>
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Right Column",
+    "class": "featured-sidebar",
+    "tag":"section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Heading",
+        "default":"Featured"
+      },
+      {
+        "type": "image_picker",
+        "id": "featuredproductimage",
+        "label": "Image"
+      },
+      {
+        "type":"text",
+        "id":"button",
+        "label":"Button",
+        "default":"Sutera Silverthread Towels »"
+      }
+    ]
+  }
+{% endschema %}

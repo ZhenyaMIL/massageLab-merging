@@ -1,0 +1,175 @@
+<div class="ai_ml_section_cnt" style="background-color:{{ section.settings.background-color }}">
+	<div class="page-width ai_ml_inner_cnt row">
+      {% if section.settings.title != blank %}
+        <div class="content-bac-main_cnt">
+    			<h1>{{ section.settings.title }}</h1>
+
+                {% if section.settings.content != blank %}
+    				<p>{{ section.settings.content }}</p>
+    			{% endif %}	          
+        </div>
+      {% endif %}  
+      <div class="columns small-12 large-3 content-image-points float-left ">
+		{% for block in section.blocks %}
+		  {% if block.type == 'bac-content-image-points' and block.settings.block_alignment== 'left' %}      	
+					<div class="columns small-12 content-with-image-points">
+            			{% if block.settings.image != blank %}
+    						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+    					{% endif %}	
+                      
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+
+            			{% if block.settings.content != blank %}
+    						<p>{{ block.settings.content }}</p>
+    					{% endif %}	                    
+					</div>
+		  {% endif %}
+		{% endfor %}	
+      </div>
+  		{% for block in section.blocks %}
+		  {% if block.type == 'bac-content-with-ba' %}      	
+					<div class="columns small-12 large-6 content-with-ba float-left">
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+    					<div class="ai_ml_ba_comp_cnt">
+              			{% if block.settings.before-image != blank %}
+                          <figure class="ai_ml_ba_comp_item ai_ml_comp_after_image" style="background-image:url('{{ block.settings.after-image | img_url: 'master' }}')"></figure>      						
+      					{% endif %}	  
+              			{% if block.settings.after-image != blank %}
+                          <figure class="ai_ml_ba_comp_item ai_ml_comp_before_image" style="background-image:url('{{ block.settings.before-image | img_url: 'master' }}')"></figure>						
+      					{% endif %}	
+                          <input type="range" min="1" max="100" value="0" class="ai_ml_before_after_slider" name='slider' id="ai_ml_before_after_slider">
+                          <div class='ai_ml_comp_slider_btn ai_ml_none'></div>                          
+                        </div>                      
+					</div>
+		  {% endif %}
+		{% endfor %}      
+      <div class="columns small-12 large-3 content-image-points float-right ">
+		{% for block in section.blocks %}
+		  {% if block.type == 'bac-content-image-points' and block.settings.block_alignment== 'right' %}      	
+					<div class="columns small-12 content-with-image-points">
+            			{% if block.settings.image != blank %}
+    						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+    					{% endif %}	                      
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+
+            			{% if block.settings.content != blank %}
+    						<p>{{ block.settings.content }}</p>
+    					{% endif %}	                    
+					</div>
+		  {% endif %}
+		{% endfor %}	
+      </div>      
+
+  <div class="ai_ml_clear"></div>					
+
+    </div>    
+			
+</div>
+
+
+{% schema %}
+  {
+    "name": "Before After Section",  
+    "tag": "section",
+    "class": "ai_ml_section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      },
+ 	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      }    
+    ],
+    "blocks":[
+      {
+		"type":"bac-content-image-points",
+  	 	"name": "Content With Image Points",
+     	 "settings": [
+ 	  {
+	    "type": "image_picker",
+	    "id": "image",
+		"label": "Image"
+	  },          
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      },
+      {
+        "type": "select",
+        "id": "block_alignment",
+        "label": "Block alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }	  
+      ]
+      },
+	  {
+		"name": "Content With Before After",
+		 "type": "bac-content-with-ba",
+		"settings": [
+		  {
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "text"
+		  },
+		  {
+			"type": "image_picker",
+			"id": "before-image",
+			"label": "Before Image"
+		  },
+		  {
+			"type": "image_picker",
+			"id": "after-image",
+			"label": "After Image"
+		  }          
+		]
+	  }     
+  	],"presets": [
+      {
+        "name": "Before After Section",
+        "category": "WBM Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

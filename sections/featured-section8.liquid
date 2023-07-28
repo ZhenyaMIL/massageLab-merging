@@ -1,0 +1,81 @@
+<div class="featured-header">
+  <div class="featured-wrapper">
+    <div class="offer">
+      <div class="product__img">
+        {% if section.settings.subheading != blank %}
+          <h3 class="offerheading mobile">{{ section.settings.subheading }}</h3>
+        {% endif %}
+        {% if section.settings.offerimage != blank %}
+          <a href="#" target="_blank" class="asset-cta w-inline-block img-click">
+              <img src="{{ section.settings.offerimage | img_url: '260x260' }}" alt="" class="main-product">
+          </a>
+        {% endif %}
+      </div>
+      <div class="final__text">
+        {% if section.settings.subheading != blank %}
+         <h3 class="offerheading lg">{{ section.settings.subheading }}</h3>
+        {% endif %}
+        {% if section.settings.offerdesc != blank %}
+          <p class="sale-text">{{ section.settings.offerdesc }}</p>
+        {% endif %}
+        <a href="#" target="_blank" class="button w-button btn-click">{{ section.settings.buttontext }}</a>
+        <div class="text-block">{{ section.settings.offersubtitle }}</div>
+        <div class="w-embed w-script">
+          <p class="offer-date">
+            {{ "now" | date: "%A, %B %d, %Y" }}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% if section.settings.sources != blank %}
+      <div class="citation-block">
+        {{ section.settings.sources }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Featured Section8",
+    "class": "featured-section8",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "offerimage",
+        "label": "Banner Image"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "INTERNET ONLY OFFER"
+      },
+      {
+        "type": "text",
+        "id": "offerdesc",
+        "label": "Description",
+        "default": "This FREE Hand Towel deal is in high demand and stock keeps selling out."
+      },
+      {
+        "type": "text",
+        "id": "buttontext",
+        "label": "Button Text",
+        "default": "✓ Check Current Availability"
+      },
+      {
+        "type": "text",
+        "id": "offersubtitle",
+        "label": "Offer Title",
+        "default": "This special offer is valid until"        
+      },
+      {
+        "type": "html",
+        "id": "sources",
+        "label": "Sources"  
+      }
+    ]
+  }
+{% endschema %}

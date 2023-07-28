@@ -1,0 +1,96 @@
+<div class="page-width">
+  <div class="aboutus-information grid--1-col-tablet-down grid--2-col-desktop grid image-position-{{ section.settings.image_position }}">
+    {% if section.settings.image != blank %}
+    <div class="aboutus-banner grid__item">
+      <div class="image-container">
+        <img loading="lazy"
+               srcset="{{ section.settings.image | img_url: 'master' }}"
+               src="{{ section.settings.image | img_url: 'master' }}"
+               alt="Aboutus Image">
+      </div>
+    </div>
+    {% endif %}
+    <div class="information-container grid__item">
+       {% if section.settings.heading != blank %}
+        <div class="title-container section-header">
+          <h2 class="heading">{{ section.settings.heading }}</h2>
+        </div>
+       {% endif %}
+       {% if section.settings.info != blank %}
+        <div class="list-Aboutus-info rte">
+          {{ section.settings.info }}
+        </div>
+       {% endif %}
+        {% if section.settings.about_btn != blank %}
+        <div class="about-btn">
+          <a href="JavaScript:void(0);" class="btn btn-large button getmytheragel">
+            {{ section.settings.about_btn }}
+          </a>
+        </div>
+        {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  jQuery(document).ready(function($) {
+    $('.chart-circle').easyPieChart({ 
+      barColor: '#1D8107',
+      size: 70,
+      trackColor: '#EBF3E4',
+      easing: 'easeInOut',
+      scaleColor: false,
+      lineCap: 'circle',
+      lineWidth: 6,
+      animate: 2000
+    });
+    
+  });
+</script>
+{% schema %}
+  {
+    "name": "Aboutus Banner",
+    "tag": "section",
+	"class": "aboutus-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+	  {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image Position",
+        "default": "left",
+        "options": [
+          { "value": "left", "label": "Left"},
+          { "value": "right", "label": "Right"}
+        ]
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "We Have Everything You Need ?"
+      },
+      {
+        "type": "html",
+        "id": "info",
+        "label": "Description",
+        "default": "<p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum.</p>"
+      },
+      {
+        "type": "text",
+        "id": "about_btn",
+        "label": "Button Label",
+        "default": "Contact Us"
+      }
+	],
+	"presets": [
+      {
+        "name": "Aboutus Banner"
+      }
+    ]
+  }
+{% endschema %}

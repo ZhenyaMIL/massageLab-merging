@@ -1,0 +1,90 @@
+<div class="physical-section">
+  <div class="physical-shopify-section-inner">
+    <div class="stepbgcolor">
+      {% if section.settings.maintitle != blank %}
+        <div class="step-heading">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.sectionimage != blank %}
+        <div class="sectionimage">
+          <img class="lazyload" src="{{ section.settings.sectionimage | img_url: 'master' }}" alt="Section Image">
+        </div>
+      {% endif %} 
+      {% if section.settings.desc1 != blank %}
+        <div class="physical-desc1 text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      {% if section.settings.updatetitle != blank or section.settings.updatedesc != blank %}
+        <div class="update-bgcolor">
+          {% if section.settings.updatetitle != blank %}
+            <div class="physical-update">{{ section.settings.updatetitle }}</div>
+          {% endif %}
+          {% if section.settings.updatedesc != blank %}
+            <div class="update-desc">{{ section.settings.updatedesc }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    {% if section.settings.btn != blank %}
+      <div class="link-btn">
+        <a href="https://offer.massage-lab.com/compression-socks" class="physical-button">{{ section.settings.btn }}</a>
+      </div>
+    {% endif %}
+    {% if section.settings.btndesc != blank %}
+      <div class="link-btn-desc">
+        {{ section.settings.btndesc }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Section7",
+    "class": "physical-section7",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Title1",
+        "default": "How To Get The Most Out Of SootheSocks™"
+      },
+      {
+        "type": "image_picker",
+        "id": "sectionimage",
+        "label": "Image"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1"
+      },
+      {
+        "type": "text",
+        "id": "updatetitle",
+        "label": "Update Title",
+        "default": "**IMPORTANT UPDATE**"
+      },
+      {
+        "type": "html",
+        "id": "updatedesc",
+        "label": "Update Description",
+        "default": "<p>SootheSocks™ has experienced a surge in demand since this article was written.</p><p>Stock is running dangerously low. Tap the button below to claim your discount and check availability now!</p>"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text",
+        "default": "Check Availability + Save Up To 62%"
+      },
+      {
+        "type": "text",
+        "id": "btndesc",
+        "label": "Button Desc",
+        "default": "FREE SHIPPING INCLUDED"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,82 @@
+<div id="shopify-section-reviews-header" class="shopify-section reviews-header {% if section.settings.image %}reviewsimage lazyload{% else %}reviews-color{% endif %}"
+    {% if section.settings.image %}style="background-image:url('{{ section.settings.image | img_url: 'master' }}')"{% endif %}>
+  <div class="review-title-banner-wrapper">
+    <div class="review-title-banner-inner">
+      {% if section.settings.title1 != blank %}
+        <h1 class="tinyheader">{{ section.settings.title1 }}</h1>
+      {% endif %}
+      {% if section.settings.title2 != blank %}
+        <div class="header">{{ section.settings.title2 }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  #shopify-section-{{ section.id }} .reviews-header.reviews-color{
+    background: {{ section.settings.reviews_background }};
+  }
+  #shopify-section-{{ section.id }} .reviews-header{
+    padding: {{ section.settings.reviews_padding }}px 0;
+  }
+  #shopify-section-{{ section.id }} .reviews-header .tinyheader{
+    color: {{ section.settings.textcolor1 }};
+  }
+  #shopify-section-{{ section.id }} .reviews-header .review-title-banner-inner .header{
+    color: {{ section.settings.textcolor2 }};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Reviews Header",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background Image",
+        "info": "Size: 1920px X 850px"
+      },
+      {
+        "type": "color",
+        "id": "reviews_background",
+        "label": "Background Color",
+        "default": "#F7F8FA"
+      },
+      {
+        "type": "range",
+        "id": "reviews_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "label": "Internal Top & Bottom Space/Padding",
+        "default": 70
+      },
+      {
+        "type": "color",
+        "id": "textcolor1",
+        "label": "Text Color1",
+        "default": "#303036"
+      },
+      {
+        "type": "color",
+        "id": "textcolor2",
+        "label": "Text Color2",
+        "default": "#0fa3fa"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Title",
+        "default": "REAL PEOPLE. REAL RESULTS"
+      },
+      {
+        "type": "html",
+        "id": "title2",
+        "label": "Description",
+        "default": "Join the 10’s of thousands of customers that are now living healthier, pain-free lives."
+      }
+    ]
+  }
+{% endschema %}

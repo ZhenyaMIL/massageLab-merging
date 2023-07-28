@@ -1,0 +1,94 @@
+<div class="ai_ml_section_cnt" style="background-color:{{ section.settings.background-color }}">
+	<div class="page-width ai_ml_inner_cnt row">	
+      {% if section.settings.title != blank %}
+        <div class="bfi-content-main_cnt ai_ml_align_center">
+    			<h1>{{ section.settings.title }}</h1>
+
+                {% if section.settings.content != blank %}
+    				<p>{{ section.settings.content }}</p>
+    			{% endif %}	          
+        </div>
+      {% endif %}       
+
+  		{% for block in section.blocks %}
+		  {% if block.type == 'bfi-content-with-media' %}      	
+					<div class="small-6 medium-3 bfi-content-with-media float-left">
+            			{% if block.settings.image != blank %}
+    						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+    					{% endif %}	 
+                        {% if block.settings.content != blank %}
+            				<p>{{ block.settings.content }}</p>
+            			{% endif %}	                      
+					</div>
+		  {% endif %}
+		{% endfor %}
+
+  
+  <div class="ai_ml_clear"></div>					
+
+    </div>    
+			
+</div>
+
+
+{% schema %}
+  {
+    "name": "Before Footer Section",  
+    "tag": "section",
+    "class": "ai_ml_section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      },
+ 	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },      
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      }, 
+	  {
+        "type": "text",
+        "id": "classes",
+        "label": "Classes"
+      }       
+    ],
+    "blocks":[
+	  {
+		"name": "Content With Media",
+		 "type": "bfi-content-with-media",
+		"settings": [
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		  },
+		  {
+			"type": "richtext",
+			"id": "content",
+			"label": "Content",
+            "default": "<p>text</p>"
+		  }	          
+		]
+	  }     
+  	],"presets": [
+      {
+        "name": "Before Footer Section",
+        "category": "WBM Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

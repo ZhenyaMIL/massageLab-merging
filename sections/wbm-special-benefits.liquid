@@ -1,0 +1,179 @@
+<div class="ai_ml_section_cnt {{ section.settings.classes }}" style="background-color:{{ section.settings.background-color }}">
+	<div class="page-width ai_ml_inner_cnt row"> 
+		{% for block in section.blocks %}
+		  {% if block.type == 'sb-content-with-title' %}      	
+			  <div class="columns small-12 medium-6 sb-content-with-title float-{{ block.settings.block_alignment }} ai_ml_align_center">
+    					{% if block.settings.title != blank %}
+    						<h1>{{ block.settings.title }}</h1>
+    					{% endif %}	
+    					{% if block.settings.sub_title != blank %}
+    						<h5>{{ block.settings.title }}</h5>
+    					{% endif %}	                
+            			{% if block.settings.content != blank %}
+    						<p>{{ block.settings.content }}</p>
+    					{% endif %}	                    				
+              </div>        
+		  {% endif %}
+		{% endfor %}     
+      <div class="columns small-12 medium-6 sb-content-with-points float-left">
+                     <div class="row sb-content-with-points-item-head">
+                        <div class="columns small-6">
+                        	 <p class="ai_ml_visibility_hidden">Features</p>
+                        </div> 
+                        <div class="columns small-3">
+                                <img src="https://cdn.shopify.com/s/files/1/0261/8441/7357/files/6_2f462425-6bf9-4c16-94fd-b5dab53bab27.jpg?v=1673354567" />                                  
+                        </div> 
+                        <div class="columns small-3">
+                                 <p>Medications</p>                          
+                        </div>                       
+                    </div> 
+
+                  <div class="sb-content-with-points-inner-cnt">
+              		{% for block in section.blocks %}
+            		  {% if block.type == 'sb-content-with-points'and block.settings.feature != blank %}            
+                                <div class="row sb-content-with-points-item">
+                                    <div class="columns small-6">
+                                    	 <p>{{ block.settings.feature }}</p>
+                                    </div> 
+                                    <div class="columns small-3">
+                                        {% if block.settings.in_nooro == "yes" %}
+                                            <img src="{{ 'feature-yes.png' | asset_url }}" />
+                                        {% else %}
+                                            <img src="{{ 'feature-no.svg' | asset_url }}" />
+                                        {% endif %}	                          
+                                    </div> 
+                                    <div class="columns small-3">
+                                        {% if block.settings.in_mediciations == "yes" %}
+                                            <img src="{{ 'feature-yes.png' | asset_url }}" />
+                                        {% else %}
+                                            <img src="{{ 'feature-no.svg' | asset_url }}" />
+                                        {% endif %}	                          
+                                    </div>                       
+                                </div>                             		                      					
+            		  {% endif %}
+            		{% endfor %}
+                  </div>
+      </div>      
+  <div class="ai_ml_clear"></div>					
+
+    </div>    
+			
+</div>
+
+
+{% schema %}
+  {
+    "name": "Special Benefits Section",  
+    "tag": "section",
+    "class": "ai_ml_section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      }, 
+	  {
+        "type": "text",
+        "id": "classes",
+        "label": "Classes"
+      }        
+    ],
+    "blocks":[
+      {
+		"type":"sb-content-with-title",
+  	 	"name": "Content With Text",
+     	 "settings": [
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+	  {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Title",
+        "default": "text"
+      },
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      },
+      {
+        "type": "select",
+        "id": "block_alignment",
+        "label": "Block alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }	  
+      ]
+      },      
+	  {
+		"name": "Special Benefits",
+		 "type": "sb-content-with-points",
+		"settings": [
+		  {
+			"type": "text",
+			"id": "feature",
+			"label": "Feature",
+			"default": "text"
+		  },
+         {
+            "type": "select",
+            "id": "in_nooro",
+            "label": "In Nooro",
+            "default": "yes",
+            "options": [
+              {
+                "value": "yes",
+                "label": "Yes"
+              },
+              {
+                "value": "no",
+                "label": "No"
+              }
+            ]
+          },
+         {
+            "type": "select",
+            "id": "in_mediciations",
+            "label": "In Mediciaitons",
+            "default": "yes",
+            "options": [
+              {
+                "value": "yes",
+                "label": "Yes"
+              },
+              {
+                "value": "no",
+                "label": "No"
+              }
+            ]
+          }          
+		]
+	  }     
+  	],"presets": [
+      {
+        "name": "Special Benefits Section",
+        "category": "WBM Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

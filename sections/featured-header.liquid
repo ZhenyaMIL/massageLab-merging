@@ -1,0 +1,104 @@
+<div class="featured-header">
+  <div class="featured-wrapper">
+    {% if section.settings.heading != blank %}
+      <div class="featured-heading">
+        {{ section.settings.heading }}
+      </div>
+    {% endif %}
+    <div class="breaker-line"></div>
+    <div class="author-block">
+      {% if section.settings.authorimage != blank %}
+        <div class="author-photo"></div>
+      {% endif %}
+      {% if section.settings.authordate != blank %}
+        <div class="author-date">
+          {{ section.settings.authordate }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="quoteblock">
+      {% if section.settings.quoteicon != blank %}
+        <div class="quoteicon">
+          <img class="lazyload" src="{{ section.settings.quoteicon | img_url: 'master' }}" alt="Quote Image">
+        </div>
+      {% endif %}
+      {% if section.settings.quotetext != blank %}
+        <p class="quotetext">{{ section.settings.quotetext }}</p>
+      {% endif %}
+    </div>
+    {% if section.settings.towelimage != blank %}
+      <a class="asset-cta" href="#">
+        <img class="full-img" src="{{ section.settings.towelimage | img_url: 'master' }}" alt="Banner Image">
+      </a>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <h2 class="subheading">{{ section.settings.subheading }}</h2>
+    {% endif %}
+    {% if section.settings.desc != blank %}
+      <div class="featured-des">{{ section.settings.desc }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .author-photo{
+    background-image:url('{{ section.settings.authorimage | img_url: 'master' }}')
+  }
+  
+</style>
+
+{% schema %}
+  {
+    "name": "Featured Header",
+    "class": "featured-header",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Can Showering Make You Dirtier? This Genius New Towel Is Infused “Stay-Fresh” Silver Ions"
+      },
+      {
+        "type": "image_picker",
+        "id": "authorimage",
+        "label": "Author Image",
+        "info": "Size: 72px X 72px"
+      },
+      {
+        "type": "text",
+        "id": "authordate",
+        "label": "Author Name & Date",
+        "default": "By <strong>Jonah Starr</strong> | October 1, 2022"
+      }, 
+      {
+        "type": "image_picker",
+        "id": "quoteicon",
+        "label": "Quote Icon",
+        "info": "Size: 72px X 72px"
+      },
+      {
+        "type": "text",
+        "id": "quotetext",
+        "label": "Quote Text",
+        "default": "<em>“Unbelievable results: soft and absorbable AND dry very quickly!” — Cheryl D.</em>"
+      },
+      {
+        "type": "image_picker",
+        "id": "towelimage",
+        "label": "Banner Image"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Traditional Bath Towels: Breeding Grounds for Mildew & Odors?"
+      },
+      {
+        "type": "html",
+        "id": "desc",
+        "label": "Decription"
+      }
+    ]
+  }
+{% endschema %}

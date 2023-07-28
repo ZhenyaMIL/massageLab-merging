@@ -1,0 +1,171 @@
+<div class="reviews-videos"> 
+  <div class="video-article-inner pagewidth"> 
+    <div class="video-row">
+      {% assign content_blocks_length = section.blocks.size %}
+      {% for block in section.blocks %} 
+        {% assign mod = forloop.index | modulo: 3 %}
+        {% if mod  == 1 and  forloop.index != 1 %}
+            </div>
+        {% endif %}
+          {% if mod  == 1 %}
+            <div class="grid-slide">
+        {% endif %}
+       <div class="wrapper">
+        <div class="image-container">
+          {% if block.settings.bannerimage1 != blank %}
+            <div class="reviews-image" {% if block.settings.bannerimage1 %}style="background-image:url('{{ block.settings.bannerimage1 | img_url: 'master' }}')"{% endif %}></div>
+          {% else %}
+            {{ 'image' | placeholder_svg_tag }}
+          {% endif %}  
+          {% if block.settings.video_url != blank %}
+            <div class="video-play-icon">
+              <a class="playvideo" href="{{ block.settings.video_url }}">
+                {% include 'reviews-play' %}
+              </a> 
+            </div>
+          {% endif %}
+        </div>
+        {% if block.settings.reviews-videos-desc != blank %}
+          <div class="list-Aboutus-info">
+            {{ block.settings.reviews-videos-desc }}
+          </div>
+        {% endif %} 
+       </div>
+       {% if forloop.index == content_blocks_length %}
+        </div>
+    {% endif %}
+      {% endfor %}
+     </div>
+   {% comment %}
+    {% if section.settings.reviews-videos-btn != blank %}
+      <div class="reviews-videos-btn">
+        <a {% if section.settings.reviews-videos-link != blank %}href="{{ section.settings.reviews-videos-link }}"{% else %}role="link" aria-disabled="true"{% endif %} data-block="{{ content_blocks_length }}" class="btn showmore-reviews">
+          {{ section.settings.reviews-videos-btn }}
+        </a>
+      </div>
+    {% endif %}
+   
+   {% endcomment %}
+  </div>  
+</div>  
+
+<script>
+  jQuery(document).ready(function() {
+
+    $('.playvideo').magnificPopup({
+    type: 'iframe',
+    closeOnBgClick: false, 
+    iframe: {
+        markup: '<div class="mfp-iframe-scaler">'+
+        '<div class="mfp-close"></div>'+
+        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+        '<div class="mfp-title">Some caption</div>'+
+        '</div>'
+    },
+    callbacks: {
+        markupParse: function(template, values, item) {
+            values.title = item.el.attr('title');
+        }
+    }, 
+    // Delay in milliseconds before popup is removed
+    removalDelay: 300,
+
+    // Class that is added to popup wrapper and background
+    // make it unique to apply your CSS animations just to this exact popup
+    mainClass: 'mfp-fade'
+  });
+
+   var blocks_size = parseInt($('.showmore-reviews').attr('data-block'));
+    
+    if(window.matchMedia("(max-width: 767px)").matches){
+      if(blocks_size > 3) {
+        $('.reviews-videos-btn').removeClass('hide');
+      }
+    } else{
+        if(blocks_size > 6) {
+          $('.reviews-videos-btn').removeClass('hide');
+          $('.video-row .grid-slide:nth-child(1)').addClass('active');
+          $('.video-row .grid-slide:nth-child(2)').addClass('active');
+        }
+    }
+    $('.video-row .grid-slide:nth-child(1)').addClass('active');
+    $('.video-row .grid-slide:nth-child(2)').addClass('active');
+    $(document).on("click",".showmore-reviews",function() {
+       var current_active_last_row = $('.grid-slide.active').last()
+      if(current_active_last_row){
+        var next_row = $(current_active_last_row).next('.grid-slide');
+        if(next_row){
+          $(next_row).addClass('active');
+        }
+      }
+    });
+    
+  });
+</script>
+
+<style type="text/css"> 
+  #shopify-section-{{ section.id }}{
+    padding: {{ section.settings.reviews_video_padding }}px 0;
+  }
+</style>
+
+
+{% schema %}
+  {
+    "name": "reviews-videos",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "reviews_video_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "label": "Internal Top & Bottom Space/Padding",
+        "default": 60
+      },
+       {
+          "type": "text",
+          "id": "reviews-videos-btn",
+          "label": "Button Label",
+          "default": "Show More"
+       },
+  	   {
+          "type": "url",
+          "id": "reviews-videos-link",
+          "label": "Button Link"
+        }
+     ],
+    "blocks": [
+      { 
+        "type": "image",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bannerimage1",
+            "label": "Image",
+            "info": "Size:570px X 355px"
+          },
+    	  {
+            "id": "video_url",
+             "type": "video_url",
+             "label": "Video URL",
+             "accept": ["youtube", "vimeo"],
+             "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+             "info": "Text",
+             "placeholder": "Text"
+          },
+          {
+            "type": "html",
+            "id": "reviews-videos-desc",
+            "label": "Description",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+

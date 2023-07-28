@@ -1,0 +1,92 @@
+<div class="featured-header">
+  <div class="featured-wrapper">
+    {% if section.settings.subheading != blank %}
+      <h2 class="subheading">{{ section.settings.subheading }}</h2>
+    {% endif %}
+    <div class="features-block">
+      {% if section.settings.towelimage != blank %}
+        <a class="asset-cta" href="#">
+          <img class="full-img" src="{{ section.settings.towelimage | img_url: 'master' }}" alt="Banner Image">
+        </a>
+      {% endif %}
+      <div class="flex-box">
+        {% for block in section.blocks %}
+          <div class="features-box">
+            {% if block.settings.featuresimage != blank %}
+              <img src="{{ block.settings.featuresimage | img_url: '50x50' }}" alt="Feature Image">
+            {% endif %}
+            {% if block.settings.featurestext != blank %}
+              <p class="feature-text">{{ block.settings.featurestext }}</p>
+            {% endif %} 
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.featuresbutton != blank %}
+        <a class="featuresbutton" href="#">{{ section.settings.featuresbutton }}</a>
+      {% endif %}
+    </div>
+    {% if section.settings.desc1 != blank %}
+      <div class="featured-des">{{ section.settings.desc1 }}</div>
+    {% endif %}
+    {% if section.settings.desc2 != blank %}
+      <div class="featured-des">{{ section.settings.desc2 }}</div>
+    {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Featured Section2",
+    "class": "featured-section2",
+    "tag":"section",
+    "max_blocks": 6,
+    "settings": [      
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Stop Using Damp, Dirty Towels And Switch To This Innovative New Solution"
+      },
+      {
+        "type": "image_picker",
+        "id": "towelimage",
+        "label": "Banner Image"
+      },
+      {
+        "type": "text",
+        "id": "featuresbutton",
+        "label": "Button",
+        "default": "CLICK HERE FOR FREE HAND TOWELS ON SELECT ORDERS ≫"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Decription1"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Decription2"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Features",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "featuresimage",
+            "label": "Features Image"
+          },
+          {
+            "type": "text",
+            "id": "featurestext",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

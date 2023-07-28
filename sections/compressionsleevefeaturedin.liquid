@@ -1,0 +1,36 @@
+
+<div class="known-from">
+    <p>{{ section.settings.heading }}</p>
+  {% if section.settings.image != blank %}
+    <img loading="lazy"
+           srcset="{{ section.settings.image | img_url: 'master' }}"
+           src="{{ section.settings.image | img_url: 'master' }}"
+           alt="Featured Image">
+  {% else %}
+    {{ 'lifestyle-2' | placeholder_svg_tag }}
+  {% endif %}
+</div>
+
+</section>
+
+
+{% schema %}
+  {
+    "name": "Featuredin",
+    "tag": "section",
+	"class": "featuredin-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Featured In:"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+	]
+  }
+{% endschema %}

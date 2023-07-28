@@ -1,0 +1,104 @@
+<div class="parrallax-block {% if section.settings.image %}parrallaximage lazyload{% else %}parrallaxcolor{% endif %}"
+    {% if section.settings.image %}style="background-image:url('{{ section.settings.image | img_url: 'master' }}')"{% endif %}>
+  <div class="parrallax-wrapper pagewidth">
+    <div class="parrallax-inner">
+      {% if section.settings.title1 != blank %}
+        <div class="parrallax-header">{{ section.settings.title1 }}</div>
+      {% endif %}
+      {% if section.settings.title2 != blank %}
+        <div class="parrallax-desc">{{ section.settings.title2 }}</div>
+      {% endif %}
+      {% if section.settings.video_url != blank %}
+        <div class="video-play-icon">
+          <a class="playvideo" href="{{ section.settings.video_url }}">
+            {% if section.settings.playimage != blank %}
+              <img class="lazyload" src="{{ section.settings.playimage | img_url: 'master' }}" alt="Playimage">
+            {% else %}
+              {{ 'image' | placeholder_svg_tag }}
+            {% endif %}
+          </a> 
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  #shopify-section-{{ section.id }} .parrallax-block.parrallaxcolor{
+    background: {{ section.settings.reviews_background }};
+  }
+  #shopify-section-{{ section.id }} .parrallax-block{
+    padding: {{ section.settings.reviews_padding }}px 0;
+  }
+  #shopify-section-{{ section.id }} .parrallax-block .parrallax-header,
+  #shopify-section-{{ section.id }} .parrallax-block .parrallax-desc{
+    color: {{ section.settings.textcolor1 }};
+  }
+  @media(max-width:800px){
+    #shopify-section-{{ section.id }} .parrallax-block{
+      padding: {{ section.settings.reviews_padding | divided_by: 2 }}px 0;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Reviews Parallax",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background Image",
+        "info": "Size: 1920px X 850px"
+      },
+      {
+        "type": "color",
+        "id": "reviews_background",
+        "label": "Background Color",
+        "default": "#003958"
+      },
+      {
+        "type": "range",
+        "id": "reviews_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "label": "Internal Top & Bottom Space/Padding",
+        "default": 140
+      },
+      {
+        "type": "color",
+        "id": "textcolor1",
+        "label": "Text Color1",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Title",
+        "default": "Physician Review"
+      },
+      {
+        "type": "html",
+        "id": "title2",
+        "label": "Description",
+        "default": "In this video, Dr. Torres describes how the NeuroMD Corrective Therapy Device works and the results he has seen with his patients."
+      },
+      {
+        "type": "image_picker",
+        "id": "playimage",
+        "label": "Image",
+        "info": "Size:90px X 119px"
+      },
+      {
+        "id": "video_url",
+         "type": "video_url",
+         "label": "Video URL",
+         "accept": ["youtube", "vimeo"],
+         "info": "Text",
+         "placeholder": "Text"
+      }
+    ]
+  }
+{% endschema %}

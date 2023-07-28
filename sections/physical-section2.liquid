@@ -1,0 +1,72 @@
+<div class="physical-section">
+    <div class="physical-shopify-section -inner">
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-heading">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.desc1 != blank %}
+        <div class="text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      {% if section.settings.sectionimage != blank %}
+        <div class="sectionimage">
+          <img class="lazyload" src="{{ section.settings.sectionimage | img_url: 'master' }}" alt="Section Image1">
+        </div>
+      {% endif %}
+      {% if section.settings.desc2 != blank %}
+        <div class="text-edit">{{ section.settings.desc2 }}</div>
+      {% endif %}
+      {% if section.settings.maintitle2 != blank %}
+        <div class="physical-heading">{{ section.settings.maintitle2 }}</div>
+      {% endif %}
+      {% if section.settings.desc3 != blank %}
+        <div class="text-edit">{{ section.settings.desc3 }}</div>
+      {% endif %}
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Section2",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Title",
+        "default": "Is There Anything You Can Do About Foot Problems (Neuropathy Pain)?"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1",
+        "default": "<p>Most experts will tell you there’s not much you can do for damaged nerves in the feet.</p><p>But if you’ve been in agony with foot pain then hearing “there’s nothing you can do” can be frustrating.</p><p>But Dr. Jeremy Campbell has some good news….</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "sectionimage",
+        "label": "Image",
+        "info": "Size: 1360px X 471px"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Description2",
+        "default": "<p>Multiple studies performed by scientists have shown that a deep tissue massage can offer dramatic relief from foot discomfort.</p><p>The problem is, most people don’t have the time or money to get several professional foot massages a day.</p>"
+      },
+      {
+        "type": "html",
+        "id": "maintitle2",
+        "label": "Text",
+        "default": "<i>But NOW there’s something that has changed all that…</i>"
+      },
+      {
+        "type": "html",
+        "id": "desc3",
+        "label": "Description3",
+        "default": "<p><i>“It sounds strange, but I’ve been giving my patients special massage socks to help with their foot problems” , says Dr. Jeremy.</i></p>"
+      }
+    ]
+  }
+{% endschema %}

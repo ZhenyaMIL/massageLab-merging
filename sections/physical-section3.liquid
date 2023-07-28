@@ -1,0 +1,63 @@
+<div class="physical-section">
+    <div class="physical-shopify-section-inner">
+      {% if section.settings.sectionimage != blank %}
+        <div class="sectionimage">
+          <img class="lazyload" src="{{ section.settings.sectionimage | img_url: 'master' }}" alt="Section Image1">
+        </div>
+      {% endif %}
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-text">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      {% if section.settings.desc1 != blank %}
+        <div class="text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      {% if section.settings.desc2 != blank %}
+        <div class="text-edit descbg">{{ section.settings.desc2 }}</div>
+      {% endif %}
+      {% if section.settings.desc3 != blank %}
+        <div class="text-edit">{{ section.settings.desc3 }}</div>
+      {% endif %}
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Section3",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "sectionimage",
+        "label": "Image",
+        "info": "Size: 1360px X 471px"
+      },
+      {
+        "type": "textarea",
+        "id": "maintitle",
+        "label": "Title",
+        "default": "SootheSocks™ use compression technology to squeeze certain points of the foot to improve blood flow and soothe nerve pain"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1",
+        "default": "<p>The socks have been designed by a team of pain management experts and podiatrists. The company is called AmRelieve and what they’ve done is remarkable.</p><p>They’ve developed a breakthrough fabric and weaving structure unlike anything else. The result is a revolutionary sock with 5 “compression zones” that actively massage key areas of the feet, to soothe neuropathy pain.</p>"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Description2",
+        "default": "<p><i>“Many of my patients wear these socks all day and never have foot problems again. They say it’s just like having a massage therapist working on their feet 24/7”</i></p>"
+      },
+      {
+        "type": "html",
+        "id": "desc3",
+        "label": "Description3",
+        "default": "<p>Honestly, it sounds too good to be true. But Dr. Jeremy insists that anyone with foot pain give them a try.</p><p>And so we did!</p>"
+      }
+    ]
+  }
+{% endschema %}

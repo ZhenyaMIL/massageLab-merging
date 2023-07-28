@@ -1,0 +1,56 @@
+<div class="physical-section">
+    <div class="physical-shopify-section-inner">
+      {% if section.settings.heading != blank %}
+        <div class="physical-heading">
+          {{ section.settings.heading }}
+        </div>
+      {% endif %}
+      {% if section.settings.sectionimage != blank %}
+        <div class="sectionimage">
+          <img class="lazyload" src="{{ section.settings.sectionimage | img_url: 'master' }}" alt="Section Image1">
+        </div>
+      {% endif %}
+      {% if section.settings.desc1 != blank %}
+        <div class="text-edit">{{ section.settings.desc1 }}</div>
+      {% endif %}
+      {% if section.settings.desc2 != blank %}
+        <div class="text-edit descbgcolor">{{ section.settings.desc2 }}</div>
+      {% endif %}
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Section4",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "heading",
+        "default": "<i>My Husband’s Experience With SootheSocks…</i>"
+      },
+      {
+        "type": "image_picker",
+        "id": "sectionimage",
+        "label": "Image",
+        "info": "Size: 1360px X 471px"
+      },
+      {
+        "type": "html",
+        "id": "desc1",
+        "label": "Description1",
+        "default": "<p>When we heard about the results people were getting with these socks we ordered a few pairs. When they arrived, we were pleasantly surprised by how “normal” the socks look.</p><p>“No way these things are gonna do anything,” my husband said, tossing the socks on the table.</p><p>But I convinced him to give them a shot, just for a day.</p><p>Within seconds Paul’s eyes lit up.</p><p>“OK, These definitely feel different. It’s like they’re pushing the stabbing out of my feet. This is amazing, It’s like someone’s giving me a massage!” he says, grinning ear to ear.</p>"
+      },
+      {
+        "type": "html",
+        "id": "desc2",
+        "label": "Description2",
+        "default": "<strong>UPDATE:</strong> It’s now been 6 weeks and we couldn’t live without SootheSocks. Paul hasn’t had any stabbing pain, tingling, or numbness and he’s back to his old self. Things have never been better between us. I have my husband back."
+      }
+    ]
+  }
+{% endschema %}

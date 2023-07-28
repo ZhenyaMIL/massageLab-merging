@@ -1,0 +1,93 @@
+<div class="physical-section">
+    <div class="physical-shopify-section-inner">
+      {% if section.settings.maintitle != blank %}
+        <div class="physical-heading">{{ section.settings.maintitle }}</div>
+      {% endif %}
+      <div class="testimonialwrapperblock">
+      {% for block in section.blocks %}
+         <div class="testimonialblock">
+           <div class="testimonial-inner-block">
+             <div class="testimonialcontent">
+                {% if block.settings.testimonialrating != blank %}
+                  <div class="testimonialrating">
+                    <img class="lazyload" src="{{ block.settings.testimonialrating | img_url: 'master' }}" alt="Rating Image">
+                  </div>
+                {% endif %}
+                 {% if block.settings.testimonialdesc != blank %}
+                   <div class="testimonial-desc">{{ block.settings.testimonialdesc }}</div>
+                 {% endif %}
+             </div>
+             <div class="testimonial-info">
+                {% if block.settings.testimonialimage != blank %}
+                  <div class="testimonialimage">
+                    <img class="lazyload" src="{{ block.settings.testimonialimage | img_url: 'master' }}" alt="Testimonial Image">
+                  </div>
+                {% endif %}
+                <div class="testimonial-userinfo">
+                 {% if block.settings.testimonialname != blank %}
+                   <div class="testimonial-name">{{ block.settings.testimonialname }}</div>
+                 {% endif %}
+                 {% if block.settings.testimonialdesignation != blank %}
+                   <div class="testimonial-designation">{{ block.settings.testimonialdesignation }}</div>
+                 {% endif %}
+                </div>
+             </div>
+           </div>
+         </div>
+      {% endfor %}
+      </div>
+    </div>
+</div>
+
+<style type="text/css">
+</style>
+
+{% schema %}
+  {
+    "name": "Physical Testimonial",
+    "class":"physical-testimonial",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Title",
+        "default": "<i>The Verdict? 93,000 5-star reviews say SootheSocks™ are amazing...</i>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "testimonialrating",
+            "label": "Rating Image"
+          },
+          {
+            "type": "html",
+            "id": "testimonialdesc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "testimonialimage",
+            "label": "Image",
+            "info": "Size: 52px X 52px"
+          },
+          {
+            "type": "text",
+            "id": "testimonialname",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "testimonialdesignation",
+            "label": "Designation"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

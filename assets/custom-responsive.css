@@ -1,0 +1,296 @@
+/* NORMAL RESPONSIVE DESIGN */
+
+
+@media screen and (max-width: 480px) {
+
+html .ai_ml_prod_varitations_cnt h2,html .ai_mlb_main_product_details_cnt h1 {
+    color: #021c72 !important;
+}
+
+html .ai_ml_prod_single_var_cnt {
+    margin-bottom: 15px;
+}  
+
+html .bundle .thumbnails-wrapper {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    margin: 0;
+}  
+  
+html .ai_ml_show_in_mobile
+{
+  display:block !important;
+}
+
+.ai_ml_addon_product_mob_cnt {
+    padding: 0px 10px;
+}
+
+.ai_ml_addon_product_details {
+    padding: 0;
+    max-width: 100%;
+}  
+
+.bundle .product-single__media-group {
+    margin-bottom: 0px;
+}  
+
+  html .ai_ml_addon_product_inner.ai_ml_show_in_mobile {
+    display: flex;
+  }
+
+.ai_ml_show_in_desktop
+{
+  display:none;
+}
+
+.ai_ml_prod_multi_var_cnt {
+    display: block;
+}  
+
+ai_ml_prod_single_var_cnt {
+    margin-bottom: 15px;
+}  
+
+.ai_ml_addon_product_details p:last-child {
+    display: none;
+}  
+  
+#ProductSection-wbm-product-details .product-single__media-group {
+    margin-bottom: -20px;
+}
+  
+  
+html .physical-therapist .physicalpopup
+  {
+    margin-bottom:15px;
+  }
+
+.py-footer-links nav {
+    margin: 20px 0px 15px 0px;
+}
+  
+html .py-footer-links ul li {
+    padding: 0px 25px;
+    display:block;
+  }
+  
+.ai_ml_fp_badges_cnt img {
+    max-width: 65px;
+    display: block;
+}
+
+html .physicalpopuplogoblock
+  {
+    display:none;
+  }
+
+html .physicalpopuplogoblock,html .physicalpopupblock {
+    flex-basis: 100%;
+}
+  
+
+section#shopify-section-physical-footer {
+    margin-bottom: 28%;
+}  
+  
+section .ai_ml_section_cnt h1, .product-single__title,html .his-content-with-title h1, .sb-content-with-title h1,html .ai_ml_wbm_before_after_cnt h1 {
+    font-size: 24px!important;
+    line-height: 1.3em!important;
+    letter-spacing: .6px!important;
+    color: #000!important;
+    text-transform: none!important;
+    font-weight: 700!important;
+    margin-top:15px;
+}
+
+section#shopify-section-wbm-special-benefits .ai_ml_inner_cnt {
+    display: block;
+}
+
+.pd-meta-testimony .columns:first-child {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ai_ml_align_center_cols .ai_ml_inner_cnt {
+    flex-wrap: wrap-reverse;
+    display: flex;
+    align-items: center;
+}
+
+.ai_ml_section video {
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+}
+
+html #shopify-section-wbm-buy-more-save-more .ai_ml_inner_cnt {
+    display: block;
+    color: #FFF;
+    align-items: center;
+    text-align: center;
+}
+
+html #shopify-section-wbm-buy-more-save-more .ai_ml_inner_cnt h1
+  {
+     color: #FFF;   
+  }
+  
+#shopify-section-wbm-here-it-is .ai_ml_align_center_cols .ai_ml_inner_cnt,#shopify-section-wbm-heal-yourself .ai_ml_align_center_cols .ai_ml_inner_cnt,#shopify-section-wbm-your-hands-deserve-rest .ai_ml_align_center_cols .ai_ml_inner_cnt,section#shopify-section-wbm-bonus .ai_ml_align_center_cols .ai_ml_inner_cnt {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+} 
+
+.hy-content-with-title br
+{
+  display:none;
+}
+
+.hy-content-pie-cnt canvas
+  {
+    max-width:50px;
+    max-height:50px;
+  }
+  
+.hy-content-pie-cnt .count-number {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+    top: 13px;
+    text-align: center;
+    right: 0;
+    left: 10px;
+    color: #A3CBB7;
+    position: absolute;
+}
+
+section#shopify-section-common-logo-slider .ai_ml_inner_cnt
+  {
+    padding-top 0px !important;
+  }
+
+section#shopify-section-common-logo-slider h1 {
+    font-size: 20px !important;
+    top: 20px;
+}  
+
+html .ai_ml_inner_cnt {
+    padding: 15px 15px !important;
+}  
+
+#shopify-section-wbm-your-hands-deserve-rest .ai_ml_inner_cnt
+  {
+    border-radius:0px;
+  }
+
+html section#shopify-section-wbm-pricing-tables h1.pt-featured-title {
+    font-size: 20px !important;
+    line-height: 1.3em !important;
+    letter-spacing: .6px;
+    color: #71bba0 !important;
+    text-transform: none;
+    font-weight: 700;
+}
+
+.pt-content-with-pricing {
+    margin-bottom: 25px;
+}  
+  
+}
+
+@media screen and (min-width: 640px)
+{
+
+}
+
+@media screen and (max-width: 640px)
+{
+  
+}
+
+@media screen and (max-width: 720px)
+{
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width : 320px) {
+
+
+
+}
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+
+}
+
+/* TARGET RESPONSIVE DESIGN TILL IPAD */
+
+@media screen and (max-width: 768px)
+{
+	
+}
+
+/* ALL IPHONES TILL 8 PLUS LANDSCAPE VIEW */
+
+@media screen and (min-width : 568px) and (max-width : 736px) {
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+	
+
+/* ----------- IPHONE LANDSCAPE ----------- */
+
+@media screen and (min-width: 485px) and (max-width: 765px) {
+
+}
+
+
+/* IPHONE X Support (LANDSCAPE) */
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) {
+		
+	
+}
+
+/* IPAD LANDSCAPE MODE */
+
+@media screen and (min-device-width : 1024px) and (max-device-width : 1200px)  { 
+
+}
+
+
+/* IPAD PORTRAIT MODE */
+
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+	
+
+}
+
+/* FROM IPHONES TO IPAD */
+
+@media screen and (min-device-width : 320px) and (max-device-width : 1024px)  { 
+
+
+
+}
+
+@media screen and (max-device-width : 1200px)  { 
+
+
+
+}

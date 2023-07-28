@@ -1,0 +1,190 @@
+<div class="ai_ml_section_cnt" style="background-color:{{ section.settings.background-color }}">
+	<div class="page-width ai_ml_inner_cnt row">	
+      {% if section.settings.title != blank %}
+        <div class="bmsm-content-main-title-cnt ai_ml_align_center ai_ml_margin_center  medium-7 small-12">      
+    			<h1>{{ section.settings.title }}</h1>
+    			
+                 {% if section.settings.content != blank %}
+            		<h1>{{ section.settings.sub_title }}</h1>
+    			{% endif %}	           
+                {% if section.settings.content != blank %}
+            		<div>{{ section.settings.content }}</div>
+    			{% endif %}	          
+        </div>
+      {% endif %}  
+ <div class="ai_ml_clear"></div>
+      <div class="pt-content-with-pricing-cnt row">
+		{% for block in section.blocks %}
+		  {% if block.type == 'pt-content-with-pricing' %}      	
+			  <div class="columns small-12 medium-4 pt-content-with-pricing float-{{ block.settings.block_alignment }} ">
+                <div class="pt-content-with-pricing-inner ai_ml_align_center">
+                  <div class="pt-content-header">
+    					{% if block.settings.stars != blank %}
+    						<div>{{ block.settings.stars }}</div>
+    					{% endif %}	
+    					{% if block.settings.happy_customers != blank %}
+    						<div>{{ block.settings.happy_customers }}</div>
+    					{% endif %}	                    
+                  </div>  
+                  <div class="pt-content-body">
+                    	{% if block.settings.image != blank %}
+            				<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+                		{% endif %}	  
+    					{% if block.settings.featured_label != blank %}
+    						<div class="pt-featured-label-s">{{ block.settings.featured_label }}</div>
+    					{% endif %}	 
+    					{% if block.settings.variation_title != blank %}
+    						<h1 class="pt-featured-title">{{ block.settings.variation_title }}</h1>
+    					{% endif %}	   
+    					{% if block.settings.per_piece_price != blank %}
+    						<h1  class="pt-featured-per_piece_price">{{ block.settings.per_piece_price }}</h1>
+    					{% endif %}	 
+    					{% if block.settings.price != blank %}
+    						<div class="pt-featured-price"><b>Total:</b> <strike>{{ block.settings.price }}</strike> {{ block.settings.discounted_price }}</div>
+    					{% endif %}	 
+    					{% if block.settings.content != blank %}
+    						<div class="pt-featured-content">{{ block.settings.content }}</div>
+    					{% endif %}	                    
+                  </div>  
+                  <div class="pt-content-footer">
+					{% if block.settings.button_text != blank %}
+    						<div><a class="ai_ml_wbm_btn" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a></div>
+    			    {% endif %}	
+                    <div class="ai_ml_wbt_payment_processor"><img src="{{ 'payment-processors.png' | asset_url }}" /></div>
+               
+                  </div>                                      
+				</div>	
+              </div>        
+		  {% endif %}
+
+		{% endfor %}	      
+      </div>
+  <div class="ai_ml_clear"></div>					
+
+    </div>    
+			
+</div>
+
+
+{% schema %}
+  {
+    "name": "Pricing Tables Section",  
+    "tag": "section",
+    "class": "ai_ml_section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      },
+ 	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+ 	  {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Title",
+        "default": "text"
+      },      
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      }, 
+	  {
+        "type": "text",
+        "id": "classes",
+        "label": "Classes"
+      }      
+    ],
+    "blocks":[
+      {
+		"type":"pt-content-with-pricing",
+  	 	"name": "Content With Pricing",
+     	 "settings": [
+	  {
+        "type": "text",
+        "id": "variation_title",
+        "label": "Varitation Title",
+        "default": "text"
+      },
+	  {
+        "type": "text",
+        "id": "price",
+        "label": "Price",
+        "default": "text"
+      },
+	  {
+        "type": "text",
+        "id": "disounted_price",
+        "label": "Discounted price",
+        "default": "text"
+      },  
+	  {
+        "type": "text",
+        "id": "per_piece_price",
+        "label": "Per Piece price",
+        "default": "text"
+      },
+ 	  {
+        "type": "text",
+        "id": "featured_label",
+        "label": "Featured Label",
+        "default": "text"
+      },  
+ 	  {
+        "type": "text",
+        "id": "stars",
+        "label": "Stars",
+        "default": "text"
+      },  
+ 	  {
+        "type": "text",
+        "id": "happy_customers",
+        "label": "Happy Customers",
+        "default": "text"
+      },            
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>text</p>"
+      },
+	  {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "text"
+      }, 
+	  {
+        "type": "text",
+        "id": "button_link",
+        "label": "Button Link",
+        "default": "text"
+      },            
+	  {
+		"type": "image_picker",
+		"id": "image",
+		"label": "Image"
+	  }          
+      ]
+      }    
+  	],    
+    "presets": [
+      {
+        "name": "Pricing Tables Section",
+        "category": "WBM Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

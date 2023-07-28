@@ -1,0 +1,70 @@
+<div class="featured-header">
+  <div class="featured-wrapper">
+    {% if section.settings.towelimage != blank %}
+      <a class="asset-cta" href="#">
+        <img class="full-img" src="{{ section.settings.towelimage | img_url: 'master' }}" alt="Banner Image">
+      </a>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <h2 class="subheading">{{ section.settings.subheading }}</h2>
+    {% endif %}
+    {% if section.settings.desc != blank %}
+      <div class="featured-des">{{ section.settings.desc }}</div>
+    {% endif %}
+    {% for block in section.blocks %}
+      <div class="review-item">
+        {% if block.settings.text != blank %}
+          <em class="italic-text">{{ block.settings.text }}</em>
+        {% endif %} 
+        {% if block.settings.name != blank %}
+          <strong>{{ block.settings.name }}</strong>
+        {% endif %} 
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Featured Section5",
+    "class": "featured-section5",
+    "tag":"section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "towelimage",
+        "label": "Banner Image"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Here’s What Satisfied Silverthread Customers Had To Say:"
+      },
+      {
+        "type": "html",
+        "id": "desc",
+        "label": "Decription"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

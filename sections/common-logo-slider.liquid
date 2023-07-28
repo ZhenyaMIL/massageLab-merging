@@ -1,0 +1,97 @@
+<div class="ai_ml_section_cnt {{ section.settings.classes }}" style="background-color:{{ section.settings.background-color }}">
+	<div class=" ai_ml_inner_cnt">	
+       <div class="ai_ml_logo_slider_inner_cnt"> 
+  		{% for block in section.blocks %}
+		  {% if block.type == 'slider-image' %}  
+      
+            			{% if block.settings.image != blank %}
+    						<img src="{{ block.settings.image | img_url: 'master' }}" />
+    					{% endif %}	    
+              
+		  {% endif %}
+		{% endfor %}
+       </div>
+      {% if section.settings.title != blank %}
+      <div class="ai_ml_logo_slider_content">
+    			<h1>{{ section.settings.title }}</h1>
+
+                {% if section.settings.content != blank %}
+    				<p>{{ section.settings.content }}</p>
+    			{% endif %}	  
+      </div> 
+      {% endif %}	
+  <div class="ai_ml_clear"></div>					
+
+    </div>    
+			
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom Logo Slider",  
+    "tag": "section",
+    "class": "ai_ml_section ai_ml_logo_slider",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color"
+      },
+ 	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+      },
+	  {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>text</p>"
+      },
+	  {
+        "type": "text",
+        "id": "classes",
+        "label": "Classes"
+      }       
+    ],
+    "blocks":[
+      {
+		"type":"slider-image",
+  	 	"name": "Slider Image",
+     	 "settings": [
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		  }	  
+      ]
+      }     
+  	],"presets": [
+      {
+        "name": "Custom Logo Slider",
+        "category": "Common Blocks"
+      }
+    ]
+	}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+<script>
+jQuery(document).ready(function ($) {
+$('.ai_ml_logo_slider .ai_ml_logo_slider_inner_cnt').slick({
+  speed: 3000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: 'linear',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true,
+});  
+});
+</script>
