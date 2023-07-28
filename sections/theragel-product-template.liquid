@@ -418,11 +418,14 @@
         $('.swatch-radio').on('change', function() {
           var index = $(this).data("index");
           var variandid = $("#ProductSelect-theragel-product-template :eq(" +index+")").val();
+          console.log("variandid ", variandid)
           $('#ProductSelect-theragel-product-template').val(variandid);
 
           
           var sku = $("#ProductSelect-theragel-product-template :eq(" +index+")").data("sku");
           $(".product-single__media-wrapper").addClass("hide");
+          const myP = $('[data-alt="'+ sku +'"]');
+          console.log(sku)
           $('[data-alt="'+ sku +'"]').removeClass("hide");
           
           $(".product-single__thumbnail--theragel-product-template").removeClass("active-thumb");

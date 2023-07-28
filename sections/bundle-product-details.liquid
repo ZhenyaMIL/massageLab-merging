@@ -35,292 +35,397 @@
       {%- assign enable_image_zoom = false -%}
   {% endcase %}
 
-  <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
-    <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
-      {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+    <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
+      <div class="{% if section.settings.vertical_slider_mobile %}hide-mobile{% endif %} grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+        {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
-      {%- for media in product.media -%}
-        {% include 'media', media: media, featured_media: featured_media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %}
-      {%- endfor -%}
+        {%- for media in product.media -%}
+          {% include 'media', addMargin: true, media: media, featured_media: featured_media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %}
+        {%- endfor -%}
 
-      <noscript>
-        {% capture product_image_size %}{{ height }}x{% endcapture %}
-        <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media" style="max-width: {{ height }}px;">
-      </noscript>
+        <noscript>
+          {% capture product_image_size %}{{ height }}x{% endcapture %}
+          <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media" style="max-width: {{ height }}px;">
+        </noscript>
 
-      {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
+        {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
 
-      {%- if first_3d_model -%}
-        <button
-          aria-label="{{ 'products.product.view_in_space_label' | t }}"
-          class="product-single__view-in-space"
-          data-shopify-xr
-          data-shopify-model3d-id="{{ first_3d_model.id }}"
-          data-shopify-title="{{ product.title | escape }}"
-          data-shopify-xr-hidden
-        >
-          {% include 'icon-3d-badge-full-color' %}<span class='product-single__view-in-space-text'>{{ 'products.product.view_in_space' | t }}</span>
-        </button>
-      {%- endif -%}
+        {%- if first_3d_model -%}
+          <button
+            aria-label="{{ 'products.product.view_in_space_label' | t }}"
+            class="product-single__view-in-space"
+            data-shopify-xr
+            data-shopify-model3d-id="{{ first_3d_model.id }}"
+            data-shopify-title="{{ product.title | escape }}"
+            data-shopify-xr-hidden
+          >
+            {% include 'icon-3d-badge-full-color' %}<span class='product-single__view-in-space-text'>{{ 'products.product.view_in_space' | t }}</span>
+          </button>
+        {%- endif -%}
 
 
-      {% if product.media.size > 1 %}
-        {% if product.media.size > 4 %}
-          {%- assign enable_thumbnail_slides = true -%}
-        {% endif %}
+        {% if product.media.size > 1 %}
+          {% if product.media.size > 4 %}
+            {%- assign enable_thumbnail_slides = true -%}
+          {% endif %}
 
-        <div data-thumbnail-slider>
-          <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} slider-active{% endif %}" data-slider>
-            {% if enable_thumbnail_slides == true %}
-              <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__prev thumbnails-slider__prev--{{ section.id }}" data-slider-button>
-                {% include 'icon-chevron-left' %}
-                <span class="icon__fallback-text">{{ 'sections.slideshow.previous_slide' | t }}</span>
-              </button>
-            {% endif %}
-
-            <ul class="product-single__thumbnails product-single__thumbnails-{{ section.id }}" data-slider-container>
+          <div data-thumbnail-slider>
+            <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} slider-active{% endif %}" data-slider>
               {% if enable_thumbnail_slides == true %}
-                <div class="product-single__thumbnails-slider-track" data-slider-track>
+                <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__prev thumbnails-slider__prev--{{ section.id }}" data-slider-button>
+                  {% include 'icon-chevron-left' %}
+                  <span class="icon__fallback-text">{{ 'sections.slideshow.previous_slide' | t }}</span>
+                </button>
               {% endif %}
 
-              {% for media in product.media %}
-                <li class="product-single__thumbnails-item product-single__thumbnails-item--{{ section.settings.media_size }} {% if enable_thumbnail_slides == true %} product-single__thumbnails-item-slide{% endif %} js"{% if enable_thumbnail_slides == true %} data-slider-slide-index="{{ forloop.index0 }}" data-slider-item{% endif %}>
-                  <a href="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"
-                    class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
-                    data-thumbnail-id="{{ section.id }}-{{ media.id }}"
-                    {% if enable_thumbnail_slides == true %} data-slider-item-link{% endif %}
-                    {% if enable_image_zoom %}data-zoom="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
+              <ul class="product-single__thumbnails product-single__thumbnails-{{ section.id }}" data-slider-container>
+                {% if enable_thumbnail_slides == true %}
+                  <div class="product-single__thumbnails-slider-track" data-slider-track>
+                {% endif %}
 
-                      {%- capture thumbnailAlt -%}
-                        {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-                          {{ 'sections.featured_product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
-                        {%- elsif media.media_type == 'model' -%}
-                          {{ 'sections.featured_product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
-                        {%- else -%}
-                          {{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                {% for media in product.media %}
+                  <li class="product-single__thumbnails-item product-single__thumbnails-item--{{ section.settings.media_size }} {% if enable_thumbnail_slides == true %} product-single__thumbnails-item-slide{% endif %} js"{% if enable_thumbnail_slides == true %} data-slider-slide-index="{{ forloop.index0 }}" data-slider-item{% endif %}>
+                    <a href="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"
+                      class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
+                      data-thumbnail-id="{{ section.id }}-{{ media.id }}"
+                      {% if enable_thumbnail_slides == true %} data-slider-item-link{% endif %}
+                      {% if enable_image_zoom %}data-zoom="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
+
+                        {%- capture thumbnailAlt -%}
+                          {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+                            {{ 'sections.featured_product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                          {%- elsif media.media_type == 'model' -%}
+                            {{ 'sections.featured_product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                          {%- else -%}
+                            {{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                          {%- endif -%}
+                        {%- endcapture -%}
+
+                        <img data-media-id-custom="{{ media.id }}" class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}" alt="{{ thumbnailAlt }}">
+                        {%- if media.media_type == 'video' or media.media_type =='external_video' -%}
+                          <div class="product-single__thumbnail-badge">
+                            {% include 'icon-video-badge-full-color' %}
+                          </div>
                         {%- endif -%}
-                      {%- endcapture -%}
+                        {%- if media.media_type == 'model' -%}
+                          <div class="product-single__thumbnail-badge">
+                            {% include 'icon-3d-badge-full-color' %}
+                          </div>
+                        {%- endif -%}
+                    </a>
+                  </li>
+                {% endfor %}
 
-                      <img class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}" alt="{{ thumbnailAlt }}">
-                      {%- if media.media_type == 'video' or media.media_type =='external_video' -%}
-                        <div class="product-single__thumbnail-badge">
-                          {% include 'icon-video-badge-full-color' %}
-                        </div>
-                      {%- endif -%}
-                      {%- if media.media_type == 'model' -%}
-                        <div class="product-single__thumbnail-badge">
-                          {% include 'icon-3d-badge-full-color' %}
-                        </div>
-                      {%- endif -%}
-                  </a>
-                </li>
-              {% endfor %}
-
+                {% if enable_thumbnail_slides == true %}
+                  </div>
+                {% endif %} 
+              </ul>
               {% if enable_thumbnail_slides == true %}
-                </div>
-              {% endif %} 
-            </ul>
-            {% if enable_thumbnail_slides == true %}
-              <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__next thumbnails-slider__next--{{ section.id }}" data-slider-button data-slider-button-next>
-                {% include 'icon-chevron-right' %}
-                <span class="icon__fallback-text">{{ 'sections.slideshow.next_slide' | t }}</span>
-              </button>
-            {% endif %}
+                <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__next thumbnails-slider__next--{{ section.id }}" data-slider-button data-slider-button-next>
+                  {% include 'icon-chevron-right' %}
+                  <span class="icon__fallback-text">{{ 'sections.slideshow.next_slide' | t }}</span>
+                </button>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      {% if section.settings.vertical_slider_mobile %}
+        <div class="vertical-slider mobile">
+          <div class="slider-galeria-thumbs">
+            {% for image in product.images %}
+              <img src="{{ image.src | product_img_url: '480x' }}">
+            {% endfor %}
+          </div>
+
+          <div class="slider-galeria">
+            {% for image in product.images %}
+              <img src="{{ image.src | product_img_url: '480x' }}">
+            {% endfor %}
           </div>
         </div>
       {% endif %}
-    </div>
 
-    <div class="grid__item {{ product_description_width }}">
-      <div class="product-single__meta">
-        <div class="ai_mlb_product_review_cnt ai_ml_show_in_desktop">
-          {% for block in section.blocks %}
-  		     {% if block.type == 'bpd-meta-testimony' %}  
-                <div class="ai_mlb_product_review_inner">
-                    <div class="ai_mlb_avatar">
-            			{% if block.settings.image != blank %}
-    						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
-    					{% endif %}	                     
-       					{% if block.settings.name != blank %}
-    						<div class="ai_mlb_info_cnt"><h4>{{ block.settings.name }}</h4></div>
-    					{% endif %}	                   
-                    </div>
-                  <div class="ai_mlb_content">
-       					{% if block.settings.content != blank %}
-    						<p>{{ block.settings.content }}</p>
-    					{% endif %}	                 
-                  </div>
-                </div> 
-              {% endif %}  
-           {% endfor %} 
-          </div>
-          <div class="ai_mlb_main_product_details_cnt">
-             <h1 class="product-single__title">{{ product.title }}</h1>          
+      <div class="grid__item {{ product_description_width }}">
+        <div class="product-single__meta">
+          <div class="ai_mlb_product_review_cnt ai_ml_show_in_desktop">
             {% for block in section.blocks %}
-                {% if block.type == 'bpd-featured-claim' %} 
-                  <div class="ai_mlb_featured_claim">
-             			{% if block.settings.image != blank %}
-      						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
-      				{% endif %}	                   
-                  </div>
-                {% endif %}	 
-  		      {% endfor %}            
-              <div class="product-single__description rte ai_mlb_single_content_desc">
-              {{ product.description }}
-            </div>          
-          </div>
+            {% if block.type == 'bpd-meta-testimony' %}  
+                  <div class="ai_mlb_product_review_inner">
+                      <div class="ai_mlb_avatar">
+                    {% if block.settings.image != blank %}
+                  <figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+                {% endif %}
+                <div class="main-info-wrapper">
+                  <div class="stars-name-wrapper">
+                    <div class="stars">
+                      {% assign numberOfSVGs = block.settings.star %}
 
-        <a href="#looxReviews"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div></a>
-        <script>window.performance.mark('debut:product:title_visible');</script>
-
-          {% capture "form_classes" -%}
-            product-form product-form-{{ section.id }}
-            {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
-            {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
-          {%- endcapture %}
-        <div class="ai_mlb_product_review_cnt ai_ml_show_in_mobile">
-          {% for block in section.blocks %}
-  		     {% if block.type == 'bpd-meta-testimony' %}  
-                <div class="ai_mlb_product_review_inner">
-                    <div class="ai_mlb_avatar">
-            			{% if block.settings.image != blank %}
-    						<figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
-    					{% endif %}	                     
-       					{% if block.settings.name != blank %}
-    						<div class="ai_mlb_info_cnt"><h4>{{ block.settings.name }}</h4></div>
-    					{% endif %}	                   
+                      {% if numberOfSVGs != 0 %}
+                        {% for i in (1..numberOfSVGs) %}
+                          {% include 'star-icon' %}
+                        {% endfor %}
+                      {% endif %}
                     </div>
-                  <div class="ai_mlb_content">
-       					{% if block.settings.content != blank %}
-    						<p>{{ block.settings.content }}</p>
-    					{% endif %}	                 
+                    {% if block.settings.name != blank %}
+                      <div class="ai_mlb_info_cnt"><h4>{{ block.settings.name }}</h4></div>
+                    {% endif %}
                   </div>
-                </div> 
-              {% endif %}  
-           {% endfor %} 
-          </div>
-        <aside class="ai_ml_pd_bundle_items_cnt">
-          {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
-            <div class="ai_ml_prod_varitations_hidden_cnt ai_ml_none">
-               
-                {% unless product.has_only_default_variant %}
-                  <div class="product-form__controls-group">
-                    {% for option in product.options_with_values %}
-                      <div class="selector-wrapper js product-form__item">
-                        <label for="SingleOptionSelector-{{ forloop.index0 }}">
-                          {{ option.name }}
-                        </label>
-                        <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input"
-                          id="SingleOptionSelector-{{ forloop.index0 }}"
-                          data-index="option{{ forloop.index }}"
-                        >
-                          {% for value in option.values %}
-                            <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
-                          {% endfor %}
-                        </select>
-                      </div>
-                    {% endfor %}
+                  {%- if block.settings.verified_customer -%}
+                  <div class="verified-customer">
+                    {% include 'verified-icon' %}
+                    <p>Verified Customer</p>
                   </div>
-                {% endunless %}
-
-                <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js ai_ml_none">
-                  {% for variant in product.variants %}
-                    <option value="{{ variant.id }}"
-                      {%- if variant == current_variant %} selected="selected" {%- endif -%}
-                    >
-                      {{ variant.title }}  {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                    </option>
-                  {% endfor %}
-                </select>
-
-                {% if section.settings.show_quantity_selector %}
-                <div class="product-form__controls-group">
-                  <div class="product-form__item">
-                    <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
-                    <input type="number" id="Quantity-{{ section.id }}"
-                      name="quantity" value="1" min="1" pattern="[0-9]*"
-                      class="product-form__input product-form__input--quantity" data-quantity-input
-                    >
-                  </div>
+                  {%- endif -%}
                 </div>
-              {% endif %}                
+
+                      </div>
+                    <div class="ai_mlb_content">
+                  {% if block.settings.content != blank %}
+                  <p>{{ block.settings.content }}</p>
+                {% endif %}	                 
+                    </div>
+                  </div> 
+                {% endif %}  
+            {% endfor %} 
+            </div>
+            <div class="ai_mlb_main_product_details_cnt">
+              <h1 class="product-single__title">{{ product.title }}</h1>
+
+              <a href="#looxReviews"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div></a>
+              <script>window.performance.mark('debut:product:title_visible');</script>
+
+              {% for block in section.blocks %}
+                  {% if block.type == 'bpd-featured-claim' %} 
+                    <div class="ai_mlb_featured_claim">
+                    {% if block.settings.image != blank %}
+                    <figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+                {% endif %}	                   
+                    </div>
+                  {% endif %}	 
+              {% endfor %}            
+                <div class="product-single__description rte ai_mlb_single_content_desc">
+                {{ product.description }}
+              </div>          
             </div>
 
-            <div class="ai_ml_prod_varitations_cnt">
 
-              {% unless product.has_only_default_variant %}
-              <div class="ai-ml-custom-product-form__controls-group">
-               
-                {% for option in product.options_with_values %}
-                
-                  <div class="selector-wrapper js product-form__item">
+            {% capture "form_classes" -%}
+              product-form product-form-{{ section.id }}
+              {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
+              {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+            {%- endcapture %}
+          <div class="ai_mlb_product_review_cnt ai_ml_show_in_mobile">
+            {% for block in section.blocks %}
+            {% if block.type == 'bpd-meta-testimony' %}  
+                  <div class="ai_mlb_product_review_inner">
+                      <div class="ai_mlb_avatar">
+                    {% if block.settings.image != blank %}
+                  <figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+                {% endif %}	                     
+                <div class="main-info-wrapper">
+                  <div class="stars-name-wrapper">
+                    <div class="stars">
+                      {% assign numberOfSVGs = block.settings.star %}
 
-                    <h2 for="SingleOptionSelector-{{ forloop.index0 }}">
-                      {{ option.name }}
-                    </h2>
-
-                      <div class="ai_ml_prod_multi_var_cnt">
-                          {% for inner_variation in product.variants %}
-                          {% if option.values contains inner_variation.title %} 
-                          
-                          <div class="ai_ml_prod_single_var_cnt">
-                            <label class="ai_ml_prod_var_sel {% if forloop.index == 1 %} {{ "active" }} {% endif %}" ><input type="radio" {% if forloop.index == 1 %} {{ "checked" }} {% endif %} name="prod_var" value="{{inner_variation.id}}" /></label>
-                            <h3>{{ inner_variation.title }}</h3>
-                            <figure>
-                                <img src="{{inner_variation.featured_image.src | replace: 'files' , '' | file_url }}" />
-                            </figure>
-                            <div class="ai_ml_prod_var_pricing_cnt">
-                                <div class="ai_ml_prod_var_pricing_box">
-                                 {% if forloop.index == 1 %} <label><i class="fa-solid fa-circle-check"></i> Best Value</label>{% endif %}
-                                </div>
-                                <div class="ai_ml_prod_var_pricing_box">
-                                    <label><strike>{{inner_variation.compare_at_price | money }}</strike> <span>{{inner_variation.price | money }}</span></label>
-                                </div>                                
-                            </div>
-                          </div>
-                          {% endif %}
-                          {% endfor %}
-                      </div>
-
+                      {% if numberOfSVGs != 0 %}
+                        {% for i in (1..numberOfSVGs) %}
+                          {% include 'star-icon' %}
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+                    {% if block.settings.name != blank %}
+                      <div class="ai_mlb_info_cnt"><h4>{{ block.settings.name }}</h4></div>
+                    {% endif %}
                   </div>
-                {% endfor %}
-              </div>
-            {% endunless %}
-
-            </div>  
-
-
-              <div class="ai_ml_pd_points_cnt">
-                <ul>
-                  {% for block in section.blocks %}
-                    {% if block.type == 'bpd-bundle-points' %} 
-                      <li class="ai_mlb_bundle_points">
-                        <i class="fa-solid fa-circle-check"></i>
-                        {% if block.settings.content != blank %}
-                          {{ block.settings.content }}
-                        {% endif %}	                   
-                      </li>
-                    {% endif %}	 
-                  {% endfor %} 
-                </ul>                  
-              </div> 
-
-          <div class="ai_ml_addon_product_cnt">
-
-                  {% for block in section.blocks %}
-                    {% if block.type == 'bpd-addon-product' %} 
-                       
-                        {% if block.settings.addon_product != blank %}
-                          
-                          {% assign tproduct = all_products[block.settings.addon_product] %}
-
-                          <div class="ai_ml_addon_product_inner ai_ml_show_in_desktop"> 
-                              <figure>
-                                <img src="{{ tproduct.featured_image | replace: 'files' , '' | file_url }}"/>
-                              </figure>
+                  {%- if block.settings.verified_customer -%}
+                  <div class="verified-customer">
+                    {% include 'verified-icon' %}
+                    <p>Verified Customer</p>
+                  </div>
+                  {%- endif -%}
+                </div>                
+                      </div>
+                    <div class="ai_mlb_content">
+                  {% if block.settings.content != blank %}
+                  <p>{{ block.settings.content }}</p>
+                {% endif %}	                 
+                    </div>
+                  </div> 
+                {% endif %}  
+            {% endfor %} 
+            </div>
+          <aside class="ai_ml_pd_bundle_items_cnt">
+            {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+              <div class="ai_ml_prod_varitations_hidden_cnt ai_ml_none">
                 
+                  {% unless product.has_only_default_variant %}
+                    <div class="product-form__controls-group">
+                      {% for option in product.options_with_values %}
+                        <div class="selector-wrapper js product-form__item">
+                          <label for="SingleOptionSelector-{{ forloop.index0 }}">
+                            {{ option.name }}
+                          </label>
+                          <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input"
+                            id="SingleOptionSelector-{{ forloop.index0 }}"
+                            data-index="option{{ forloop.index }}"
+                          >
+                            {% for value in option.values %}
+                              <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
+                            {% endfor %}
+                          </select>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  {% endunless %}
+
+                  <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js ai_ml_none">
+                    {% for variant in product.variants %}
+                      <option value="{{ variant.id }}"
+                        {%- if variant == current_variant %} selected="selected" {%- endif -%}
+                      >
+                        {{ variant.title }}  {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                      </option>
+                    {% endfor %}
+                  </select>
+
+                  {% if section.settings.show_quantity_selector %}
+                  <div class="product-form__controls-group">
+                    <div class="product-form__item">
+                      <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
+                      <input type="number" id="Quantity-{{ section.id }}"
+                        name="quantity" value="1" min="1" pattern="[0-9]*"
+                        class="product-form__input product-form__input--quantity" data-quantity-input
+                      >
+                    </div>
+                  </div>
+                {% endif %}                
+              </div>
+
+              <div class="ai_ml_prod_varitations_cnt">
+
+                {% unless product.has_only_default_variant %}
+                <div class="ai-ml-custom-product-form__controls-group">
+                
+                  {% for option in product.options_with_values %}
+                  
+                    <div class="selector-wrapper js product-form__item">
+
+                      <h2 for="SingleOptionSelector-{{ forloop.index0 }}">
+                        {{ option.name }}
+                      </h2>
+
+                        <div class="ai_ml_prod_multi_var_cnt">
+                            {% for inner_variation in product.variants %}
+                            {% if option.values contains inner_variation.title %}
+
+                            <div data-bundle-id-custom="{{ inner_variation.featured_media.id }}" class="ai_ml_prod_single_var_cnt {% if forloop.index == 1 %}active{% endif %}">
+                              <div class="label-discount-wrapper">
+                                <label class="ai_ml_prod_var_sel {% if forloop.index == 1 %} {{ "active" }} {% endif %}" ><input type="radio" {% if forloop.index == 1 %} {{ "checked" }} {% endif %} name="prod_var" value="{{inner_variation.id}}" /></label>
+                                <h3 class="extra-discount">
+                                  {{ inner_variation.metafields.custom.extra_discount }}
+                                </h3>
+                              </div>
+                              <div class="variant-title-custom">
+                                <h3>{{ inner_variation.title }}</h3>
+                                <h4 class="secondary-title">{{ inner_variation.metafields.custom.secondary_title }}</h4>
+                              </div>
+
+                              <figure>
+                                  {{ inner_variation.metafields.custom.main_image | img_url: 'master' | img_tag }}
+                                  {% comment %} <img src="{{ inner_variation.featured_image | img_url: 'master' }}" alt="{{ inner_variation.title }}" /> {% endcomment %}
+                                  {% comment %} <img src="{{inner_variation.featured_image.src | replace: 'files' , '' | file_url }}" /> {% endcomment %}
+                              </figure>
+                              <div class="ai_ml_prod_var_pricing_cnt">
+                                  <div class="ai_ml_prod_var_pricing_box">
+                                  {% if inner_variation.metafields.custom.label.value == "Great Deal" %}
+                                    <label style="border: 1px solid #0FB81B;"><i style="color: #0FB81B;" class="fa-solid fa-circle-check"></i> Great Deal </label>
+                                  {% endif %}
+                                  {% if inner_variation.metafields.custom.label.value == "Most Popular" %}
+                                    <label style="border: 1px solid #FF5757;"><i style="color: #FF5757;" class="fa-solid fa-circle-check"></i> Most Popular </label>
+                                  {% endif %}
+                                  {% if inner_variation.metafields.custom.label.value == "Best Value" %}
+                                      <label><i class="fa-solid fa-circle-check"></i> Best Value</label>
+                                  {% endif %}
+                                  
+                                  </div>
+                                  <div class="ai_ml_prod_var_pricing_box">
+                                      {% if inner_variation.compare_at_price > inner_variation.price %}
+                                      <p class='discount-custom'>
+                                        {{ inner_variation.metafields.custom.discount }}
+                                        {% comment %} {{ inner_variation.compare_at_price | minus: inner_variation.price | times: 100.0 | divided_by: inner_variation.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}% OFF {% endcomment %}
+                                      </p>
+                                      {% endif %}
+                                      <label><strike>{{inner_variation.compare_at_price | money }}</strike> <span>{{inner_variation.price | money }}</span></label>
+                                  </div>                                
+                              </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endunless %}
+
+              </div>  
+
+
+                <div class="ai_ml_pd_points_cnt">
+                  <ul>
+                    {% for block in section.blocks %}
+                      {% if block.type == 'bpd-bundle-points' %}
+                        {% assign additional_attribute = "" %}
+                        {%- if block.settings.underline_text -%}
+                          {% assign additional_attribute = "data-underline-paragraph='true'" %}
+                        {%- endif -%}
+                        <li {{ additional_attribute }} class="ai_mlb_bundle_points">
+                          <i class="fa-solid fa-circle-check"></i>
+                          {% if block.settings.content != blank %}
+                            {{ block.settings.content }}
+                          {% endif %}	                   
+                        </li>
+                      {% endif %}	 
+                    {% endfor %} 
+                  </ul>                  
+                </div> 
+
+            <div class="ai_ml_addon_product_cnt">
+
+                        
+                      {% if product.metafields.custom.addon_product != blank %}
+                        
+                        {% assign tproduct = product.metafields.custom.addon_product.value %}
+                        {% assign dd = product.metafields.custom.addon_product %}
+
+                        <div class="ai_ml_addon_product_inner ai_ml_show_in_desktop"> 
+                            <figure>
+                              <img data src="{{ tproduct.featured_image | image_url }}"/>
+                            </figure>
+              
+                            <div class="ai_ml_addon_product_details">
+                                <p>{{ product.metafields.custom.addon_product_text }}</p>
+                                <h3>
+                                  {{ tproduct.title }}
+                                </h3>
+                                {{ product.metafields.custom.addon_product_description }}
+                            </div>  
+                          
+                            <div class="ai_ml_addon_product_pricing">
+                                <label class="ai_ml_prod_var_addon_sel"><input type="checkbox" name="prod_var_addon" value="{{tproduct.variants[0].id}}" /></label>
+                                <label><strike>{{tproduct.compare_at_price | money }}</strike> <span>{{tproduct.price | money }}</span></label>
+                            </div>                                 
+                        </div> 
+
+                        <div class="ai_ml_addon_product_inner ai_ml_show_in_mobile"> 
+                            <figure>
+                              <img data src="{{ tproduct.featured_image | image_url }}"/>
+                            </figure>
+
+                            <div class="ai_ml_addon_product_mob_cnt">
                               <div class="ai_ml_addon_product_details">
-                                  <p>Add to your subscription</p>
+                                  <p>{{ product.metafields.custom.addon_product_text }}</p>
                                   <h3>{{ tproduct.title }}</h3>
                                   <p>{{ tproduct.description }}</p>
                               </div>  
@@ -329,129 +434,228 @@
                                   <label class="ai_ml_prod_var_addon_sel"><input type="checkbox" name="prod_var_addon" value="{{tproduct.variants[0].id}}" /></label>
                                   <label><strike>{{tproduct.compare_at_price | money }}</strike> <span>{{tproduct.price | money }}</span></label>
                               </div>                                 
-                          </div> 
-
-                          <div class="ai_ml_addon_product_inner ai_ml_show_in_mobile"> 
-                              <figure>
-                                <img src="{{ tproduct.featured_image | replace: 'files' , '' | file_url }}"/>
-                              </figure>
-
-                              <div class="ai_ml_addon_product_mob_cnt">
-                                <div class="ai_ml_addon_product_details">
-                                    <p>Add to your subscription</p>
-                                    <h3>{{ tproduct.title }}</h3>
-                                    <p>{{ tproduct.description }}</p>
-                                </div>  
+                            </div>
                               
-                                <div class="ai_ml_addon_product_pricing">
-                                    <label class="ai_ml_prod_var_addon_sel"><input type="checkbox" name="prod_var_addon" value="{{tproduct.variants[0].id}}" /></label>
-                                    <label><strike>{{tproduct.compare_at_price | money }}</strike> <span>{{tproduct.price | money }}</span></label>
-                                </div>                                 
-                              </div>
-                                
-                          </div>             
-                          
-                        {% endif %}	                   
-  
-                    {% endif %}	 
-                  {% endfor %} 
+                        </div>             
+                        
+                      {% endif %}	                   
+    
+              
+            </div>
+
+
             
+                <div class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}"
+                  data-error-message-wrapper
+                  role="alert">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span class="product-form__error-message" data-error-message>{{ 'products.product.quantity_minimum_message' | t }}</span>
+                </div>
+
+                <div class="product-form__controls-group product-form__controls-group--submit">
+                  <div class="product-form__item product-form__item--submit
+                    {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
+                    {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
+                  >
+                    <button type="submit" name="add"
+                      {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+                      aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+                      class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}"
+                      {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+                      data-add-to-cart>
+                      <span data-add-to-cart-text>
+                        {% unless current_variant.available %}
+                          {{ 'products.product.sold_out' | t }}
+                        {% else %}
+                          Add to Cart
+                        {% endunless %}
+                      </span>
+                      <span class="hide" data-loader>
+                        {% include 'icon-spinner' %}
+                      </span>
+                    </button>
+                    {% if section.settings.enable_payment_button %}
+                      {{ form | payment_button }}
+                    {% endif %}
+                  </div>
+                </div>
+                  <figure class="ai_ml_secure_payment_method_dec">
+                    <img src="{{'secure-payment-methods.png' | asset_url }}" />
+                </figure>
+                <div class="security-data-text">
+                  {% include 'lock-icon' %}
+                  <p>All transaction secured and encrypted</p>
+                </div>
+                <div class="ai_ml_pd_accord_cnt">
+
+                    <div class="ai_ml_pd_accord_items">
+                      <ul>
+                        {% for block in section.blocks %}
+                          {% if block.type == 'bpd-auto-accord-items' %} 
+                            <li>
+                              {% if block.settings.title != blank %}
+                              <div class="ai_ml_pd_acc_title" target="#ai_ml_pd_acc{{forloop.index}}">{{ block.settings.title }} <i class="fa-solid fa-plus"></i></div>
+                              {% endif %}	                   
+                            
+                            <div id="ai_ml_pd_acc{{forloop.index}}" class="ai_ml_pd_accord_content_cnt">
+                              {% if block.settings.content != blank %}
+                                {{ block.settings.content }}
+                              {% endif %}	                   
+                            </div>
+                          </li>
+                          {% endif %}	 
+                      {% endfor %} 
+                      </ul>
+                    </div>
+                  
+                </div>          
+            {% endform %}
+
+          </aside>  
+
           </div>
 
+          {%- comment -%}
+            Live region for announcing updated price and availability to screen readers
+          {%- endcomment -%}
+          <p class="visually-hidden" data-product-status
+            aria-live="polite"
+            role="status"
+          ></p>
 
-          
-              <div class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}"
-                data-error-message-wrapper
-                role="alert">
-                <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                {% include 'icon-error' %}
-                <span class="product-form__error-message" data-error-message>{{ 'products.product.quantity_minimum_message' | t }}</span>
-              </div>
-
-              <div class="product-form__controls-group product-form__controls-group--submit">
-                <div class="product-form__item product-form__item--submit
-                  {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
-                  {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
-                >
-                  <button type="submit" name="add"
-                    {% unless current_variant.available %} aria-disabled="true"{% endunless %}
-                    aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
-                    class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}"
-                    {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
-                    data-add-to-cart>
-                    <span data-add-to-cart-text>
-                      {% unless current_variant.available %}
-                        {{ 'products.product.sold_out' | t }}
-                      {% else %}
-                        Add to Cart
-                      {% endunless %}
-                    </span>
-                    <span class="hide" data-loader>
-                      {% include 'icon-spinner' %}
-                    </span>
-                  </button>
-                  {% if section.settings.enable_payment_button %}
-                    {{ form | payment_button }}
-                  {% endif %}
-                </div>
-              </div>
-                <figure class="ai_ml_secure_payment_method_dec">
-                  <img src="{{'secure-payment-methods.png' | asset_url }}" />
-               </figure>  
-               <div class="ai_ml_pd_accord_cnt">
-
-                  <div class="ai_ml_pd_accord_items">
-                    <ul>
-                      {% for block in section.blocks %}
-                        {% if block.type == 'bpd-auto-accord-items' %} 
-                          <li>
-                            {% if block.settings.title != blank %}
-                             <div class="ai_ml_pd_acc_title" target="#ai_ml_pd_acc{{forloop.index}}">{{ block.settings.title }} <i class="fa-solid fa-plus"></i></div>
-                            {% endif %}	                   
-                          
-                          <div id="ai_ml_pd_acc{{forloop.index}}" class="ai_ml_pd_accord_content_cnt">
-                            {% if block.settings.content != blank %}
-                              {{ block.settings.content }}
-                            {% endif %}	                   
-                          </div>
-                        </li>
-                        {% endif %}	 
-                    {% endfor %} 
-                    </ul>
-                  </div>
-                 
-               </div>          
-          {% endform %}
-
-        </aside>  
-
-        </div>
-
-        {%- comment -%}
-          Live region for announcing updated price and availability to screen readers
-        {%- endcomment -%}
-        <p class="visually-hidden" data-product-status
-          aria-live="polite"
-          role="status"
-        ></p>
-
-        {%- comment -%}
-          Live region for announcing that the product form has been submitted and the
-          product is in the process being added to the cart
-        {%- endcomment -%}
-        <p class="visually-hidden" data-loader-status
-          aria-live="assertive"
-          role="alert"
-          aria-hidden="true"
-        >{{ 'products.product.loader_label' | t }}</p>
+          {%- comment -%}
+            Live region for announcing that the product form has been submitted and the
+            product is in the process being added to the cart
+          {%- endcomment -%}
+          <p class="visually-hidden" data-loader-status
+            aria-live="assertive"
+            role="alert"
+            aria-hidden="true"
+          >{{ 'products.product.loader_label' | t }}</p>
 
 
-        {% if section.settings.show_share_buttons %}
-          {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
-        {% endif %}
+          {% if section.settings.show_share_buttons %}
+            {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
+          {% endif %}
+      </div>
     </div>
-  </div>
 </div>
+
+<script>
+  $('.slider-galeria').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    infinite: false,
+    asNavFor: '.slider-galeria-thumbs',
+  });
+  $('.slider-galeria-thumbs').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    asNavFor: '.slider-galeria',
+    vertical: true,
+    verticalSwiping: true,
+    focusOnSelect: true,
+    infinite: false,
+  });
+</script>
+
+<style>
+.slider-galeria-thumbs {
+  float: left;
+  width: 16%;
+}
+
+.slider-galeria {
+  float: left;
+  width: 84%;
+}
+
+.slider-galeria div, .slider-galeria-thumbs div {
+  outline: 0;
+}
+
+.slider-galeria span {
+  display: block;
+  height: 250px;
+  background: #000;
+  color: #3498db;
+  font-size: 36px;
+  line-height: 250px;
+  margin: 0 10px 0 10px;
+  padding: 2%;
+  text-align: center;
+}
+
+.slider-galeria-thumbs span {
+  display: block;
+  margin-bottom: 5px;
+  height: 55px;
+  background: #3498db;
+  color: #000;
+  font-size: 14px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.slider-galeria-thumbs .slick-current span {
+  background: #000;
+  color: #3498db;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
+  text-indent: -9999px;
+  background: transparent;
+  border: 0;
+  z-index: 1000; 
+  outline: 0;
+}
+
+.slick-prev:before {
+  content: "<";
+	color: #fff;
+	font-size: 60px;
+	line-height: 0;
+	text-indent: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  text-indent: -9999px;
+  background: transparent;
+  border: 0;
+  z-index: 1000; 
+  outline: 0;
+}
+
+.slick-next:before {
+  content: ">";
+	color: #fff;
+	font-size: 60px;
+	line-height: 0;
+	text-indent: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+</style>
 
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">
@@ -535,6 +739,12 @@
       "id": "enable_video_looping",
       "label": "Enable video looping",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "vertical_slider_mobile",
+      "label": "Vertical slider on mobile",
+      "default": true
     }
   ],
   "blocks":[
@@ -569,7 +779,41 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
-        }           
+        },
+        {
+          "type": "select",
+          "id": "star",
+          "label": "Stars",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ],
+          "default": "5"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified_customer",
+          "label": "Verified Customer",
+          "default": true
+        }
         ]
     },
     {
@@ -581,7 +825,14 @@
               "id": "content",
               "label": "Content",
               "default": "<p>text</p>"
-            } 
+            },
+            {
+              "type": "checkbox",
+              "id": "underline_text",
+              "label": "Underline text",
+              "default": false,
+              "info": "Use underline instead of italic"
+            }
         ]    
             
     },
@@ -603,20 +854,7 @@
           }
         ]    
             
-    },
-    {
-      "type":"bpd-addon-product",
-      "name": "Addon Product",
-        "settings": [          
-        {
-          "type": "text",
-          "id": "addon_product",
-          "label": "Addon Product Slug",
-          "default": "text"
-        }
-        ]    
-            
-    }    
+    }
   ]   
 }
 {% endschema %}
@@ -637,6 +875,3 @@
 }
 </script>
 {% endif %}
-
-
-	<div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>

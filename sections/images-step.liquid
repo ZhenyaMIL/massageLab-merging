@@ -1,0 +1,110 @@
+<div class="theragelstep">
+  <div class="page-width">
+    <h3 class="header-of-step">
+      {{ section.settings.header }}
+    </h3>
+    <p class="sub-header-of-step">
+      {{ section.settings.subheader }}
+    </p>
+    <div class="step-box">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+          {%- when 'step_with_image' -%}
+
+            <div class="steps first">
+                {% if block.settings.image != blank %}
+                <div class="step-img-custom">
+                  <img loading="lazy"
+                      srcset="{{ block.settings.image | img_url: '100x' }}"
+                      src="{{ block.settings.image | img_url: '100x' }}" alt="step Image" width="100" height="100">
+                </div>
+                {% endif %}
+                <div class="step-block">
+                  <div class="step-title">{{ block.settings.title | escape }}</div>
+                  <p class="step-desc">{{ block.settings.sub_title | escape }}</p>
+                </div>
+            </div>
+
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+.images-step-custom {
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+ .images-step-custom.images-step-custom {
+    padding-top: 0;
+  }
+}
+
+.images-step-custom .theragelstep {
+  margin-bottom: 0;
+  border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 749px) {
+  .images-step-custom .step-box .steps.steps {
+      border: none;
+      padding: 0;
+  }
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Images step",
+    "tag": "section",
+    "class": "step-section images-step-custom",
+    "settings": [
+      {
+        "type": "text",
+        "id": "header",
+        "label": "Header",
+        "default": "Header"
+      },
+      {
+        "type": "text",
+        "id": "subheader",
+        "label": "Subheader",
+        "default": "Subheader"
+      }
+    ],
+  "blocks": [
+    {
+      "name": "step with image",
+      "type": "step_with_image",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "sub_title",
+          "label": "Sub Title",
+          "default": "Sub Title"
+        }
+      ]
+    }
+  ],
+	"presets": [
+      {
+        "name": "Images step"
+      }
+    ]
+  }
+{% endschema %}

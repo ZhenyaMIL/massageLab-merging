@@ -85,7 +85,6 @@ $(document).on("click",".ai_ml_prod_single_var_cnt input", function(e){
 
   $(document).find(".ai_ml_prod_var_sel").removeClass("active");
   var main_index=$(document).find(".ai_ml_prod_single_var_cnt input").index(this);
-  console.log(main_index);
   $(document).parents(".ai_ml_prod_single_var_cnt").find(".ai_ml_prod_var_sel").addClass("active");
   $(document).find("#ProductSelect-bundle-product-details option").removeAttr('selected');
   $(document).find("#ProductSelect-bundle-product-details option").eq(main_index).attr('selected', 'selected');
@@ -131,3 +130,75 @@ else
 }
   
 });
+
+// highligh bundle after clicking
+document.addEventListener('DOMContentLoaded', function() {
+  const bundles = document.querySelectorAll('.ai_ml_prod_single_var_cnt');
+
+  bundles.forEach(bundle => {
+    bundle.addEventListener('click', () => {
+      let label = bundle.querySelector('.ai_ml_prod_var_sel');
+
+      initialState();
+
+      bundle.classList.add('active');
+      label.click();
+
+    })
+  });
+
+  function initialState () {
+    bundles.forEach(bundle => {
+      bundle.classList.remove('active');
+    });
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  let additionalProductButton = document.querySelector('.ai_ml_addon_product_inner.ai_ml_show_in_desktop');
+  let additionalProductButtonMobile = document.querySelector('.ai_ml_addon_product_inner.ai_ml_show_in_mobile');
+
+  additionalProductButton.addEventListener('click', function(event){
+    if(event.target.tagName !== "INPUT") {
+      let label = additionalProductButton.querySelector('.ai_ml_prod_var_addon_sel');
+
+      label.click();
+      console.log(event.target.tagName)
+    }
+  })
+
+  additionalProductButtonMobile.addEventListener('click', () => {
+    let label = additionalProductButtonMobile.querySelector('.ai_ml_prod_var_addon_sel');
+  
+    label.click();
+  });
+
+  let bundles = document.querySelectorAll('[data-bundle-id-custom]');
+
+  bundles.forEach(bundle => {
+
+    bundle.addEventListener('click', () => {
+      let bundleId = bundle.getAttribute("data-bundle-id-custom").trim();
+      let mediaProduct = document.querySelector(`[data-media-id-custom="${bundleId}"]`);
+
+      mediaProduct.click();
+    });
+  });
+
+  let mediaProducts = document.querySelectorAll('[data-media-id-custom]');
+
+  mediaProducts.forEach(media => {
+
+    media.addEventListener('click', () => {
+      let mediaId = media.getAttribute("data-media-id-custom").trim();
+      let bundle = document.querySelector(`[data-bundle-id-custom="${mediaId}"]`);
+
+      bundle.click();
+    });
+  });
+});
+
+
+

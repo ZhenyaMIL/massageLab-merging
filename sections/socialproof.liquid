@@ -1,0 +1,171 @@
+<div class="theragelstep stepofchew socialproof">
+  <div class="page-width">
+    {% if section.settings.main_title %}
+          <h3 class="main-title" >{{ section.settings.main_title }}</h3>
+    {% endif %}
+    {% if section.settings.secondary_title %}
+          <h4 class="secondary-title" >{{ section.settings.secondary_title }}</h4>
+    {% endif %}
+    <div class="step-box">
+    {% assign hideStep = section.settings.hide_step_block %}
+   
+      <div class="steps first">
+          {% if section.settings.step1-image != blank %}
+            <div class="step-img-custom">
+              <img loading="lazy"
+                  srcset="{{ section.settings.step1-image | img_url: 'master' }}"
+                  src="{{ section.settings.step1-image | img_url: 'master' }}" alt="step Image">
+            </div>
+          {% endif %}
+          <div {% if hideStep %}style="display:none"{% endif %} class="step-block">
+           <div class="step-title">{{ section.settings.step1-title | escape }}</div>
+            <p class="step-desc">{{ section.settings.step1-desc | escape }}</p>
+          </div> 
+      </div>
+      <div class="steps secound">
+          {% if section.settings.step2-image != blank %}
+          <div class="step-img-custom">
+            <img loading="lazy"
+                 srcset="{{ section.settings.step2-image | img_url: 'master' }}"
+                 src="{{ section.settings.step2-image | img_url: 'master' }}" alt="step Image">
+          </div>
+          {% endif %}
+          <div {% if hideStep %}style="display:none"{% endif %} class="step-block">
+            <div class="step-title">{{ section.settings.step2-title | escape }}</div>
+            <p class="step-desc">{{ section.settings.step2-desc | escape }}</p>
+          </div> 
+      </div>
+       <div class="steps third">
+          {% if section.settings.step3-image != blank %}
+          <div class="step-img-custom">
+            <img loading="lazy"
+                 srcset="{{ section.settings.step3-image | img_url: 'master' }}"
+                 src="{{ section.settings.step3-image | img_url: 'master' }}" alt="step Image">
+          </div>
+          {% endif %}
+          <div {% if hideStep %}style="display:none"{% endif %} class="step-block">
+            <div class="step-title">{{ section.settings.step3-title | escape }}</div>
+            <p class="step-desc">{{ section.settings.step3-desc | escape }}</p>
+          </div> 
+      </div>
+      
+    </div>
+  </div>
+</div>
+ 
+
+ <style>
+ .stepofchew.socialproof .secondary-title {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+ }
+
+  .stepofchew.socialproof .step-box {
+    border-top: 1px solid black;
+    padding-top: 20px;
+  }
+
+ </style>
+
+{% schema %}
+  {
+    "name": "Steps",
+    "tag": "section",
+    "class": "step-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Main title"
+      },
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Main title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "secondary_title",
+        "label": "Secondary title",
+        "default": "Secondary Title"
+      },
+      {
+        "type": "header",
+        "content": "Step 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "step1-image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "step1-title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "step1-desc",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      },
+	  {
+        "type": "header",
+        "content": "Step 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "step2-image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "step2-title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "step2-desc",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      },
+      {
+        "type": "header",
+        "content": "Step 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "step3-image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "step3-title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "step3-desc",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_step_block",
+        "label": "hide step block",
+        "default": false
+      }
+    ],
+	"presets": [
+      {
+        "name": "Steps"
+      }
+    ]
+  }
+{% endschema %}

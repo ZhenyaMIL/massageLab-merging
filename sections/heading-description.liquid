@@ -1,5 +1,5 @@
 <div class="page-width">
-  <div class="aboutus-information image-position-{{ section.settings.image_position }}">
+  <div class="aboutus-information tt-head heading-description-custom image-position-{{ section.settings.image_position }}">
     {% if section.settings.image != blank %}
     <div class="aboutus-banner">
       <div class="image-container">
@@ -31,18 +31,47 @@
   </div>
 </div>
 
+<style>
+.heading-description-custom .page-width {
+  padding: 0;
+  max-width: none;
+}
+
+.tt-head {
+  border-top: 1px solid #021c72 !important;
+}
+
+.heading-description-custom {
+  padding: 0;
+}
+
+.heading-description-custom .information-container {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+
+.heading-description-custom .aboutus-information {
+  border-radius: 0;
+}
+
+.heading-description-custom .heading {
+  font-size: 44px !important;
+}
+
+</style>
+
 
 {% schema %}
   {
-    "name": "Guarantee",
+    "name": "Heading & description",
     "tag": "section",
-	"class": "aboutus-section guarantee-section",
+	"class": "aboutus-section guarantee-section heading-description-custom",
     "settings": [
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image",
-        "info": "info"
+        "label": "Image"
       },
 	  {
         "type": "select",
@@ -75,7 +104,7 @@
 	],
 	"presets": [
       {
-        "name": "guarantee"
+        "name": "Heading & description"
       }
     ]
   }

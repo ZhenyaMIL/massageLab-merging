@@ -1,0 +1,694 @@
+  <section id="bundle-chew" class="pricing-container">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'pack_1' -%}
+            <article class="pricing container-1">
+              <div class="header-tariff">
+                <h2>{{ block.settings.title }}</h2>
+              </div>
+
+              <div class="tarif-media">
+                  {%- assign main_image = block.settings.main_image -%}
+
+                  {% if main_image %}
+                    {{ main_image | image_url: width: main_image.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+                  {% endif %}
+              </div>
+
+              <div class="tariff-description">
+                {{ block.settings.description }}
+              </div>
+
+              <div class="footer-tariff">
+                {% for variant in product.variants %}
+                  {% assign variant_id = variant.id | append: "" %}
+
+                  {% if block.settings.variant_id == variant_id %}
+                    {% comment %} <p class="price-retail">
+                        Retail Price: {{ variant.compare_at_price | money }}
+                    </p> {% endcomment %}
+                    <p class="price-current">
+                    {% if block.settings.custom_price != blank %}
+                      <span class="custom-price">{{ block.settings.custom_price }}</span>
+                    {% else %}
+                        {{ variant.price | money }}
+                    {% endif %}
+                    </p>
+                    {% comment %} <p class="price-save">
+                      You save: {{ variant.compare_at_price | minus: variant.price | money_without_currency  }}$
+                    </p> {% endcomment %}
+                  {% endif %}
+
+                {% endfor %}
+
+                <button data-variant-id="{{ block.settings.variant_id }}" >Yes! Add To My Order 👉</button>
+                {% if block.settings.additional_text %}
+                  <p>{{ block.settings.additional_text }}</p>
+                {% endif %}
+
+                {%- assign secondary_image = block.settings.secondary_image -%}
+
+                {% if secondary_image %}
+                  {{ secondary_image | image_url: width: secondary_image.width | image_tag: class: 'secondary-image', loading: 'lazy' }}
+                {% endif %}
+              </div>
+            </article>
+          {%- when 'pack_2' -%}
+            <article class="pricing container-2">
+              <div class="header-tariff">
+                <h2>{{ block.settings.title }}</h2>
+              </div>
+
+              <div class="tarif-media">
+                  {%- assign main_image = block.settings.main_image -%}
+
+                  {% if main_image %}
+                    {{ main_image | image_url: width: main_image.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+                  {% endif %}
+              </div>
+
+              <div class="tariff-description">
+                {{ block.settings.description }}
+              </div>
+
+              <div class="footer-tariff">
+                {% for variant in product.variants %}
+                  {% assign variant_id = variant.id | append: "" %}
+
+                  {% if block.settings.variant_id == variant_id %}
+                    {% comment %} <p class="price-retail">
+                        Retail Price: {{ variant.compare_at_price | money }}
+                    </p> {% endcomment %}
+                    <p class="price-current">
+                      {% if block.settings.custom_price != blank %}
+                        <span class="custom-price">{{ block.settings.custom_price }}</span>
+                      {% else %}
+                          {{ variant.price | money }}
+                      {% endif %}
+                    </p>
+                    {% comment %} <p class="price-save">
+                      You save: {{ variant.compare_at_price | minus: variant.price | money_without_currency  }}$
+                    </p> {% endcomment %}
+                  {% endif %}
+
+                {% endfor %}
+
+                <button data-variant-id="{{ block.settings.variant_id }}" >Yes! Add To My Order 👉</button>
+                {% if block.settings.additional_text %}
+                  <p>{{ block.settings.additional_text }}</p>
+                {% endif %}
+
+                {%- assign secondary_image = block.settings.secondary_image -%}
+
+                {% if secondary_image %}
+                  {{ secondary_image | image_url: width: secondary_image.width | image_tag: class: 'secondary-image', loading: 'lazy' }}
+                {% endif %}
+              </div>
+            </article>
+          {%- when 'pack_3' -%}
+            <article class="pricing container-3">
+              <div class="header-tariff">
+                <h2>{{ block.settings.title }}</h2>
+              </div>
+
+              <div class="tarif-media">
+                  {%- assign main_image = block.settings.main_image -%}
+
+                  {% if main_image %}
+                    {{ main_image | image_url: width: main_image.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+                  {% endif %}
+              </div>
+
+              <div class="tariff-description">
+                {{ block.settings.description }}
+              </div>
+
+              <div class="footer-tariff">
+                {% for variant in product.variants %}
+                  {% assign variant_id = variant.id | append: "" %}
+
+                  {% if block.settings.variant_id == variant_id %}
+                    {% comment %} <p class="price-retail">
+                        Retail Price: {{ variant.compare_at_price | money }}
+                    </p> {% endcomment %}
+                    <p class="price-current">
+                      {% if block.settings.custom_price != blank %}
+                        <span class="custom-price">{{ block.settings.custom_price }}</span>
+                      {% else %}
+                          {{ variant.price | money }}
+                      {% endif %}
+                    </p>
+                    {% comment %} <p class="price-save">
+                      You save: {{ variant.compare_at_price | minus: variant.price | money_without_currency  }}$
+                    </p> {% endcomment %}
+                  {% endif %}
+
+                {% endfor %}
+
+                <button data-variant-id="{{ block.settings.variant_id }}" >Yes! Add To My Order 👉</button>
+                {% if block.settings.additional_text %}
+                  <p>{{ block.settings.additional_text }}</p>
+                {% endif %}
+                {%- assign secondary_image = block.settings.secondary_image -%}
+
+                {% if secondary_image %}
+                  {{ secondary_image | image_url: width: secondary_image.width | image_tag: class: 'secondary-image', loading: 'lazy' }}
+                {% endif %}
+              </div>
+            </article>
+        {%- endcase -%}
+      {%- endfor -%}
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let buttonsAddBundle = document.querySelectorAll('#bundle-chew button[data-variant-id]');
+
+      buttonsAddBundle.forEach(button => {
+        button.addEventListener('click', () => {
+          let buttonId = button.getAttribute("data-variant-id").trim();
+          let productVariant = document.querySelector(`input[value="${buttonId}"]`);
+          let variantButton = productVariant.parentNode;
+          let addTocartButton = document.querySelector('span[data-add-to-cart-text]');
+          let addTocartButtonWrapper = addTocartButton.parentNode;
+
+          variantButton.click();
+          addTocartButton.click();
+          addTocartButtonWrapper.style = "transform: scale(1.3)";
+          setTimeout(()=> {
+            addTocartButtonWrapper.style = "transform: scale(1)";
+          },500)
+        });
+      });
+    });
+  </script>
+
+<style>
+  .price-retail.price-retail {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  #shopify-section-bundle-chew {
+    background: #f2fbff;
+  }
+
+  #shopify-section-bundle-chew .custom-price {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .pricing-container article:nth-child(2) .header-tariff {
+    position: relative;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .pricing-container article:nth-child(2) .header-tariff {
+      padding-top: 60px;
+    }
+  }
+
+  .pricing-container article:nth-child(2) .header-tariff:after {
+    position: absolute;
+    content: "Most popular";
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #FF9021;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    top: 10px;
+    left: 50%;
+  transform: translate(-50%, 0);
+  } 
+
+  .flex-box-tariff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  ul.flex-box-tariff li {
+      padding: 0;
+      padding-bottom: 8px;
+  }
+
+  .flex-box-tariff .icon-checkmark {
+    fill: #60C74D;
+  }
+
+  .flex-box-tariff li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    column-gap: 10px;
+  }
+
+  .flex-box-tariff p {
+    font-size: 12px;
+    color: white;
+  }
+
+
+  .tarif-media,
+  .footer-tariff {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+
+  .footer-tariff {
+    margin-bottom: 10px;
+  }
+
+  .footer-tariff p {
+    margin-bottom: 0;
+  }
+
+  .price-current.price-current {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0;
+  }
+
+  .price-save.price-save {
+    font-size: 14px;
+    color: #00AEEF;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  .pricing img {
+    height: auto;
+    max-width: 300px;
+  }
+
+  .header-tariff {
+    background: #00AEEF;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-tariff h2 {
+    color: white;
+    margin: 0;
+  }
+
+  .footer-tariff {
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-tariff img {
+    width: 80%;
+  }
+
+    :root {
+      --gradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+      --purple: hsl(237, 63%, 64%);
+      --very-light-grayish-blue: hsl(240, 78%, 98%);
+      --light-grayish-blue: hsl(234, 14%, 74%);
+      --grayish-blue: hsl(233, 13%, 49%);
+      --dark-grayish-blue: hsl(232, 13%, 33%);
+      --white: white;
+      --body-font: "Montserrat", sans-serif;
+    }
+
+    h1 {
+      color: var(--grayish-blue);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+
+    /* Pricing Section */
+
+    .pricing-container {
+      display: grid;
+      width: 72%;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+      column-gap: 15px;
+      padding-top: 30px;
+      padding-bottom: 90px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      .pricing-container {
+        width: 90%;
+      }
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-radius: 10px;
+      padding-top: 0;
+    }
+
+    .container-2 {
+      background:#0D426D;
+      color: var(--white);
+      margin-top: -1.6rem;
+      margin-bottom: -1.6rem;
+    }
+
+    .container-1,
+    .container-3 {
+      background:#0D426D;
+    }
+
+    .pricing h2 {
+      font-size: 1.23rem;
+      font-weight: 700;
+    }
+
+    .pricing {
+      overflow: hidden;
+    }
+
+    .container-2 h2 {
+      padding-top: 40px;
+    }
+
+
+    hr {
+      width: 80%;
+      border-width: 0.5px;
+      margin: 0 auto;
+      border-color: transparent;
+      border-color: var(--light-grayish-blue);
+      border-style: solid;
+      opacity: 0.5;
+    }
+
+
+    .pricing button {
+      cursor: pointer;
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 1rem;
+      border-radius: 60px;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 1px;
+      padding: 0.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .pricing button:hover {
+      transform: scale(1.02);
+    }
+
+    .container-2 button {
+      color: var(--purple);
+      background-color: var(--white);
+    }
+
+    .container-1 button,
+    .container-2 button,
+    .container-3 button {
+      color: var(--white);
+      background: #60C74D;
+      background-repeat: no-repeat;
+    }
+
+
+    @media screen and (max-width: 1025px) {
+      .pricing-container {
+        width: 50%;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+      }
+
+      .container-2 {
+        margin-top: initial;
+        margin-bottom: initial;
+      }
+
+      .container-2 h2 {
+        padding-top: initial;
+      }
+
+      .container-2 p {
+        margin-top: initial;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      body {
+        background-size: 80%, 26.5%;
+        background-position: top 0 right -10rem, bottom -4.7rem left -1.9rem;
+      }
+
+      .pricing-container {
+        width: 92%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .pricing-container {
+        width: 90%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      #bundle-chew {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      #bundle-chew img {
+        max-width: 80px;
+      }
+
+      #bundle-chew .header-tariff h2 {
+        font-size: 10px;
+      }
+
+      #bundle-chew .header-tariff {
+        padding: 5px;
+      }
+
+      #bundle-chew .footer-tariff p {
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      #shopify-section-bundle-chew .custom-price {
+        font-size: 10px;
+      }
+
+      #bundle-chew .footer-tariff {
+        margin: 5px;
+      }
+
+      #bundle-chew  .tarif-media {
+        margin-top: 10px;
+      }
+
+      #bundle-chew .tariff-description svg.icon {
+        width: 10px;
+        height: 10px;
+      }
+
+      #bundle-chew .flex-box-tariff {
+        margin: 5px auto;
+        width: 90%;
+      }
+
+      #bundle-chew .pricing button {
+        border-radius: 10px;
+        font-size: 10px;
+        padding: 5px;
+        margin-top: 0;
+      }
+
+      #bundle-chew .flex-box-tariff p {
+        font-size: 10px;
+      }
+
+      #bundle-chew article:nth-child(2) .header-tariff:after {
+        width: 80px;
+        height: 20px;
+        font-size: 8px;
+      }
+
+      #bundle-chew  article:nth-child(2) .header-tariff {
+        padding-top: 40px;
+      }
+      
+      #bundle-chew .container-2 {
+        margin-top: -10px;
+        margin-bottom: -10px;
+      }
+      
+      #bundle-chew .footer-tariff {
+        padding: 5px;
+      }
+    }
+</style>
+
+
+
+{% schema %}
+  {
+  "name": "Bundle chew",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Pack - 1",
+      "type": "pack_1",
+      "settings": [
+        {
+          "type": "text",
+          "id": "variant_id",
+          "label": "Variant - id"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Main title"
+        },
+        {
+          "type": "text",
+          "id": "custom_price",
+          "label": "Custom price"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Main image"
+        },
+        {
+          "type": "html",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "additional_text",
+          "label": "Title",
+          "default": "60 Day Money-Back Guarantee"
+        },
+        {
+          "type": "image_picker",
+          "id": "secondary_image",
+          "label": "Secondary image"
+        }
+      ]
+    },
+    {
+      "name": "Pack - 2",
+      "type": "pack_2",
+      "settings": [
+        {
+          "type": "text",
+          "id": "variant_id",
+          "label": "Variant - id "
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Main title"
+        },
+        {
+          "type": "text",
+          "id": "custom_price",
+          "label": "Custom price"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Main image"
+        },
+        {
+          "type": "html",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "additional_text",
+          "label": "Title",
+          "default": "60 Day Money-Back Guarantee"
+        },
+        {
+          "type": "image_picker",
+          "id": "secondary_image",
+          "label": "Secondary image"
+        }
+      ]
+    },
+    {
+      "name": "Pack - 3",
+      "type": "pack_3",
+      "settings": [
+        {
+          "type": "text",
+          "id": "variant_id",
+          "label": "Variant - id "
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Main title"
+        },
+        {
+          "type": "text",
+          "id": "custom_price",
+          "label": "Custom price"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Main image"
+        },
+        {
+          "type": "html",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "additional_text",
+          "label": "Title",
+          "default": "60 Day Money-Back Guarantee"
+        },
+        {
+          "type": "image_picker",
+          "id": "secondary_image",
+          "label": "Secondary image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle chew"
+    }
+  ]
+}  
+{% endschema %}

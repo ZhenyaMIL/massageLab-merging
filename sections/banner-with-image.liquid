@@ -1,15 +1,16 @@
-<div class="page-width">
-  <div class="aboutus-information image-position-{{ section.settings.image_position }}">
+<div class="page-width border-blue">
+  <div class="aboutus-information grid--1-col-tablet-down grid--2-col-desktop grid image-position-{{ section.settings.image_position }}">
     {% if section.settings.image != blank %}
-    <div class="aboutus-banner">
+    <div class="aboutus-banner grid__item">
       <div class="image-container">
-        <img 
+        <img loading="lazy"
+               srcset="{{ section.settings.image | img_url: 'master' }}"
                src="{{ section.settings.image | img_url: 'master' }}"
                alt="Aboutus Image">
       </div>
     </div>
     {% endif %}
-    <div class="information-container">
+    <div class="information-container grid__item">
        {% if section.settings.heading != blank %}
         <div class="title-container section-header">
           <h2 class="heading">{{ section.settings.heading }}</h2>
@@ -22,7 +23,7 @@
        {% endif %}
         {% if section.settings.about_btn != blank %}
         <div class="about-btn">
-          <a href="JavaScript:void(0);" class="btn button getmytheragel">
+          <a href="JavaScript:void(0);" class="btn btn-large button getmytheragel">
             {{ section.settings.about_btn }}
           </a>
         </div>
@@ -32,17 +33,47 @@
 </div>
 
 
+<style>
+  .aboutus-section-custom {
+    background: transparent;
+  }
+
+  .aboutus-section-custom {
+    padding: 50px 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .aboutus-section-custom .aboutus-banner.aboutus-banner .image-container img {
+      border-radius: 20px;
+    }
+  }
+</style>
+
+<script>
+  jQuery(document).ready(function($) {
+    $('.chart-circle').easyPieChart({ 
+      barColor: '#1D8107',
+      size: 70,
+      trackColor: '#EBF3E4',
+      easing: 'easeInOut',
+      scaleColor: false,
+      lineCap: 'circle',
+      lineWidth: 6,
+      animate: 2000
+    });
+    
+  });
+</script>
 {% schema %}
   {
-    "name": "Guarantee",
+    "name": "Banner with image",
     "tag": "section",
-	"class": "aboutus-section guarantee-section",
+	"class": "aboutus-section aboutus-section-custom",
     "settings": [
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image",
-        "info": "info"
+        "label": "Image"
       },
 	  {
         "type": "select",
@@ -75,7 +106,7 @@
 	],
 	"presets": [
       {
-        "name": "guarantee"
+        "name": "Banner with image"
       }
     ]
   }

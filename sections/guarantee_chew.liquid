@@ -1,7 +1,7 @@
 <div class="page-width">
   <div class="aboutus-information image-position-{{ section.settings.image_position }}">
     {% if section.settings.image != blank %}
-    <div class="aboutus-banner">
+    <div class="aboutus-banner aboutus-banner-df">
       <div class="image-container">
         <img 
                src="{{ section.settings.image | img_url: 'master' }}"
@@ -31,12 +31,42 @@
   </div>
 </div>
 
+<style>
+.heading-description-custom {
+  margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .guarantee-section.guarantee-section {
+    margin-bottom: 20px;
+  }
+
+  .aboutus-banner-df {
+    display: flex;
+    justify-content: center;
+  }
+
+.aboutus-banner-df img {
+  max-width: 220px !important;
+}
+
+.aboutus-banner-df .image-container {
+  margin: 0!important;
+}
+
+}
+
+.custom-g {
+  border-bottom: 1px solid #021c72;
+}
+</style>
+
 
 {% schema %}
   {
     "name": "Guarantee",
     "tag": "section",
-	"class": "aboutus-section guarantee-section",
+	"class": "aboutus-section guarantee-section custom-g",
     "settings": [
       {
         "type": "image_picker",

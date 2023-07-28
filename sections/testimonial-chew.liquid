@@ -1,0 +1,185 @@
+<div class="testimonial-block testimonial-chew ">
+              <div class="page-width">
+                {% if section.settings.maintitle != blank %}
+                  <div class="section-header text-center">
+                    <h2 class="heading">{{ section.settings.maintitle | escape }}</h2>
+                  </div>
+                {% endif %}
+                {% if section.blocks.size > 0 %}
+                  <div class="ishitestimonials-carousel">
+                    {% for block in section.blocks %}
+                        <div class="ishitestimonials-container-chew">
+                          <div class="author-rating">
+                            <div class="testimonial-img">
+                                {% if block.settings.testimonial_image != blank %}
+                                  <img loading="lazy"
+                                      srcset="{{ block.settings.testimonial_image | img_url: '98x' }}"
+                                      src="{{ block.settings.testimonial_image | img_url: '98x' }}"
+                                      alt="Testimonial image">
+                                {% else %}
+                                  {{ 'image' | placeholder_svg_tag: 'ishi-placeholder' }}
+                                {% endif %}
+                            </div>
+                              <div class="user-info mobile">
+                                {% assign review = block.settings.review | plus:0 %}
+                                {% if block.settings.showratting %}
+                                  <div class="user-ratting">
+                                    <span class="starrating loox-rating">
+                                      <i class="loox-icon {% if review >=1 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                      <i class="loox-icon {% if review >=2 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                      <i class="loox-icon {% if review >=3 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                      <i class="loox-icon {% if review >=4 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                      <i class="loox-icon {% if review >=5 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                    </span>
+                                  </div>
+                                {% endif %}
+                                {% if block.settings.testimonial_title != blank %}
+                                  <h3 class="user-name">{{ block.settings.testimonial_title | escape }}</h3>
+                                  <div class='verified'>
+                                    <img src="https://cdn.shopify.com/s/files/1/0261/8441/7357/t/6/assets/verified-logo-1676617319885.jpeg?v=1676617322" srcset="https://cdn.shopify.com/s/files/1/0261/8441/7357/t/6/assets/verified-logo-1676617319885.jpeg?v=1676617322 1536w" width="500" height="500" style="aspect-ratio:500 / 500" data-pf-type="Image3" class="sc-hmjpVf jFnkub pf-644_">
+                                    <p>Verified Buyer</p>
+                                  </div>
+                                {% endif %}
+                              </div>
+                          </div>
+                          <div class="user-container">
+                             {% if block.settings.testimonial_description != blank %}
+                              <div class="user-description">{{ block.settings.testimonial_description }}</div>
+                            {% endif %}
+                            <div class="user-info desktop">
+                              {% assign review = block.settings.review | plus:0 %}
+                              {% if block.settings.showratting %}
+                                <div class="user-ratting">
+                                  <span class="starrating loox-rating">
+                                    <i class="loox-icon {% if review >=1 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                    <i class="loox-icon {% if review >=2 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                    <i class="loox-icon {% if review >=3 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                    <i class="loox-icon {% if review >=4 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                    <i class="loox-icon {% if review >=5 %}loox-star{% else %}loox-star-o{% endif %}"></i>
+                                  </span>
+                                </div>
+                              {% endif %}
+                              {% if block.settings.testimonial_title != blank %}
+                                <h3 class="user-name">{{ block.settings.testimonial_title | escape }}</h3>
+                                <div class='verified'>
+                                  <img src="https://cdn.shopify.com/s/files/1/0261/8441/7357/t/6/assets/verified-logo-1676617319885.jpeg?v=1676617322" srcset="https://cdn.shopify.com/s/files/1/0261/8441/7357/t/6/assets/verified-logo-1676617319885.jpeg?v=1676617322 1536w" width="500" height="500" style="aspect-ratio:500 / 500" data-pf-type="Image3" class="sc-hmjpVf jFnkub pf-644_">
+                                  <p>Verified Buyer</p>
+                                </div>
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+          </div>
+
+
+  <style>
+
+    .testimonial-section-chew {
+      border-bottom: 1px solid black;
+    }
+
+    .user-info.mobile {
+      display: none;
+    }
+    .user-info.desktop {
+      display: block;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .user-info.desktop {
+        display: none;
+      }
+      .user-info.mobile {
+        display: block;
+      }
+
+      .author-rating {
+        display: flex;
+        column-gap: 30px;
+      }
+
+      .user-name {
+        font-size: 14px;
+        margin: 5px 0;
+        margin-bottom: 10px;
+      }
+
+      .testimonial-section-chew .verified {
+        column-gap: 5px;
+      }
+
+      .testimonial-section-chew .verified img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
+
+{% schema %}
+  {
+    "name": "Testimonial",
+    "tag": "section",
+	"class": "testimonial-section testimonial-section-chew",
+    "settings": [
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Heading",
+        "default": "Section Heading"
+      }
+	],
+     "blocks": [
+       { 
+        "type": "text",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "testimonial_image",
+            "label": "Image"
+          },
+           {
+            "type": "checkbox",
+            "id": "showratting",
+            "label": "Show Rattings",
+            "default": true
+          },
+		  {
+            "type": "select",
+            "id": "review",
+            "label": "Star Rattings",
+            "default": "1",
+            "options": [
+              { "value": "1", "label": "1 Star"},
+              { "value": "2", "label": "2 Star"},
+              { "value": "3", "label": "3 Star"},
+              { "value": "4", "label": "4 Star"},
+              { "value": "5", "label": "5 Star"}
+            ]
+          },
+          {
+            "type": "text",
+            "id": "testimonial_title",
+            "label": "Name",
+            "default": "Luies Charls"
+          },
+          {
+            "type": "richtext",
+            "id": "testimonial_description",
+            "label": "Text",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          }
+        ]
+      }
+    ],
+	"presets": [
+      {
+        "name": "Testimonial"
+      }
+    ]
+  }
+{% endschema %}

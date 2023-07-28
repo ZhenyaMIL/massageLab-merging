@@ -1,0 +1,148 @@
+<div class="faq-block faq-block-chew ">
+  <div class="page-width">
+    {% if section.settings.maintitle != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.maintitle | escape }}</h2>
+    </div>
+    {% endif %}
+    <div id="faqblock-{{ section.id }}" class="accordion panel-group">
+      {% assign i = 1 %}
+      {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+      <div class="panel">
+      <div class="ishi-collapse in summary rotate {% if forloop.first == true %} ishi-collapse{% else %}ishi-collapsed {% endif %}" data-href="#faq-container-{{i}}" data-toggle="collapse" aria-expanded="{% if forloop.first == true %}true{% else %}false{% endif %}" data-parent="#faqblock-{{ section.id }}">
+        <div class="summary__title">
+          <h2 class="h4 accordion__title faq-title">
+            {% if section.settings.show_counter %}
+            <span class="category-count">{{i}}.</span>
+            {% endif %}
+            {{ block.settings.faq-title }}
+          </h2>
+        </div>
+      </div>
+      <div id="faq-container-{{i}}" class="ishi-collapse {% if forloop.first == true %}in {% endif %}" {% if forloop.first == true %}style="display:block"{% endif %}>
+        {% if block.settings.faq-subtitle != blank %}
+        <div class="accordion__content rte">
+          {{ block.settings.faq-subtitle }}
+        </div>
+        {% endif %}
+      </div>
+      </div>
+      {% assign i = i | plus: 1 %}
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+
+$(document).ready(function () {
+  $(document).on("click","[data-toggle='collapse']",function() {
+    var parent = $(this).data("parent");
+    var target = $(this).data("href");
+    if($(parent).length && $(parent).hasClass('panel-group')) {
+     $(parent+" .panel").each(function() {
+       var p = $(this).find("[data-toggle='collapse']");
+       var t = p.data("href");
+       if(t!= target && p.attr("aria-expanded") == "true") {
+        $(t).slideUp().removeClass("in");
+        p.addClass("ishi-collapsed").attr("aria-expanded","false");
+       } 
+     });
+    } 
+    if($(this).attr("aria-expanded") == "false") {
+      $(target).slideDown().addClass("in");
+      $(this).removeClass("ishi-collapsed").attr("aria-expanded","true");
+    } else {
+      $(target).slideUp().removeClass("in");
+      $(this).addClass("ishi-collapsed").attr("aria-expanded","false");
+    }
+  });
+  });
+</script>
+
+<style>
+  .faq-block-chew {
+    margin-top: 80px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .faq-block-chew {
+      margin-top: 40px;
+    }
+  }
+
+  .faq-block-chew.faq-block-chew .accordion .summary.ishi-collapsed {
+        background: #F8F8F8;
+      padding-left: 15px;
+      margin-bottom: 10px;
+  }
+
+  .faq-block-chew.faq-block-chew .accordion .summary {
+          background: #F8F8F8;
+          padding-left: 15px;
+  }
+
+  .faq-block-chew.faq-block-chew .accordion .accordion__content {
+    padding-left: 15px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "FAQs Section",
+  "tag": "section",
+  "max_blocks": 30,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_counter",
+      "label": "Show FAQ Count",
+      "default": true
+    },
+    {
+        "type": "text",
+        "id": "maintitle",
+        "label": "Heading",
+        "default": "Section Heading"
+      }
+  ],
+  "blocks": [
+      { 
+        "type": "faq-block",
+        "name": "FAQs Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq-title",
+            "label": "FAQs Question",
+            "default": "faq-title"
+          },
+          {
+            "type": "html",
+            "id": "faq-subtitle",
+            "label": "FAQs Answer",
+            "default": "faq-subtitle"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ Page",
+        "blocks": [
+          {
+            "type": "faq-block"
+          },
+          {
+            "type": "faq-block"
+          },
+          {
+            "type": "faq-block"
+          }
+        ]
+      }
+    ]
+}
+{% endschema %}

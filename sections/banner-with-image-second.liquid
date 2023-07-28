@@ -1,15 +1,16 @@
 <div class="page-width">
-  <div class="aboutus-information image-position-{{ section.settings.image_position }}">
+  <div class="aboutus-information grid--1-col-tablet-down grid--2-col-desktop grid image-position-{{ section.settings.image_position }}">
     {% if section.settings.image != blank %}
-    <div class="aboutus-banner">
+    <div class="aboutus-banner grid__item">
       <div class="image-container">
-        <img 
+        <img loading="lazy"
+               srcset="{{ section.settings.image | img_url: 'master' }}"
                src="{{ section.settings.image | img_url: 'master' }}"
                alt="Aboutus Image">
       </div>
     </div>
     {% endif %}
-    <div class="information-container">
+    <div class="information-container grid__item">
        {% if section.settings.heading != blank %}
         <div class="title-container section-header">
           <h2 class="heading">{{ section.settings.heading }}</h2>
@@ -22,27 +23,62 @@
        {% endif %}
         {% if section.settings.about_btn != blank %}
         <div class="about-btn">
-          <a href="JavaScript:void(0);" class="btn button getmytheragel">
+          <a href="JavaScript:void(0);" class="btn btn-large button getmytheragel">
             {{ section.settings.about_btn }}
           </a>
         </div>
+        {% endif %}
+        {% if section.settings.add_text %}
+          <p style="text-align: center;">{{ section.settings.add_text }}</p>
         {% endif %}
     </div>
   </div>
 </div>
 
+<style>
+.aboutus-section-custom .about-btn a {
+  border-radius: 60px;
+}
 
+.aboutus-section-custom.second {
+  padding: 50px;
+  background: #F0FAF9;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutus-section-custom.second {
+    padding: 0;
+  }
+}
+</style>
+
+<script>
+  jQuery(document).ready(function($) {
+    $('.chart-circle').easyPieChart({ 
+      barColor: '#1D8107',
+      size: 70,
+      trackColor: '#EBF3E4',
+      easing: 'easeInOut',
+      scaleColor: false,
+      lineCap: 'circle',
+      lineWidth: 6,
+      animate: 2000
+    });
+    
+  });
+</script>
 {% schema %}
   {
-    "name": "Guarantee",
+    "name": "Banner with image second",
     "tag": "section",
-	"class": "aboutus-section guarantee-section",
+	"class": "aboutus-section aboutus-section-custom second",
     "settings": [
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image",
-        "info": "info"
+        "label": "Image"
       },
 	  {
         "type": "select",
@@ -71,11 +107,17 @@
         "id": "about_btn",
         "label": "Button Label",
         "default": "Contact Us"
+      },
+      {
+        "type": "text",
+        "id": "add_text",
+        "label": "Additional text",
+        "default": "Additiona text"
       }
 	],
 	"presets": [
       {
-        "name": "guarantee"
+        "name": "Banner with image second"
       }
     ]
   }
